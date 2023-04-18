@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./calendar.css" />
+  </head>
+  <body>
+    <table id="calendar-table">
+      <thead>
+        <tr>
+          <td onclick="prev()"><</td>
+          <td colspan="5" id="year-month">
+            <span id="year"></span><span id="month"></span>
+          </td>
+          <td onclick="next()">></td>
+        </tr>
+        <tr id="days">
+          <td>SUN</td>
+          <td>MON</td>
+          <td>TUE</td>
+          <td>WED</td>
+          <td>THU</td>
+          <td>FRI</td>
+          <td>SAT</td>
+        </tr>
+      </thead>
+      <tbody id="calendar-table-body"></tbody>
+    </table>
+    <script src="./calculateDate.js"></script>
+  </body>
+</html>
