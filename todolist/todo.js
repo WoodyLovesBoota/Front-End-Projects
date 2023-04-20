@@ -21,3 +21,5 @@ Object.values(todos).forEach(e =>{
   todoList.appendChild(item);
   item.append(checkBox, content, button);
 })
+
+// TODO : delete todo
