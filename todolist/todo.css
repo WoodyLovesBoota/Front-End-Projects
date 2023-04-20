@@ -1,0 +1,12 @@
+header p {
+    font-size: 80px;
+    font-weight: bolder;
+    margin: 20px 40px;
+    word-spacing: 10px;
+    letter-spacing: 10px;
+    color: rgb(175, 173, 173);
+}
+
+header p span {
+    color: rgb(199, 145, 250);
+}
