@@ -17,11 +17,11 @@ const drawCalendar = () => {
   let monthToEng;
   if(nowMonth===1) monthToEng = "Jan";
   else if(nowMonth===2) monthToEng = "Feb";
-  else if(nowMonth===3) monthToEng = "Mar";
-  else if(nowMonth===4) monthToEng = "Apr";
+  else if(nowMonth===3) monthToEng = "March";
+  else if(nowMonth===4) monthToEng = "April";
   else if(nowMonth===5) monthToEng = "May";
-  else if(nowMonth===6) monthToEng = "Jun";
-  else if(nowMonth===7) monthToEng = "Jul";
+  else if(nowMonth===6) monthToEng = "June";
+  else if(nowMonth===7) monthToEng = "July";
   else if(nowMonth===8) monthToEng = "Aug";
   else if(nowMonth===9) monthToEng = "Sep";
   else if(nowMonth===10) monthToEng = "Oct";
