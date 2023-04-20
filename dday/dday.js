@@ -17,7 +17,6 @@ const calcTime = () => {
   let now = new Date();
   let nowTime = now.getTime();
   let targetTime = target.getTime();
-
   let lest = Math.floor((targetTime - nowTime) / 1000);
   let lestDate = Math.floor(lest / (60 * 60 * 24));
   let lestHour = padInt(Math.floor((lest - lestDate * (60 * 60 * 24)) / (60 * 60)));
@@ -28,9 +27,7 @@ const calcTime = () => {
     lest - lestDate * (60 * 60 * 24) - lestHour * (60 * 60) - lestMinute * 60
   ));
   
-  let clockMessage =
-    lestDate +
-    "일 ";
+  let clockMessage = lestDate + "일";
 
   let clockMessage2 =
     lestHour +
@@ -39,7 +36,6 @@ const calcTime = () => {
     " : " +
     lestSecond;
     
-
   content.innerHTML = clockMessage;
   main.appendChild(content);
   content2.innerHTML = clockMessage2;
