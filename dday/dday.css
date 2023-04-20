@@ -6,13 +6,19 @@
 body {
   width: 800px;
   height: 600px;
-  margin: 50% auto;
+  margin: 30% auto;
 }
 
 h1 {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+  color: rgba(226, 147, 250, 0.781);
+  font-size: 80px;
 }
 
-h2 {
-  font-size: 70px;
+p {
+  font-size: 90px;
+  margin-bottom: 50px;
+  color: rgb(179, 176, 176);
+  font-weight: bolder;
+  letter-spacing: 10px;
 }
