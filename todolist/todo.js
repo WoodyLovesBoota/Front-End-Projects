@@ -7,3 +7,17 @@ setTodo = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
+Object.values(todos).forEach(e =>{
+  let todoList = document.getElementById("todos");
+  let item = document.createElement("li");
+  let content = document.createElement("span");
+  let button = document.createElement("button");
+  let checkBox = document.createElement("input");
+  checkBox.setAttribute("type", "checkbox");
+
+  content.innerText = e;
+  button.innerHTML = "X"
+  
+  todoList.appendChild(item);
+  item.append(checkBox, content, button);
+})
