@@ -1,6 +1,8 @@
 body {
   text-align: center;
   cursor: pointer;
+  color: rgb(179, 177, 177);
+  font-weight: bold;
 }
 
 #calendar-table {
@@ -37,7 +39,7 @@ tbody > tr > td > p {
   margin-right: 30px;
 }
 
-span {
+#month, #year {
   font-size: 70px;
   font-weight: 1000;
   color: rgba(204, 105, 235, 0.781);
