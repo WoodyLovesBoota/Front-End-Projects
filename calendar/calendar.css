@@ -6,13 +6,14 @@ body {
 }
 
 #calendar-table {
-  width: 560px;
-  height: 400px;
+  width: auto;
+  margin: 0;
 }
 
 td {
-  width: 50px;
-  height: 50px;
+  line-height: 70px;
+  margin: 0;
+  width: 70px;
 }
 
 div {
@@ -20,19 +21,22 @@ div {
 }
 
 .choiced {
-  color: blue;
+  color: rgb(146, 146, 240);
   font-weight: bold;
+}
+
+tbody > tr > td > p {
+  margin: 0;
 }
 
 .today > p {
   color: white;
-  font-weight: bold;
-  background-color: rgb(6, 78, 6);
+  background-color: rgba(222, 152, 243, 0.781);
   border-radius: 50%;
-}
-
-tbody > tr > td > p {
-  line-height: 45px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 10px;
 }
 
 #month {
@@ -40,11 +44,16 @@ tbody > tr > td > p {
 }
 
 #month, #year {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 1000;
   color: rgba(204, 105, 235, 0.781);
+  width: auto;
 }
 
 .arrow {
   font-size: 30px;
+}
+
+#days td{
+  line-height: 32px;
 }
