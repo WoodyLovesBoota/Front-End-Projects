@@ -32,3 +32,17 @@ div {
 tbody > tr > td > p {
   line-height: 45px;
 }
+
+#month {
+  margin-right: 30px;
+}
+
+span {
+  font-size: 70px;
+  font-weight: 1000;
+  color: rgba(204, 105, 235, 0.781);
+}
+
+.arrow {
+  font-size: 30px;
+}

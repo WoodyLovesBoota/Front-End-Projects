@@ -14,9 +14,22 @@ const drawCalendar = () => {
   let firstDay = new Date(nowYear, nowMonth - 1, 1).getDay();
   let totalRow = Math.ceil((firstDay + getDateOfMonth(nowYear, nowMonth)) / 7);
   let past = 7 - firstDay;
-
-  document.getElementById("year").innerText = nowYear.toString() + "년 ";
-  document.getElementById("month").innerText = nowMonth.toString() + "월";
+  let monthToEng;
+  if(nowMonth===1) monthToEng = "Jan";
+  else if(nowMonth===2) monthToEng = "Feb";
+  else if(nowMonth===3) monthToEng = "Mar";
+  else if(nowMonth===4) monthToEng = "Apr";
+  else if(nowMonth===5) monthToEng = "May";
+  else if(nowMonth===6) monthToEng = "Jun";
+  else if(nowMonth===7) monthToEng = "Jul";
+  else if(nowMonth===8) monthToEng = "Aug";
+  else if(nowMonth===9) monthToEng = "Sep";
+  else if(nowMonth===10) monthToEng = "Oct";
+  else if(nowMonth===11) monthToEng = "Nov";
+  else monthToEng = "Dec";
+  
+  document.getElementById("year").innerText = nowYear.toString();
+  document.getElementById("month").innerText = monthToEng;
 
   while (calendarBodyTable.rows.length > 0) {
     calendarBodyTable.deleteRow(calendarBodyTable.rows.length - 1);
