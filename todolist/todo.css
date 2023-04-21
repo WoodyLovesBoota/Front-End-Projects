@@ -10,3 +10,42 @@ header p {
 header p span {
     color: rgb(199, 145, 250);
 }
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 20px;
+}
+
+ul li{
+    position : relative;
+    margin-bottom: 10px;
+}
+
+ul li span {
+    display: inline-block;
+    margin: 0px 30px;
+    width: 200px;
+    color: rgb(131, 130, 130);
+}
+
+ul li button {
+    margin: 0px;
+    border: none;
+    font-weight: bolder;
+    background-color: white;
+    color: rgb(190, 190, 190);
+}
+
+ul li label {
+    position: absolute;
+    top: 20%;
+    display: inline-block;
+    border: 1px solid rgb(190, 189, 189);
+    width: 17px;
+	height: 17px;
+}
+
+ul li label input {
+    display: none;
+}

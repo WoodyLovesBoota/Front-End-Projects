@@ -31,13 +31,14 @@ const drawTodos = () => {
     let button = document.createElement("button");
     let checkBox = document.createElement("input");
     checkBox.setAttribute("type", "checkbox");
-  
+    let label = document.createElement("label")
+    label.appendChild(checkBox);
     content.innerText = e;
     button.innerHTML = "X"
     button.setAttribute("onclick", `deleteTodo(this.parentElement);`);
   
     todoList.appendChild(item);
-    item.append(checkBox, content, button);
+    item.append(label, content, button);
   });
 };
 
@@ -45,4 +46,3 @@ window.onload = () => {
   drawTodos();
 }
 
-// TODO : delete todo
