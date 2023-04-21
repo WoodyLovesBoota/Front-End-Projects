@@ -11,6 +11,11 @@ header p span {
     color: rgb(199, 145, 250);
 }
 
+main {
+    margin: 50px auto;
+    
+}
+
 ul {
     list-style: none;
     padding-left: 0px;
@@ -48,4 +53,27 @@ ul li label {
 
 ul li label input {
     display: none;
+}
+
+/* Todo : check 되었을 때 전체 밑줄 (css or js)*/
+ul li label input:checked{
+    
+}
+
+#todo-input {
+    border: none;
+    border-bottom: rgb(190, 189, 189) 3px solid;
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 30px;
+    color: rgb(165, 164, 164);
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+}
+
+/* Todo : focus 되었을 때 커서만 보이게 테두리말고*/
+#todo-input:focus {
+
 }
