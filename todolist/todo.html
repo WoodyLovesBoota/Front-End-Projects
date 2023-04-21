@@ -12,16 +12,17 @@
         <hr>
     </header>
     <main>
-        <div>
-            <form>
-                <input id="todo-input" type="text" placeholder="할 일을 입력하세요" onchange="setTodo()">
-            </form>
-        </div>
+ 
         <div id="todos-box">
             <ul id="todos">
 
             </ul>
 
+        </div>
+        <div>
+            <form>
+                <input id="todo-input" required type="text" placeholder="Add your ToDo" onchange="setTodo()">
+            </form>
         </div>
     </main>
     <script src="./todo.js"></script>
