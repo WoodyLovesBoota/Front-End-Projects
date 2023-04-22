@@ -53,18 +53,16 @@ ul li input {
 ul li input:checked + label::after {
     content: 'V';
     color: lightgray;
-}
-
-ul li input:checked + label::after {
-    content: 'V';
-    color: lightgray;
     top: -5px;
     left: 1px;
     position: absolute;
     font-weight: 700;
 }
 
-/* Todo : check 되었을 때 전체 밑줄 (css or js)*/
+ul li input:checked ~ span {
+    text-decoration: line-through;
+}
+
 ul li label {
     display: inline-block;
     border: 1px solid lightgray;
