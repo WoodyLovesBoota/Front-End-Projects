@@ -65,7 +65,7 @@ ul li input:checked ~ span {
 
 ul li label {
     display: inline-block;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
     width: 17px;
 	height: 17px;
     top: 30%;
@@ -79,7 +79,7 @@ ul li label {
     border-bottom: lightgray 2px solid;
     width: 300px;
     height: 30px;
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 30px;
     color: lightgray;
     font-weight: bolder;
