@@ -7,18 +7,20 @@ body {
   width: 800px;
   height: 600px;
   margin: 30% auto;
+  background-color: rgb(48, 46, 46);
+
 }
 
 h1 {
   margin-bottom: 80px;
-  color: rgba(226, 147, 250, 0.781);
+  color: rgb(252, 101, 1);
   font-size: 80px;
 }
 
 p {
   font-size: 90px;
   margin-bottom: 50px;
-  color: rgb(179, 176, 176);
+  color: lightgray;
   font-weight: bolder;
   letter-spacing: 10px;
 }
