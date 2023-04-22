@@ -3,6 +3,10 @@ body {
   cursor: pointer;
   color: rgb(179, 177, 177);
   font-weight: bold;
+  background-color: rgb(48, 46, 46);
+  width: 700px;
+  height: 600px;
+
 }
 
 #calendar-table {
@@ -21,7 +25,7 @@ div {
 }
 
 .choiced {
-  color: rgb(146, 146, 240);
+  color: rgb(252, 101, 1);
   font-weight: bold;
 }
 
@@ -31,7 +35,8 @@ tbody > tr > td > p {
 
 .today > p {
   color: white;
-  background-color: rgba(222, 152, 243, 0.781);
+  background-color:rgb(252, 101, 1);
+
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -46,7 +51,7 @@ tbody > tr > td > p {
 #month, #year {
   font-size: 50px;
   font-weight: 1000;
-  color: rgba(204, 105, 235, 0.781);
+  color: rgb(252, 101, 1);
   width: auto;
 }
 
