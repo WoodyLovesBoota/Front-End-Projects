@@ -1,14 +1,18 @@
+body {
+    background-color: rgb(48, 46, 46);
+}
+
 header p {
     font-size: 80px;
     font-weight: bolder;
     margin: 20px 40px;
     word-spacing: 10px;
     letter-spacing: 10px;
-    color: rgb(175, 173, 173);
+    color: lightgray;
 }
 
 header p span {
-    color: rgb(199, 145, 250);
+    color: rgb(252, 101, 1);
 }
 
 main {
@@ -31,22 +35,22 @@ ul li span {
     display: inline-block;
     margin: 0px 30px;
     width: 200px;
-    color: rgb(131, 130, 130);
+    color: lightgray
 }
 
 ul li button {
     margin: 0px;
     border: none;
     font-weight: bolder;
-    background-color: white;
-    color: rgb(190, 190, 190);
+    background-color: rgb(48, 46, 46);
+    color: lightgray
 }
 
 ul li label {
     position: absolute;
     top: 20%;
     display: inline-block;
-    border: 1px solid rgb(190, 189, 189);
+    border: 1px solid lightgray;
     width: 17px;
 	height: 17px;
 }
@@ -61,13 +65,15 @@ ul li label input:checked{
 }
 
 #todo-input {
-    border: none;
-    border-bottom: rgb(190, 189, 189) 3px solid;
+    position: fixed;
+    bottom: 200px;
+    border: none 0px 0px 5px 0px;
+    border-bottom: lightgray;
     width: 300px;
     height: 30px;
     font-size: 15px;
     margin-top: 30px;
-    color: rgb(165, 164, 164);
+    color: lightgray;
     font-weight: bolder;
     letter-spacing: 1.5px;
     word-spacing: 3px;
@@ -75,5 +81,5 @@ ul li label input:checked{
 
 /* Todo : focus 되었을 때 커서만 보이게 테두리말고*/
 #todo-input:focus {
-
+    
 }
