@@ -46,22 +46,32 @@ ul li button {
     color: lightgray
 }
 
-ul li label {
+ul li input {
+    display: none;
+}
+
+ul li input:checked + label::after {
+    content: 'V';
+    color: lightgray;
+}
+
+ul li input:checked + label::after {
+    content: 'V';
+    color: lightgray;
+    top: -5px;
+    left: 1px;
     position: absolute;
-    top: 20%;
+    font-weight: 700;
+}
+
+/* Todo : check 되었을 때 전체 밑줄 (css or js)*/
+ul li label {
     display: inline-block;
     border: 1px solid lightgray;
     width: 17px;
 	height: 17px;
-}
-
-ul li label input {
-    display: none;
-}
-
-/* Todo : check 되었을 때 전체 밑줄 (css or js)*/
-ul li label input:checked{
-    
+    top: 30%;
+    position: absolute;
 }
 
 #todo-input {

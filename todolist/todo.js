@@ -31,14 +31,15 @@ const drawTodos = () => {
     let button = document.createElement("button");
     let checkBox = document.createElement("input");
     checkBox.setAttribute("type", "checkbox");
+    checkBox.setAttribute("id", getKeyByValue(todos, e));
     let label = document.createElement("label")
-    label.appendChild(checkBox);
+    label.setAttribute("for", getKeyByValue(todos, e));
     content.innerText = e;
     button.innerHTML = "X"
     button.setAttribute("onclick", `deleteTodo(this.parentElement);`);
-  
+    
     todoList.appendChild(item);
-    item.append(label, content, button);
+    item.append(checkBox, label,  content, button);
   });
 };
 
