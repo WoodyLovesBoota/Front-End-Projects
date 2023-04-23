@@ -6,6 +6,11 @@ body {
     letter-spacing: 1px;
 }
 
+a {
+    text-decoration: none;
+    color: lightgray;
+}
+
 h1 {
     text-align: center;
 }
@@ -31,4 +36,5 @@ nav ul li {
     border-right: 1px solid lightgray;
     padding-right: 13px;
     margin-left: 10px;
+    cursor: pointer;
 }
