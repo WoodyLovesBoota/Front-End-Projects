@@ -26,5 +26,13 @@ nav ul li:nth-child(2) {
 
 .card p {
     color: black;
+    font-weight: 800;
     margin: 5px;
+}
+
+.card img {
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
 }
