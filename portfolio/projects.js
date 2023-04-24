@@ -14,7 +14,7 @@ const projects = {
         },
         {
             "name" : "Todo-List",
-            "code" : "../../todo/todo.html",
+            "code" : "../../todolist/todo.html",
             "image" : "../image/todo.jpg",
             "detail" : ""
         }
