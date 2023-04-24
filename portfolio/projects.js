@@ -1,4 +1,4 @@
-{
+const projects = {
     "basic" : [
         {
             "name" : "Calendar",
@@ -13,4 +13,6 @@
             "detail" : ""
         }
     ]
-}
+};
+
+export default (projects);
