@@ -41,3 +41,8 @@ nav ul li {
     margin: 0px;
     cursor: pointer;
 }
+
+nav ul li:hover {
+    background: linear-gradient(to right, rgb(252, 101, 1), transparent);
+}
+
