@@ -1,7 +1,7 @@
 body {
   text-align: center;
   cursor: pointer;
-  color: rgb(179, 177, 177);
+  color: lightgray;
   font-weight: bold;
   background-color: rgb(48, 46, 46);
   width: 700px;
@@ -64,6 +64,7 @@ tbody > tr > td > p {
 }
 
 #description {
+  margin-top: 50px;
   text-align: start;
   line-height: 25px;
 }

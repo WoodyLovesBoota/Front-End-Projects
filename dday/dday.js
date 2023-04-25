@@ -44,7 +44,7 @@ const calcTime = () => {
   main.appendChild(content2);
 };
 
-let desc = projects.basic[0].detail;
+let desc = projects.basic[1].detail;
 let descDiv = document.querySelector("#description");
 let due = document.createElement('p');
 let dueLabel = document.createElement('span');
