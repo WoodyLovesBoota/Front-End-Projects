@@ -1,5 +1,4 @@
 import projects from "./projects.js";
-console.log(projects);
 
 projects["basic"].forEach((e,i) => {
     console.log(e)
