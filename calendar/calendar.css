@@ -6,7 +6,7 @@ body {
   background-color: rgb(48, 46, 46);
   width: 700px;
   height: 600px;
-
+  margin: 50px;
 }
 
 #calendar-table {
