@@ -9,6 +9,9 @@ const setTodo = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
+let input = document.querySelector("#todo-input");
+input.addEventListener("change", setTodo);
+
 const getKeyByValue = (object, value) => {
   return Object.keys(object).find(key => object[key] === value);
 }
@@ -38,10 +41,11 @@ const drawTodos = () => {
     label.setAttribute("for", getKeyByValue(todos, e));
     content.innerText = e;
     button.innerHTML = "X"
-    button.setAttribute("onclick", `deleteTodo(this.parentElement);`);
     
     todoList.appendChild(item);
     item.append(checkBox, label,  content, button);
+    button.addEventListener("click", deleteTodo(item));
+
   });
 };
 
