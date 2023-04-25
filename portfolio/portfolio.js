@@ -1,7 +1,6 @@
 import projects from "./projects.js";
 
 projects["basic"].forEach((e,i) => {
-    console.log(e)
     let cardArr = document.getElementsByClassName("project-cards")[0];
     let card = document.createElement("div");
     card.setAttribute("class", "card");
