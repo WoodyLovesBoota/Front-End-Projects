@@ -6,9 +6,8 @@
 body {
   width: 800px;
   height: 350px;
-  margin: 30% auto;
   background-color: rgb(48, 46, 46);
-
+  margin: 50px;
 }
 
 h1 {
@@ -23,4 +22,18 @@ p {
   color: lightgray;
   font-weight: bolder;
   letter-spacing: 10px;
+}
+
+#description {
+  margin-top: 100px;
+}
+
+#description p {
+  text-align: start;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
