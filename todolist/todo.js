@@ -1,12 +1,20 @@
 import projects from "../portfolio/projects.js";
 
+// TODO : localStorage 로 checked 받아서 다시쓰는걸로 고치기
+// 지금은 꼬여서 어쩔땐 localStorage로 가고 어쩔땐 그냥 input checked 로 감
+
 let date = new Date()
 let todos = localStorage.length === 0 ? {} : JSON.parse(localStorage.getItem("todos"));
+
 
 const setTodo = () => {
   let todoItem = document.getElementById("todo-input").value;
   todos[date.getTime()] = todoItem;
   localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+const setChecks = () => {
+  localStorage.setItem("checks", checkedTodo);
 }
 
 let input = document.querySelector("#todo-input");
@@ -21,6 +29,8 @@ const deleteTodo = (item) => {
   let key = getKeyByValue(todos, target);
   delete todos[key];
   localStorage.setItem("todos", JSON.stringify(todos));
+  if(checkedTodo.indexOf(target)!==-1) checkedTodo.splice(checkedTodo.indexOf(target),1);
+  localStorage.setItem("checks", checkedTodo);
   drawTodos();
   drawChecked();
 }
@@ -49,7 +59,9 @@ const drawTodos = () => {
     checkBox.addEventListener("change", (event) => {
       if(event.currentTarget.checked) checkedTodo.push(e);
       else checkedTodo.splice(checkedTodo.indexOf(e),1);
-      drawChecked();
+      setChecks();
+      // drawChecked();
+
     })
     todoList.appendChild(item);
     item.append(checkBox, label,  content, button);
@@ -61,10 +73,22 @@ const drawChecked = () => {
   let item = document.querySelectorAll(".check-box");
   item.forEach(e => {
     let text = e.parentElement.children[2];
-    if(checkedTodo.indexOf(text.innerText)!==-1) {
+    if(checkedTodo.indexOf(String(text.innerText))!==-1) {
       text.classList.add("checked");
       e.parentElement.firstChild.classList.add("v");
     }
+  })
+}
+
+const drawCheckedWhenRefresh = () => {
+  let item = document.querySelectorAll(".check-box");
+  item.forEach(e => {
+    let text = e.parentElement.children[2];
+    let checked = localStorage.getItem("checks");
+    if(checked.indexOf(String(text.innerText))!==-1) {
+      text.classList.add("checked");
+      e.parentElement.firstChild.classList.add("v");
+    }  
   })
 }
 
@@ -97,10 +121,11 @@ const drawDescription = () => {
 };
 
 
-// window.onload = () => {
+window.onload = () => {
   console.log('start')
   drawTodos();
   drawDescription();
   drawChecked();
-// }
+  drawCheckedWhenRefresh();
+}
 

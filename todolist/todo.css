@@ -60,6 +60,14 @@ ul li input {
     font-weight: 700;
 }
 
+ul li input:checked + label::after {
+    content: 'V';
+    color: lightgray;
+    top: -5px;
+    left: 1px;
+    position: absolute;
+    font-weight: 700;
+}
 
 ul li input:checked ~ span {
     text-decoration: line-through;
