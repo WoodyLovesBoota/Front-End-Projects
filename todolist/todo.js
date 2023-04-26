@@ -45,7 +45,7 @@ const drawTodos = () => {
     
     todoList.appendChild(item);
     item.append(checkBox, label,  content, button);
-    button.addEventListener("click", deleteTodo(item));
+    button.addEventListener("click", () => {deleteTodo(item)});
 
   });
 };
