@@ -51,7 +51,7 @@ ul li input {
     display: none;
 }
 
-ul li input:checked + label::after {
+.v + label::after {
     content: 'V';
     color: lightgray;
     top: -5px;
@@ -60,7 +60,12 @@ ul li input:checked + label::after {
     font-weight: 700;
 }
 
+
 ul li input:checked ~ span {
+    text-decoration: line-through;
+}
+
+.checked {
     text-decoration: line-through;
 }
 

@@ -17,13 +17,15 @@ const getKeyByValue = (object, value) => {
 }
 
 const deleteTodo = (item) => {
-  console.log("a")
   let target = item.querySelector("span").innerText;
   let key = getKeyByValue(todos, target);
   delete todos[key];
   localStorage.setItem("todos", JSON.stringify(todos));
   drawTodos();
+  drawChecked();
 }
+
+let checkedTodo = [];
 
 const drawTodos = () => {
   let list = document.getElementById("todos");
@@ -38,17 +40,33 @@ const drawTodos = () => {
     let checkBox = document.createElement("input");
     checkBox.setAttribute("type", "checkbox");
     checkBox.setAttribute("id", getKeyByValue(todos, e));
+    checkBox.setAttribute("class", "check-box");
+
     let label = document.createElement("label")
     label.setAttribute("for", getKeyByValue(todos, e));
     content.innerText = e;
     button.innerHTML = "X"
-    
+    checkBox.addEventListener("change", (event) => {
+      if(event.currentTarget.checked) checkedTodo.push(e);
+      else checkedTodo.splice(checkedTodo.indexOf(e),1);
+      drawChecked();
+    })
     todoList.appendChild(item);
     item.append(checkBox, label,  content, button);
     button.addEventListener("click", () => {deleteTodo(item)});
-
   });
 };
+
+const drawChecked = () => {
+  let item = document.querySelectorAll(".check-box");
+  item.forEach(e => {
+    let text = e.parentElement.children[2];
+    if(checkedTodo.indexOf(text.innerText)!==-1) {
+      text.classList.add("checked");
+      e.parentElement.firstChild.classList.add("v");
+    }
+  })
+}
 
 const drawDescription = () => {
   let desc = projects.basic[2].detail;
@@ -78,8 +96,11 @@ const drawDescription = () => {
   descDiv.append(due, hour, skill, detail);
 };
 
-window.onload = () => {
+
+// window.onload = () => {
+  console.log('start')
   drawTodos();
   drawDescription();
-}
+  drawChecked();
+// }
 
