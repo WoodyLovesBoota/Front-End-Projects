@@ -17,6 +17,7 @@ const getKeyByValue = (object, value) => {
 }
 
 const deleteTodo = (item) => {
+  console.log("a")
   let target = item.querySelector("span").innerText;
   let key = getKeyByValue(todos, target);
   delete todos[key];
