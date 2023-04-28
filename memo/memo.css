@@ -30,9 +30,12 @@ textarea {
 
 .card {
   margin: 5px;
-  background-color: lightgray;
-  color: rgb(48, 46, 46);
+  background-color: rgb(227, 255, 128);
+  color: rgb(104, 103, 103);
+  font-size: 16px;
+  font-weight: 600;
   padding: 3px;
   width: 100px;
   height: 150px;
+  cursor: pointer;
 }
