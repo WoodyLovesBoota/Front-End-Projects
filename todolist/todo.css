@@ -8,7 +8,6 @@ header p {
     font-weight: bolder;
     margin: 20px 40px;
     word-spacing: 10px;
-    letter-spacing: 10px;
     color: lightgray;
 }
 
@@ -18,7 +17,6 @@ header p span {
 
 main {
     margin: 50px auto;
-    
 }
 
 ul {
@@ -50,28 +48,6 @@ ul li button {
 ul li input {
     display: none;
 }
-
-/* .v + label::after {
-    content: 'V';
-    color: lightgray;
-    top: -5px;
-    left: 1px;
-    position: absolute;
-    font-weight: 700;
-} */
-
-/* ul li input:checked + label::after {
-    content: 'V';
-    color: lightgray;
-    top: -5px;
-    left: 1px;
-    position: absolute;
-    font-weight: 700;
-} */
-
-/* ul li input:checked ~ span {
-    text-decoration: line-through;
-} */
 
 .checked input ~ span {
     text-decoration: line-through;
