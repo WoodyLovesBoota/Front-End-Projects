@@ -4,6 +4,14 @@ body {
   color: lightgray;
 }
 
+header p {
+  font-size: 60px;
+  font-weight: bolder;
+  margin: 20px 10px;
+  word-spacing: 10px;
+  color: lightgray;
+}
+
 header p span {
   color: rgb(252, 101, 1);
 }
