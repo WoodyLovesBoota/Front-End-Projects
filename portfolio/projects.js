@@ -25,6 +25,10 @@ const todoDetail = [
     <br>Todo 의 체크박스를 클릭하면 한 일로 처리되도록 구현하였고, X 버튼을 누르면 localStrorage 와 화면에서 모두 삭제되도록 구현하였다."
 ];
 
+const memoDetail = [
+    "2023-04-28 ~ "
+];
+
     
 
 const projects = {
@@ -46,6 +50,12 @@ const projects = {
             "code" : "../../todolist/todo.html",
             "image" : "../image/todo.jpg",
             "detail" : todoDetail
+        },
+        {
+            "name" : "Memo",
+            "code" : "../../memo/memo.html",
+            "image" : "",
+            "detail" : memoDetail
         }
     ]
 };
