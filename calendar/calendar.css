@@ -35,7 +35,7 @@ tbody > tr > td > p {
 
 .today > p {
   color: white;
-  background-color:rgb(252, 101, 1);
+  background-color: rgb(252, 101, 1);
 
   border-radius: 50%;
   width: 50px;
@@ -48,7 +48,8 @@ tbody > tr > td > p {
   margin-right: 30px;
 }
 
-#month, #year {
+#month,
+#year {
   font-size: 50px;
   font-weight: 1000;
   color: rgb(252, 101, 1);
@@ -59,7 +60,7 @@ tbody > tr > td > p {
   font-size: 30px;
 }
 
-#days td{
+#days td {
   line-height: 32px;
 }
 

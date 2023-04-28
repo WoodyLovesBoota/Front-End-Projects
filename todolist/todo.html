@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TODO-List</title>
-    <link rel="stylesheet" href="./todo.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./todo.css" />
+  </head>
+  <body>
     <header>
-        <p><span>T</span>o <span>D</span>o</p>
-        <hr>
+      <p><span>T</span>o <span>D</span>o</p>
+      <hr />
     </header>
     <main>
- 
-        <div id="todos-box">
-            <ul id="todos">
-
-            </ul>
-
-        </div>
-        <div>
-            <form>
-                <input id="todo-input" autofocus required type="text" placeholder="Add your ToDo">
-            </form>
-        </div>
-        <div id="description"></div>
+      <div id="todos-box">
+        <ul id="todos"></ul>
+      </div>
+      <div>
+        <form>
+          <input
+            id="todo-input"
+            autofocus
+            required
+            type="text"
+            placeholder="Add your ToDo"
+          />
+        </form>
+      </div>
+      <div id="description"></div>
     </main>
     <script type="module" src="./todo.js"></script>
-</body>
+  </body>
 </html>

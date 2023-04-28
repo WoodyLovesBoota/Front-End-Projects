@@ -17,19 +17,19 @@ const drawCalendar = () => {
   let totalRow = Math.ceil((firstDay + getDateOfMonth(nowYear, nowMonth)) / 7);
   let past = 7 - firstDay;
   let monthToEng;
-  if(nowMonth===1) monthToEng = "Jan";
-  else if(nowMonth===2) monthToEng = "Feb";
-  else if(nowMonth===3) monthToEng = "March";
-  else if(nowMonth===4) monthToEng = "April";
-  else if(nowMonth===5) monthToEng = "May";
-  else if(nowMonth===6) monthToEng = "June";
-  else if(nowMonth===7) monthToEng = "July";
-  else if(nowMonth===8) monthToEng = "Aug";
-  else if(nowMonth===9) monthToEng = "Sep";
-  else if(nowMonth===10) monthToEng = "Oct";
-  else if(nowMonth===11) monthToEng = "Nov";
+  if (nowMonth === 1) monthToEng = "Jan";
+  else if (nowMonth === 2) monthToEng = "Feb";
+  else if (nowMonth === 3) monthToEng = "March";
+  else if (nowMonth === 4) monthToEng = "April";
+  else if (nowMonth === 5) monthToEng = "May";
+  else if (nowMonth === 6) monthToEng = "June";
+  else if (nowMonth === 7) monthToEng = "July";
+  else if (nowMonth === 8) monthToEng = "Aug";
+  else if (nowMonth === 9) monthToEng = "Sep";
+  else if (nowMonth === 10) monthToEng = "Oct";
+  else if (nowMonth === 11) monthToEng = "Nov";
   else monthToEng = "Dec";
-  
+
   document.getElementById("year").innerText = nowYear.toString();
   document.getElementById("month").innerText = monthToEng;
 
@@ -83,26 +83,26 @@ const drawDescription = () => {
   let desc = projects.basic[0].detail;
   console.log(desc);
   let descDiv = document.querySelector("#description");
-  let due = document.createElement('p');
-  let dueLabel = document.createElement('span');
-  let dueContent = document.createElement('span');
+  let due = document.createElement("p");
+  let dueLabel = document.createElement("span");
+  let dueContent = document.createElement("span");
   dueLabel.innerText = "구현 기간 : ";
   dueContent.innerText = desc[0];
   due.append(dueLabel, dueContent);
-  let hour = document.createElement('p');
-  let hourLabel = document.createElement('span');
-  let hourContent = document.createElement('span');
+  let hour = document.createElement("p");
+  let hourLabel = document.createElement("span");
+  let hourContent = document.createElement("span");
   hourLabel.innerText = "소모 시간 : ";
   hourContent.innerText = desc[1];
   hour.append(hourLabel, hourContent);
-  let skill = document.createElement('p');
-  let skillLabel = document.createElement('span');
-  let skillContent = document.createElement('span');
+  let skill = document.createElement("p");
+  let skillLabel = document.createElement("span");
+  let skillContent = document.createElement("span");
   skillLabel.innerText = "사용한 기능 : ";
   skillContent.innerText = desc[2];
   skill.append(skillLabel, skillContent);
-  let detail = document.createElement('p');
-  let detailContent = document.createElement('span');
+  let detail = document.createElement("p");
+  let detailContent = document.createElement("span");
   detailContent.innerHTML = desc[3];
   detail.append(detailContent);
   descDiv.append(due, hour, skill, detail);
@@ -130,8 +130,6 @@ window.onload = () => {
   drawCalendar();
   drawDescription();
 };
-
-
 
 const clicked = (cell) => {
   if (document.getElementsByClassName("choiced")[0])
