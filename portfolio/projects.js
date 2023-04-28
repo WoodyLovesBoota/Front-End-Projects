@@ -17,13 +17,14 @@ const ddayDetail = [
 ];
 
 const todoDetail = [
-    "2023-04-21 ~ 2023-04-23", 
-    "6hours", 
+    "2023-04-21 ~ 2023-04-23 / 2023-04-28", 
+    "8hours", 
     "localStorage, JS object controll",
     "Local Stroage 와 input form 을 이용하여 Todo List 를 만들었다.\
     <br>input form 에 할 일을 기록하면 localStorage 에 저장되고, 이를 화면에 출력해주는 기능을 구현하였다.\
     <br>Todo 의 체크박스를 클릭하면 한 일로 처리되도록 구현하였고, X 버튼을 누르면 localStrorage 와 화면에서 모두 삭제되도록 구현하였다."
 ];
+
     
 
 const projects = {
