@@ -56,13 +56,19 @@ const drawTodos = () => {
     label.setAttribute("for", getKeyByValue(todos, e));
     content.innerText = e;
     button.innerHTML = "X"
-    checkBox.addEventListener("change", (event) => {
-      if(event.currentTarget.checked) checkedTodo.push(e);
-      else checkedTodo.splice(checkedTodo.indexOf(e),1);
-      setChecks();
+    // checkBox.addEventListener("change", (event) => {
+    //   if(event.currentTarget.checked) checkedTodo.push(e);
+    //   else checkedTodo.splice(checkedTodo.indexOf(e),1);
+    //   setChecks();
       // drawChecked();
 
-    })
+    // })
+    checkBox.addEventListener("change", (event) => {
+      setChecks(event);
+    });
+    if(checkedTodo.indexOf(e)!==-1) {
+      item.classList.add("checked");
+    }
     todoList.appendChild(item);
     item.append(checkBox, label,  content, button);
     button.addEventListener("click", () => {deleteTodo(item)});
