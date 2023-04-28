@@ -1,34 +1,22 @@
 import projects from "../portfolio/projects.js";
 
-// TODO : localStorage 로 checked 받아서 다시쓰는걸로 고치기
-// 지금은 꼬여서 어쩔땐 localStorage로 가고 어쩔땐 그냥 input checked 로 감
-
 let date = new Date()
 let todos = localStorage.length === 0 ? {} : JSON.parse(localStorage.getItem("todos"));
-let checkedTodo = localStorage.length > 0 ? [] : localStorage.getItem("checks");
-
+let checkedTodo = localStorage.length < 2 ? [] : localStorage.getItem("checks").split(',');
+let input = document.querySelector("#todo-input");
+input.addEventListener("change", setTodo);
 
 const setTodo = () => {
   let todoItem = document.getElementById("todo-input").value;
   todos[date.getTime()] = todoItem;
   localStorage.setItem("todos", JSON.stringify(todos));
+  drawTodos();
 }
 
-    // checkBox.addEventListener("change", (event) => {
-    //   if(event.currentTarget.checked) checkedTodo.push(e);
-    //   else checkedTodo.splice(checkedTodo.indexOf(e),1);
-    //   setChecks();
-      // drawChecked();
-
-    // })
-console.log(checkedTodo);
 const setChecks = () => {
   localStorage.setItem("checks", checkedTodo);
   drawTodos();
 }
-
-let input = document.querySelector("#todo-input");
-input.addEventListener("change", setTodo);
 
 const getKeyByValue = (object, value) => {
   return Object.keys(object).find(key => object[key] === value);
@@ -80,29 +68,6 @@ const drawTodos = () => {
   });
 };
 
-const drawChecked = () => {
-  let item = document.querySelectorAll(".check-box");
-  item.forEach(e => {
-    let text = e.parentElement.children[2];
-    if(checkedTodo.indexOf(String(text.innerText))!==-1) {
-      text.classList.add("checked");
-      e.parentElement.firstChild.classList.add("v");
-    }
-  })
-}
-
-const drawCheckedWhenRefresh = () => {
-  let item = document.querySelectorAll(".check-box");
-  item.forEach(e => {
-    let text = e.parentElement.children[2];
-    let checked = localStorage.getItem("checks");
-    if(checked.indexOf(String(text.innerText))!==-1) {
-      text.classList.add("checked");
-      e.parentElement.firstChild.classList.add("v");
-    }  
-  })
-}
-
 const drawDescription = () => {
   let desc = projects.basic[2].detail;
   let descDiv = document.querySelector("#description");
@@ -135,7 +100,5 @@ const drawDescription = () => {
 window.onload = () => {
   drawTodos();
   drawDescription();
-  // drawChecked();
-  // drawCheckedWhenRefresh();
 }
 
