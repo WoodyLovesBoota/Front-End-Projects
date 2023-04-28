@@ -30,6 +30,7 @@ const drawMemos = () => {
     let content = document.createElement("p");
     content.innerText = e.length > 10 ? e.substr(0, 9) + "..." : e;
     let exit = document.createElement("p");
+    //TODO : deletebutton click 하면 삭제시키기
     exit.classList.add("delete-button");
     exit.innerText = "X";
     memoCard.append(content, exit);
