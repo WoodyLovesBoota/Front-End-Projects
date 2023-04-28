@@ -4,6 +4,10 @@ nav ul li:nth-child(2) {
     background: linear-gradient(to right, rgb(252, 101, 1), transparent);
 }
 
+nav ul li:nth-child(1) {
+    background: none
+}
+
 #basic p span {
     border-bottom: 1px solid lightgray;
     padding-bottom: 5px;

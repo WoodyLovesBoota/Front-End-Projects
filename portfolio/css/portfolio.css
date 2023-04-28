@@ -42,7 +42,6 @@ nav ul li {
     cursor: pointer;
 }
 
-nav ul li:hover {
+nav ul li:nth-child(1) {
     background: linear-gradient(to right, rgb(252, 101, 1), transparent);
 }
-
