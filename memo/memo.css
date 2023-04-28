@@ -47,3 +47,16 @@ textarea {
   height: 150px;
   cursor: pointer;
 }
+
+#memo-writer {
+  margin-left: 10px;
+}
+
+#memo-writer button {
+  border: none;
+  background-color: rgb(48, 46, 46);
+  color: lightgray;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px 0;
+}
