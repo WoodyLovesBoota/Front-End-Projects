@@ -1,10 +1,9 @@
 import projects from "../portfolio/projects.js";
 
 let date = new Date()
-let todos = localStorage.length === 0 ? {} : JSON.parse(localStorage.getItem("todos"));
+let todos = localStorage.length < 1 ? {} : JSON.parse(localStorage.getItem("todos"));
 let checkedTodo = localStorage.length < 2 ? [] : localStorage.getItem("checks").split(',');
-let input = document.querySelector("#todo-input");
-input.addEventListener("change", setTodo);
+
 
 const setTodo = () => {
   let todoItem = document.getElementById("todo-input").value;
@@ -12,6 +11,9 @@ const setTodo = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
   drawTodos();
 }
+
+let input = document.querySelector("#todo-input");
+input.addEventListener("change", setTodo);
 
 const setChecks = () => {
   localStorage.setItem("checks", checkedTodo);
