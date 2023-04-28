@@ -5,6 +5,7 @@ import projects from "../portfolio/projects.js";
 
 let date = new Date()
 let todos = localStorage.length === 0 ? {} : JSON.parse(localStorage.getItem("todos"));
+let checkedTodo = localStorage.length > 0 ? [] : localStorage.getItem("checks");
 
 
 const setTodo = () => {
@@ -13,8 +14,17 @@ const setTodo = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
+    // checkBox.addEventListener("change", (event) => {
+    //   if(event.currentTarget.checked) checkedTodo.push(e);
+    //   else checkedTodo.splice(checkedTodo.indexOf(e),1);
+    //   setChecks();
+      // drawChecked();
+
+    // })
+console.log(checkedTodo);
 const setChecks = () => {
   localStorage.setItem("checks", checkedTodo);
+  drawTodos();
 }
 
 let input = document.querySelector("#todo-input");
@@ -35,7 +45,6 @@ const deleteTodo = (item) => {
   drawChecked();
 }
 
-let checkedTodo = [];
 
 const drawTodos = () => {
   let list = document.getElementById("todos");
@@ -56,19 +65,17 @@ const drawTodos = () => {
     label.setAttribute("for", getKeyByValue(todos, e));
     content.innerText = e;
     button.innerHTML = "X"
-    // checkBox.addEventListener("change", (event) => {
-    //   if(event.currentTarget.checked) checkedTodo.push(e);
-    //   else checkedTodo.splice(checkedTodo.indexOf(e),1);
-    //   setChecks();
-      // drawChecked();
 
-    // })
     checkBox.addEventListener("change", (event) => {
-      setChecks(event);
-    });
+      if(!item.classList.contains("checked")) checkedTodo.push(e);
+      else checkedTodo.splice(checkedTodo.indexOf(e),1);
+      setChecks();
+    })
+
     if(checkedTodo.indexOf(e)!==-1) {
       item.classList.add("checked");
     }
+
     todoList.appendChild(item);
     item.append(checkBox, label,  content, button);
     button.addEventListener("click", () => {deleteTodo(item)});
@@ -128,10 +135,9 @@ const drawDescription = () => {
 
 
 window.onload = () => {
-  console.log('start')
   drawTodos();
   drawDescription();
-  drawChecked();
-  drawCheckedWhenRefresh();
+  // drawChecked();
+  // drawCheckedWhenRefresh();
 }
 

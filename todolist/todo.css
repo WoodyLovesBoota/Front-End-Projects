@@ -51,30 +51,39 @@ ul li input {
     display: none;
 }
 
-.v + label::after {
+/* .v + label::after {
     content: 'V';
     color: lightgray;
     top: -5px;
     left: 1px;
     position: absolute;
     font-weight: 700;
-}
+} */
 
-ul li input:checked + label::after {
+/* ul li input:checked + label::after {
     content: 'V';
     color: lightgray;
     top: -5px;
     left: 1px;
     position: absolute;
     font-weight: 700;
-}
+} */
 
-ul li input:checked ~ span {
+/* ul li input:checked ~ span {
+    text-decoration: line-through;
+} */
+
+.checked input ~ span {
     text-decoration: line-through;
 }
 
-.checked {
-    text-decoration: line-through;
+.checked input + label::after {
+    content: 'V';
+    color: lightgray;
+    top: -5px;
+    left: 1px;
+    position: absolute;
+    font-weight: 700;
 }
 
 ul li label {
