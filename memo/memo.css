@@ -18,3 +18,21 @@ textarea {
   font-weight: 600;
   letter-spacing: 2px;
 }
+
+#memo-lists {
+  display: flex;
+  flex-flow: row wrap;
+  /* grid-template-columns: repeat(auto-fill, 100px); */
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 10px;
+}
+
+.card {
+  margin: 5px;
+  background-color: lightgray;
+  color: rgb(48, 46, 46);
+  padding: 3px;
+  width: 100px;
+  height: 150px;
+}

@@ -21,8 +21,9 @@ const drawMemos = () => {
   Object.values(memos).forEach((e) => {
     let section = document.querySelector("#memo-lists");
     let memoCard = document.createElement("div");
+    memoCard.classList.add("card");
     let content = document.createElement("p");
-    content.innerText = e;
+    content.innerText = e.length > 10 ? e.substr(0, 9) + "..." : e;
     memoCard.appendChild(content);
     section.appendChild(memoCard);
   });
