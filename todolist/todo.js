@@ -42,9 +42,7 @@ const deleteTodo = (item) => {
   if(checkedTodo.indexOf(target)!==-1) checkedTodo.splice(checkedTodo.indexOf(target),1);
   localStorage.setItem("checks", checkedTodo);
   drawTodos();
-  drawChecked();
 }
-
 
 const drawTodos = () => {
   let list = document.getElementById("todos");
