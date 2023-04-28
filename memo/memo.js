@@ -29,7 +29,10 @@ const drawMemos = () => {
     memoCard.classList.add("card");
     let content = document.createElement("p");
     content.innerText = e.length > 10 ? e.substr(0, 9) + "..." : e;
-    memoCard.appendChild(content);
+    let exit = document.createElement("p");
+    exit.classList.add("delete-button");
+    exit.innerText = "X";
+    memoCard.append(content, exit);
     section.appendChild(memoCard);
 
     memoCard.addEventListener("click", (event) => {

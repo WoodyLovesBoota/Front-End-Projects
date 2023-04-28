@@ -37,6 +37,7 @@ textarea {
 }
 
 .card {
+  position: relative;
   margin: 5px;
   background-color: rgb(227, 255, 128);
   color: rgb(104, 103, 103);
@@ -46,6 +47,10 @@ textarea {
   width: 100px;
   height: 150px;
   cursor: pointer;
+}
+
+.card p {
+  margin-left: 5px;
 }
 
 #memo-writer {
@@ -59,4 +64,17 @@ textarea {
   cursor: pointer;
   font-size: 18px;
   margin: 10px 0;
+}
+
+.delete-button {
+  position: absolute;
+  margin: 0;
+  top: 1px;
+  right: 2px;
+  font-size: small;
+  color: transparent;
+}
+
+.delete-button:hover {
+  color: rgb(104, 103, 103);
 }
