@@ -2,9 +2,13 @@ import projects from "../portfolio/projects.js";
 
 let date = new Date();
 let todos =
-  localStorage.length < 1 ? {} : JSON.parse(localStorage.getItem("todos"));
+  localStorage.getItem("todos") === null
+    ? {}
+    : JSON.parse(localStorage.getItem("todos"));
 let checkedTodo =
-  localStorage.length < 2 ? [] : localStorage.getItem("checks").split(",");
+  localStorage.getItem("cheks") === null
+    ? []
+    : localStorage.getItem("checks").split(",");
 
 const setTodo = () => {
   let todoItem = document.getElementById("todo-input").value;

@@ -1,6 +1,7 @@
 body {
   background-color: rgb(48, 46, 46);
   width: 600px;
+  height: 1000px;
 }
 
 header p {
@@ -72,14 +73,11 @@ ul li label {
 }
 
 #todo-input {
-  position: fixed;
-  bottom: 300px;
   border: none;
-  border-bottom: lightgray 2px solid;
   width: 600px;
   height: 30px;
   font-size: 20px;
-  margin-top: 30px;
+  margin-top: 10px;
   color: lightgray;
   font-weight: bolder;
   letter-spacing: 1.5px;
@@ -92,8 +90,8 @@ ul li label {
 }
 
 #description {
-  position: fixed;
-  bottom: 10px;
+  margin-top: 100px;
+  color: lightgray;
 }
 
 #description p {
