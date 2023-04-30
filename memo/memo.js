@@ -19,6 +19,7 @@ const setMemo = (event) => {
 
 const openLightBox = (event, content) => {
   let key = getKeyByValue(memos, content);
+  console.log(memos[key]);
   if (memos[key] !== undefined) {
     let box = document.querySelector(".light-box");
     let formArea = document.createElement("form");
@@ -44,7 +45,7 @@ const getKeyByValue = (object, value) => {
 };
 
 const deleteMemo = (content) => {
-  let key = getKeyByValue(memos, content.innerText);
+  let key = getKeyByValue(memos, content);
   delete memos[key];
   localStorage.setItem("memos", JSON.stringify(memos));
   drawMemos();
@@ -72,7 +73,7 @@ const drawMemos = () => {
     exit.classList.add("delete-button");
     exit.innerText = "X";
     exit.addEventListener("click", () => {
-      deleteMemo(content);
+      deleteMemo(e);
     });
     memoCard.append(content, exit);
     section.appendChild(memoCard);
