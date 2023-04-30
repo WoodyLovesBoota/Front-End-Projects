@@ -49,6 +49,14 @@ const deleteMemo = (content) => {
   drawMemos();
 };
 
+const saveMemo = (event, key, box) => {
+  let newCotent = event.target.value;
+  memos[key] = newCotent;
+  localStorage.setItem("memos", JSON.stringify(memos));
+  box.classList.remove("show");
+  drawMemos();
+};
+
 const drawMemos = () => {
   let section = document.querySelector("#memo-lists");
   while (section.children.length > 0) section.removeChild(section.lastChild);
