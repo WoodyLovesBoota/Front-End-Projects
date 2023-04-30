@@ -1,6 +1,6 @@
 body {
   background-color: rgb(48, 46, 46);
-  width: 800px;
+  width: 850px;
   color: lightgray;
 }
 
@@ -125,4 +125,18 @@ textarea {
 
 .unshow {
   display: none;
+}
+
+#description {
+  margin-top: 100px;
+}
+
+#description p {
+  text-align: start;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
