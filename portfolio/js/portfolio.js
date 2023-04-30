@@ -1,4 +1,4 @@
-import projects from "./projects.js";
+import projects from "../projects.js";
 
 projects["basic"].forEach((e, i) => {
   let cardArr = document.getElementsByClassName("project-cards")[0];
