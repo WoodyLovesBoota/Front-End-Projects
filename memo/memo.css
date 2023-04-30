@@ -78,3 +78,25 @@ textarea {
 .delete-button:hover {
   color: rgb(104, 103, 103);
 }
+
+.light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#light-box textarea {
+  width: 100%;
+  height: 40%;
+  background-color: rgb(227, 255, 128);
+}
+
+.unshow {
+  display: none;
+}

@@ -21,7 +21,7 @@ const setMemo = (event) => {
 const openLightBox = (event, content) => {
   let key = getKeyByValue(memos, content);
   if (memos[key] !== undefined) {
-    let box = document.querySelector("#light-box");
+    let box = document.querySelector(".light-box");
     let formArea = document.createElement("form");
     let text = document.createElement("textarea");
     text.innerText = content;
@@ -34,7 +34,7 @@ const openLightBox = (event, content) => {
     });
     formArea.append(text, saveButton);
     box.appendChild(formArea);
-    box.classList.add("show");
+    box.classList.remove("unshow");
   }
 };
 
@@ -50,10 +50,12 @@ const deleteMemo = (content) => {
 };
 
 const saveMemo = (event, key, box) => {
+  while (box.children.length > 0) box.removeChild(box.lastChild);
+
   let newCotent = event.target.value;
   memos[key] = newCotent;
   localStorage.setItem("memos", JSON.stringify(memos));
-  box.classList.remove("show");
+  box.classList.add("unshow");
   drawMemos();
 };
 
