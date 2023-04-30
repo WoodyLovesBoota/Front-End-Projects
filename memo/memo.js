@@ -17,7 +17,6 @@ const setMemo = (event) => {
   localStorage.setItem("memos", JSON.stringify(memos));
 };
 
-// TODO : Lightbox 안에 full content 넣고 보이게 하기.
 const openLightBox = (event, content) => {
   let key = getKeyByValue(memos, content);
   if (memos[key] !== undefined) {
@@ -70,7 +69,6 @@ const drawMemos = () => {
     let content = document.createElement("p");
     content.innerText = e.length > 10 ? e.substr(0, 9) + "..." : e;
     let exit = document.createElement("button");
-    //TODO : deletebutton click 하면 삭제시키기
     exit.classList.add("delete-button");
     exit.innerText = "X";
     exit.addEventListener("click", () => {
@@ -84,8 +82,6 @@ const drawMemos = () => {
     });
   });
 };
-
-// TODO : delteMemo 기능 추가 / 그에따른 삭제 버튼 추가.
 
 window.onload = () => {
   drawMemos();
