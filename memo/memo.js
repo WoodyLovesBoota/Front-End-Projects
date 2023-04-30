@@ -22,9 +22,22 @@ const openLightBox = (event, content) => {
   console.log(content);
 };
 
+const getKeyByValue = (object, value) => {
+  return Object.keys(object).find((key) => object[key] === value);
+};
+
+const deleteMemo = (content) => {
+  let key = getKeyByValue(memos, content.innerText);
+  console.log(key);
+  delete memos[key];
+  localStorage.setItem("memos", JSON.stringify(memos));
+  drawMemos();
+};
+
 const drawMemos = () => {
+  let section = document.querySelector("#memo-lists");
+  while (section.children.length > 0) section.removeChild(section.lastChild);
   Object.values(memos).forEach((e) => {
-    let section = document.querySelector("#memo-lists");
     let memoCard = document.createElement("div");
     memoCard.classList.add("card");
     let content = document.createElement("p");
@@ -33,6 +46,9 @@ const drawMemos = () => {
     //TODO : deletebutton click 하면 삭제시키기
     exit.classList.add("delete-button");
     exit.innerText = "X";
+    exit.addEventListener("click", () => {
+      deleteMemo(content);
+    });
     memoCard.append(content, exit);
     section.appendChild(memoCard);
 
