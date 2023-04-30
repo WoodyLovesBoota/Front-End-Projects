@@ -57,7 +57,7 @@ const projects = {
     {
       name: "Memo",
       code: "../../memo/memo.html",
-      image: "",
+      image: "../image/memo.jpg",
       detail: memoDetail,
     },
   ],
