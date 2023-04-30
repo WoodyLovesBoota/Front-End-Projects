@@ -1,6 +1,6 @@
 body {
   background-color: rgb(48, 46, 46);
-  width: 600px;
+  width: 800px;
   color: lightgray;
 }
 
@@ -30,7 +30,6 @@ textarea {
 #memo-lists {
   display: flex;
   flex-flow: row wrap;
-  /* grid-template-columns: repeat(auto-fill, 100px); */
   justify-content: flex-start;
   align-content: flex-start;
   margin: 10px;

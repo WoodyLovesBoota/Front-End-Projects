@@ -19,13 +19,20 @@ const ddayDetail = [
 const todoDetail = [
   "2023-04-21 ~ 2023-04-23 / 2023-04-28",
   "8hours",
-  "localStorage, JS object controll",
+  "localStorage, JS object control",
   "Local Stroage 와 input form 을 이용하여 Todo List 를 만들었다.\
     <br>input form 에 할 일을 기록하면 localStorage 에 저장되고, 이를 화면에 출력해주는 기능을 구현하였다.\
     <br>Todo 의 체크박스를 클릭하면 한 일로 처리되도록 구현하였고, X 버튼을 누르면 localStrorage 와 화면에서 모두 삭제되도록 구현하였다.",
 ];
 
-const memoDetail = ["2023-04-28 ~ "];
+const memoDetail = [
+  "2023-04-28 ~ 2023-04-30",
+  "5hours",
+  "localStorage, JS object control",
+  "Local Storage 와 textarea 를 이용하여 Memo 게시판을 만들었다.\
+  <br>textarea에 메모 내용을 입력하면 localStorage에 저장되고 이를 이용하여 게시판에 메모지가 추가된다.\
+  <br>게시판의 메모를 클릭하면 메모의 전체 내용을 볼 수 있고, 메모를 수정하여 저장할 수 있다.",
+];
 
 const projects = {
   basic: [
