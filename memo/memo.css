@@ -103,14 +103,16 @@ textarea {
   width: 100%;
   height: 100%;
   background-color: rgb(227, 255, 128);
-  color: black;
+  color: rgb(104, 103, 103);
+  padding: 20px;
+  font-weight: 800;
 }
 
 .save-button {
   position: absolute;
   margin: 0;
   top: 8px;
-  right: 2px;
+  right: -30px;
   font-size: small;
   color: rgb(104, 103, 103);
   background-color: transparent;
