@@ -19,7 +19,23 @@ const setMemo = (event) => {
 
 // TODO : Lightbox 안에 full content 넣고 보이게 하기.
 const openLightBox = (event, content) => {
-  console.log(content);
+  let key = getKeyByValue(memos, content);
+  if (memos[key] !== undefined) {
+    let box = document.querySelector("#light-box");
+    let formArea = document.createElement("form");
+    let text = document.createElement("textarea");
+    text.innerText = content;
+    let saveButton = document.createElement("button");
+    saveButton.setAttribute("type", "submit");
+    saveButton.classList.add("save-button");
+    saveButton.innerText = "v";
+    text.addEventListener("change", (event) => {
+      saveMemo(event, key, box);
+    });
+    formArea.append(text, saveButton);
+    box.appendChild(formArea);
+    box.classList.add("show");
+  }
 };
 
 const getKeyByValue = (object, value) => {
@@ -28,7 +44,6 @@ const getKeyByValue = (object, value) => {
 
 const deleteMemo = (content) => {
   let key = getKeyByValue(memos, content.innerText);
-  console.log(key);
   delete memos[key];
   localStorage.setItem("memos", JSON.stringify(memos));
   drawMemos();
@@ -42,7 +57,7 @@ const drawMemos = () => {
     memoCard.classList.add("card");
     let content = document.createElement("p");
     content.innerText = e.length > 10 ? e.substr(0, 9) + "..." : e;
-    let exit = document.createElement("p");
+    let exit = document.createElement("button");
     //TODO : deletebutton click 하면 삭제시키기
     exit.classList.add("delete-button");
     exit.innerText = "X";
