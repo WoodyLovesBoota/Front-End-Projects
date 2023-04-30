@@ -26,6 +26,7 @@ const openLightBox = (event, content) => {
     let text = document.createElement("textarea");
     text.innerText = content;
     text.setAttribute("spellcheck", "false");
+
     let saveButton = document.createElement("button");
     saveButton.setAttribute("type", "submit");
     saveButton.classList.add("save-button");

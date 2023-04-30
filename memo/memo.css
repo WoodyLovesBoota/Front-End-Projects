@@ -72,13 +72,13 @@ textarea {
   top: 1px;
   right: 2px;
   font-size: small;
-  color: rgb(104, 103, 103);
+  color: rgb(165, 164, 164);
   border: none;
   background-color: transparent;
 }
 
-.save-button:hover {
-  border: 1px solid rgb(104, 103, 103);
+.delete-button:hover {
+  border: 1px solid rgb(165, 164, 164);
 }
 
 .light-box {
@@ -114,14 +114,14 @@ textarea {
   top: 8px;
   right: -30px;
   font-size: small;
-  color: rgb(104, 103, 103);
+  color: rgb(165, 164, 164);
   background-color: transparent;
   border: none;
   font-size: larger;
 }
 
 .save-button:hover {
-  border: 1px solid rgb(104, 103, 103);
+  border: 1px solid rgb(165, 164, 164);
 }
 
 .unshow {
