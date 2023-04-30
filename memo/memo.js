@@ -68,7 +68,7 @@ const drawMemos = () => {
     let memoCard = document.createElement("div");
     memoCard.classList.add("card");
     let content = document.createElement("p");
-    content.innerText = e.length > 10 ? e.substr(0, 9) + "..." : e;
+    content.innerText = e.length > 15 ? e.substr(0, 14) + "..." : e;
     let exit = document.createElement("button");
     exit.classList.add("delete-button");
     exit.innerText = "X";
