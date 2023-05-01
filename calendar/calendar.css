@@ -63,9 +63,3 @@ tbody > tr > td > p {
 #days td {
   line-height: 32px;
 }
-
-#description {
-  margin-top: 50px;
-  text-align: start;
-  line-height: 25px;
-}

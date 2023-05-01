@@ -88,19 +88,3 @@ ul li label {
 #todo-input:focus {
   outline: none;
 }
-
-#description {
-  margin-top: 100px;
-  color: lightgray;
-}
-
-#description p {
-  color: lightgray;
-  text-align: start;
-  line-height: 25px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
