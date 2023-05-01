@@ -115,7 +115,11 @@ let scheduleInput = document.querySelector("#schedule-content");
 const saveSchedule = () => {
   let content = document.getElementById("schedule-content").value;
   let time = document.querySelector("#schedule-time").value;
-
+  /* TODO
+    1. 저장 화면에 년 월 일 시간 띠우기
+    2. 가져와서 local 에 넘기기
+    3. 로컬에서 가져와서 달력에 추가하기
+  */
   schedules[time] = content;
   localStorage.setItem("schedules", JSON.stringify(schedules));
 };
