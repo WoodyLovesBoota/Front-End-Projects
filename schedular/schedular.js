@@ -109,7 +109,6 @@ window.onload = () => {
 };
 
 const clicked = (cell) => {
-  if (document.getElementsByClassName("choiced")[0])
-    document.getElementsByClassName("choiced")[0].classList.remove("choiced");
-  cell.classList.add("choiced");
+  let clickedDate = Number(cell.innerText);
+  console.log(nowYear, nowMonth, clickedDate);
 };
