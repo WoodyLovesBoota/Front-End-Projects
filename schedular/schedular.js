@@ -17,13 +17,6 @@ const getDateOfMonth = (year, month) => {
   return totalDate;
 };
 
-const saveSchedule = () => {
-  let content = document.getElementById("schedule-content").value;
-  console.log(content);
-  schedules["1"] = content;
-  localStorage.setItem("schedules", JSON.stringify(schedules));
-};
-
 const drawCalendar = () => {
   let firstDay = new Date(nowYear, nowMonth - 1, 1).getDay();
   let totalRow = Math.ceil((firstDay + getDateOfMonth(nowYear, nowMonth)) / 7);
@@ -116,8 +109,19 @@ const next = () => {
   drawCalendar();
 };
 
+let scheduleTime = document.querySelector("schedule-time");
 let scheduleInput = document.querySelector("#schedule-content");
-scheduleInput.addEventListener("change", saveSchedule);
+
+const saveSchedule = () => {
+  let content = document.getElementById("schedule-content").value;
+  let time = document.querySelector("#schedule-time").value;
+
+  schedules[time] = content;
+  localStorage.setItem("schedules", JSON.stringify(schedules));
+};
+
+let button = document.querySelector("#submit-button");
+button.addEventListener("click", saveSchedule);
 
 window.onload = () => {
   drawCalendar();
