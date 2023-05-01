@@ -5,11 +5,23 @@ let nowYear = now.getFullYear();
 let nowMonth = now.getMonth() + 1;
 let today = [now.getFullYear(), now.getMonth() + 1, now.getDate()];
 
-let calendarTable = document.getElementById("calendar-table");
+let schedules =
+  localStorage.getItem("schedules") === null
+    ? {}
+    : JSON.parse(localStorage.getItem("schedules"));
+
 let calendarBodyTable = document.querySelector("#calendar-table-body");
+
 const getDateOfMonth = (year, month) => {
   let totalDate = new Date(year, month, 0).getDate();
   return totalDate;
+};
+
+const saveSchedule = () => {
+  let content = document.getElementById("schedule-content").value;
+  console.log(content);
+  schedules["1"] = content;
+  localStorage.setItem("schedules", JSON.stringify(schedules));
 };
 
 const drawCalendar = () => {
@@ -103,6 +115,9 @@ const next = () => {
   }
   drawCalendar();
 };
+
+let scheduleInput = document.querySelector("#schedule-content");
+scheduleInput.addEventListener("change", saveSchedule);
 
 window.onload = () => {
   drawCalendar();
