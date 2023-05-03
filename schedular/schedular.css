@@ -88,3 +88,13 @@ input[type="time"] {
 .unshow {
   display: none;
 }
+
+.bar {
+  font-size: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(221, 173, 233);
+  height: 1.5vh;
+  margin-bottom: 1vh;
+}
