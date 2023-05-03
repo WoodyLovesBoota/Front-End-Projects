@@ -140,6 +140,7 @@ button.addEventListener("click", saveSchedule);
 
 window.onload = () => {
   drawCalendar();
+  drawSchedule();
 };
 
 const clicked = (cell) => {
@@ -151,4 +152,34 @@ const clicked = (cell) => {
     addPad(nowMonth.toString()) +
     "-" +
     addPad(clickedDate.toString());
+};
+
+const drawSchedule = () => {
+  let targetSchedules =
+    schedules[addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())];
+  console.log(targetSchedules);
+  let cells = document.querySelectorAll(".cell");
+  cells.forEach((e) => {
+    // console.log(e.firstChild);
+    if (
+      e.firstChild !== null &&
+      targetSchedules[addPad(e.firstChild.innerText)] !== undefined
+    ) {
+      let targetDate = addPad(e.firstChild.innerText);
+      console.log(targetDate);
+      let dateSchedule = targetSchedules[targetDate];
+      console.log(dateSchedule);
+      Object.entries(dateSchedule).forEach(([key, value]) => {
+        console.log(key, value);
+        let bar = document.createElement("div");
+        bar.classList.add("bar");
+        let barTime = document.createElement("p");
+        let barContent = document.createElement("p");
+        barTime.innerText = key;
+        barContent.innerText = value;
+        bar.append(barTime, barContent);
+        e.appendChild(bar);
+      });
+    }
+  });
 };
