@@ -90,7 +90,7 @@ input[type="time"] {
 }
 
 .bar {
-  font-size: 8px;
+  font-size: 0.6vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
