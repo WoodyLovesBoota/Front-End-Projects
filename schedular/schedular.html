@@ -29,20 +29,22 @@
       <tbody id="calendar-table-body"></tbody>
     </table>
     <div id="schedule-maker" class="unshow">
-      <p id="schedule-date">Date</p>
-      <p id="target-date"></p>
-      <p>Time</p>
-      <form id="schedule-maker-form">
-        <input id="schedule-time" type="time" />
-        <p>Schedule</p>
-        <lael
-          ><input
-            id="schedule-content"
-            type="text"
-            placeholder="write your schedule"
-        /></lael>
-        <button id="submit-button" type="sumit">제출</button>
-      </form>
+      <div id="box">
+        <p id="schedule-date">Date</p>
+        <p id="target-date"></p>
+        <p id="schedule-time">Time</p>
+        <form id="schedule-maker-form">
+          <input id="schedule-input-time" type="time" />
+          <p id="schedule-content">Schedule</p>
+          <lael
+            ><input
+              id="schedule-input-content"
+              type="text"
+              placeholder="write your schedule"
+          /></lael>
+          <button id="submit-button" type="sumit">저장</button>
+        </form>
+      </div>
     </div>
     <script type="module" src="./schedular.js"></script>
   </body>
