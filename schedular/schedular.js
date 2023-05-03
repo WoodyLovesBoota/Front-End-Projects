@@ -9,6 +9,7 @@ let schedules =
   localStorage.getItem("schedules") === null
     ? {}
     : JSON.parse(localStorage.getItem("schedules"));
+console.log(schedules);
 
 let calendarBodyTable = document.querySelector("#calendar-table-body");
 
@@ -109,19 +110,28 @@ const next = () => {
   drawCalendar();
 };
 
+const addPad = (num) => {
+  let res = num.length < 2 ? "0" + num : num;
+  return res;
+};
+
 let scheduleTime = document.querySelector("schedule-time");
 let scheduleInput = document.querySelector("#schedule-content");
 
 const saveSchedule = () => {
+  let date = document.querySelector("#target-date").innerText;
   let content = document.getElementById("schedule-content").value;
   let time = document.querySelector("#schedule-time").value;
-
-  /* TODO
-    1. 저장 화면에 년 월 일 시간 띠우기
-    2. 가져와서 local 에 넘기기
-    3. 로컬에서 가져와서 달력에 추가하기
-  */
-  schedules[time] = content;
+  let [targetYear, targetMonth, targetDay] = date.split("-");
+  let yearAndMonth = targetYear + "-" + targetMonth;
+  let daySchedule =
+    schedules[yearAndMonth] === undefined ? {} : schedules[yearAndMonth];
+  let timeSchedule =
+    daySchedule[targetDay] === undefined ? {} : daySchedule[targetDay];
+  console.log(daySchedule, timeSchedule);
+  timeSchedule[time.replace(":", "")] = content;
+  daySchedule[targetDay] = timeSchedule;
+  schedules[yearAndMonth] = daySchedule;
   localStorage.setItem("schedules", JSON.stringify(schedules));
 };
 
@@ -135,10 +145,10 @@ window.onload = () => {
 const clicked = (cell) => {
   let clickedDate = Number(cell.innerText);
   document.querySelector("#schedule-maker").classList.remove("unshow");
-  document
-    .querySelector("#target-date")
-    .innerText(
-      nowYear.toString() + nowMonth.toString() + clickedDate.toString()
-    );
-  console.log(nowYear, nowMonth, clickedDate);
+  document.querySelector("#target-date").innerText =
+    addPad(nowYear.toString()) +
+    "-" +
+    addPad(nowMonth.toString()) +
+    "-" +
+    addPad(clickedDate.toString());
 };
