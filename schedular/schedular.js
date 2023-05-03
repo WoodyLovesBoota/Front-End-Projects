@@ -178,7 +178,7 @@ const drawSchedule = () => {
         bar.classList.add("bar");
         let barTime = document.createElement("p");
         let barContent = document.createElement("p");
-        barTime.innerText = key;
+        barTime.innerText = key.substring(0, 2) + " : " + key.substring(2, 4);
         barContent.innerText = value;
         bar.append(barTime, barContent);
         e.appendChild(bar);

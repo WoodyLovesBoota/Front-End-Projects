@@ -94,7 +94,12 @@ input[type="time"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(221, 173, 233);
+  background-color: rgb(221, 173, 233, 0.7);
   height: 1.5vh;
   margin-bottom: 1vh;
+  border: none;
+}
+
+.bar p {
+  margin: 0 0.7vw;
 }
