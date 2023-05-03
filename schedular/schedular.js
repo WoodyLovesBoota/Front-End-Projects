@@ -99,6 +99,7 @@ const prev = () => {
     nowMonth = 12;
   }
   drawCalendar();
+  drawSchedule();
 };
 
 const next = () => {
@@ -108,15 +109,13 @@ const next = () => {
     nowMonth = 1;
   }
   drawCalendar();
+  drawSchedule();
 };
 
 const addPad = (num) => {
   let res = num.length < 2 ? "0" + num : num;
   return res;
 };
-
-let scheduleTime = document.querySelector("schedule-time");
-let scheduleInput = document.querySelector("#schedule-content");
 
 const saveSchedule = () => {
   let date = document.querySelector("#target-date").innerText;
@@ -155,12 +154,16 @@ const clicked = (cell) => {
 };
 
 const drawSchedule = () => {
-  let targetSchedules =
-    schedules[addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())];
-  console.log(targetSchedules);
   let cells = document.querySelectorAll(".cell");
   cells.forEach((e) => {
-    // console.log(e.firstChild);
+    while (e.children.length > 1) {
+      e.removeChild(e.lastChild);
+    }
+  });
+
+  let targetSchedules =
+    schedules[addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())];
+  cells.forEach((e) => {
     if (
       e.firstChild !== null &&
       targetSchedules[addPad(e.firstChild.innerText)] !== undefined
