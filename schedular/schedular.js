@@ -186,3 +186,9 @@ const drawSchedule = () => {
     }
   });
 };
+
+/* TODO
+  1. schedule bar click 하면 해당 bar 내용 수정 가능
+    - 시간 선택도 가능하게
+  2. 그냥 날짜 시간 선택 가능하게 해서 schedule 입력가능하게
+*/
