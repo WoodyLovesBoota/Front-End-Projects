@@ -9,7 +9,6 @@ let schedules =
   localStorage.getItem("schedules") === null
     ? {}
     : JSON.parse(localStorage.getItem("schedules"));
-console.log(schedules);
 
 let calendarBodyTable = document.querySelector("#calendar-table-body");
 
@@ -119,15 +118,14 @@ const addPad = (num) => {
 
 const saveSchedule = () => {
   let date = document.querySelector("#target-date").innerText;
-  let content = document.getElementById("schedule-content").value;
-  let time = document.querySelector("#schedule-time").value;
+  let content = document.getElementById("schedule-input-content").value;
+  let time = document.querySelector("#schedule-input-time").value;
   let [targetYear, targetMonth, targetDay] = date.split("-");
   let yearAndMonth = targetYear + "-" + targetMonth;
   let daySchedule =
     schedules[yearAndMonth] === undefined ? {} : schedules[yearAndMonth];
   let timeSchedule =
     daySchedule[targetDay] === undefined ? {} : daySchedule[targetDay];
-  console.log(daySchedule, timeSchedule);
   timeSchedule[time.replace(":", "")] = content;
   daySchedule[targetDay] = timeSchedule;
   schedules[yearAndMonth] = daySchedule;
@@ -164,25 +162,21 @@ const drawSchedule = () => {
   let targetSchedules =
     schedules[addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())];
   cells.forEach((e) => {
-    if (
-      e.firstChild !== null &&
-      targetSchedules[addPad(e.firstChild.innerText)] !== undefined
-    ) {
-      let targetDate = addPad(e.firstChild.innerText);
-      console.log(targetDate);
-      let dateSchedule = targetSchedules[targetDate];
-      console.log(dateSchedule);
-      Object.entries(dateSchedule).forEach(([key, value]) => {
-        console.log(key, value);
-        let bar = document.createElement("div");
-        bar.classList.add("bar");
-        let barTime = document.createElement("p");
-        let barContent = document.createElement("p");
-        barTime.innerText = key.substring(0, 2) + " : " + key.substring(2, 4);
-        barContent.innerText = value;
-        bar.append(barTime, barContent);
-        e.appendChild(bar);
-      });
+    if (targetSchedules !== undefined && e.firstChild !== null) {
+      if (targetSchedules[addPad(e.firstChild.innerText)] !== undefined) {
+        let targetDate = addPad(e.firstChild.innerText);
+        let dateSchedule = targetSchedules[targetDate];
+        Object.entries(dateSchedule).forEach(([key, value]) => {
+          let bar = document.createElement("div");
+          bar.classList.add("bar");
+          let barTime = document.createElement("p");
+          let barContent = document.createElement("p");
+          barTime.innerText = key.substring(0, 2) + " : " + key.substring(2, 4);
+          barContent.innerText = value;
+          bar.append(barTime, barContent);
+          e.appendChild(bar);
+        });
+      }
     }
   });
 };
