@@ -156,15 +156,17 @@ const clicked = (cell) => {
 };
 
 const changeSchedule = (schedule) => {
-  console.log(schedule.parentNode);
+  console.log(schedule);
   let clickedDate = Number(schedule.parentNode.firstChild.innerText);
-  document.querySelector("#schedule-maker").classList.remove("unshow");
-  document.querySelector("#target-date").innerText =
+  document.querySelector("#schedule-changer").classList.remove("unshow");
+  document.querySelector("#target-change-date").innerText =
     addPad(nowYear.toString()) +
     "-" +
     addPad(nowMonth.toString()) +
     "-" +
     addPad(clickedDate.toString());
+  document.querySelector("#schedule-change-input-content").value =
+    schedule.lastChild.innerText;
 };
 
 const drawSchedule = () => {
