@@ -155,6 +155,22 @@ const clicked = (cell) => {
     addPad(clickedDate.toString());
 };
 
+const replaceSchedule = () => {
+  let date = document.querySelector("#target-change-date").innerText;
+  let content = document.getElementById("schedule-change-input-content").value;
+  let time = document.querySelector("#schedule-change-input-time").value;
+  let [targetYear, targetMonth, targetDay] = date.split("-");
+  let yearAndMonth = targetYear + "-" + targetMonth;
+  let daySchedule =
+    schedules[yearAndMonth] === undefined ? {} : schedules[yearAndMonth];
+  let timeSchedule =
+    daySchedule[targetDay] === undefined ? {} : daySchedule[targetDay];
+  timeSchedule[time.replace(":", "")] = content;
+  daySchedule[targetDay] = timeSchedule;
+  schedules[yearAndMonth] = daySchedule;
+  localStorage.setItem("schedules", JSON.stringify(schedules));
+};
+
 const changeSchedule = (schedule) => {
   console.log(schedule);
   let clickedDate = Number(schedule.parentNode.firstChild.innerText);
@@ -167,6 +183,15 @@ const changeSchedule = (schedule) => {
     addPad(clickedDate.toString());
   document.querySelector("#schedule-change-input-content").value =
     schedule.lastChild.innerText;
+  document.querySelector("#change-button").addEventListener("click", () => {
+    delete schedules[
+      addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())
+    ][addPad(clickedDate.toString())][
+      schedule.firstChild.innerText.replace(" : ", "")
+    ];
+    localStorage.setItem("schedules", JSON.stringify(schedules));
+    replaceSchedule();
+  });
 };
 
 const drawSchedule = () => {
