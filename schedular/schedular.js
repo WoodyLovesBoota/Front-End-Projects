@@ -57,9 +57,11 @@ const drawCalendar = () => {
     nowCols.classList.add("cell");
     if (i === 7 - firstDay) nowText.classList.add("sat");
     if (firstDay === 0) nowText.classList.add("sun");
-    nowCols.onclick = () => {
-      clicked(nowText);
-    };
+    nowCols.addEventListener("click", (e) => {
+      if (e.target.nodeName === "TD") {
+        clicked(nowText);
+      }
+    });
     if ([nowYear, nowMonth, i] === today) nowCols.classList.add("today");
   }
 
@@ -74,9 +76,11 @@ const drawCalendar = () => {
       if (j === 6) nowText.classList.add("sat");
       nowCols.appendChild(nowText);
       past++;
-      nowCols.onclick = () => {
-        clicked(nowText);
-      };
+      nowCols.addEventListener("click", (e) => {
+        if (e.target.nodeName !== "DIV") {
+          clicked(nowText);
+        }
+      });
 
       if (nowYear === today[0] && nowMonth === today[1] && past === today[2])
         nowCols.classList.add("today");
@@ -151,6 +155,18 @@ const clicked = (cell) => {
     addPad(clickedDate.toString());
 };
 
+const changeSchedule = (schedule) => {
+  console.log(schedule.parentNode);
+  let clickedDate = Number(schedule.parentNode.firstChild.innerText);
+  document.querySelector("#schedule-maker").classList.remove("unshow");
+  document.querySelector("#target-date").innerText =
+    addPad(nowYear.toString()) +
+    "-" +
+    addPad(nowMonth.toString()) +
+    "-" +
+    addPad(clickedDate.toString());
+};
+
 const drawSchedule = () => {
   let cells = document.querySelectorAll(".cell");
   cells.forEach((e) => {
@@ -169,12 +185,18 @@ const drawSchedule = () => {
         Object.entries(dateSchedule).forEach(([key, value]) => {
           let bar = document.createElement("div");
           bar.classList.add("bar");
+          bar.addEventListener("click", () => {
+            changeSchedule(bar);
+          });
           let barTime = document.createElement("p");
           let barContent = document.createElement("p");
           barTime.innerText = key.substring(0, 2) + " : " + key.substring(2, 4);
           barContent.innerText = value;
           bar.append(barTime, barContent);
           e.appendChild(bar);
+          bar.addEventListener("click", () => {
+            changeSchedule(bar);
+          });
         });
       }
     }
