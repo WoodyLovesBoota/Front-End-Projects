@@ -172,7 +172,8 @@ input[type="time"] {
 }
 
 #submit-button,
-#change-button {
+#change-button,
+#delete-button {
   margin-left: 3vw;
   width: 5vw;
   height: 3.5vh;
