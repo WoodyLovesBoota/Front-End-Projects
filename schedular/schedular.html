@@ -43,7 +43,9 @@
               placeholder="write your schedule"
               required
           /></lael>
-          <button id="submit-button" type="sumit">저장</button>
+          <div class="buttons">
+            <button id="submit-button" type="sumit">저장</button>
+          </div>
         </form>
       </div>
     </div>
@@ -53,16 +55,15 @@
         <p id="target-change-date"></p>
         <p id="schedule-change-time">Time</p>
         <form id="schedule-changer-form">
-          <input id="schedule-change-input-time" type="time" required />
+          <input id="schedule-change-input-time" type="time" />
           <p id="schedule-change-content">Schedule</p>
           <lael
             ><input
               id="schedule-change-input-content"
               type="text"
               placeholder="write your schedule"
-              required
           /></lael>
-          <div id="buttons">
+          <div class="buttons">
             <button id="change-button" type="sumit">저장</button>
             <button id="delete-button" type="submit">삭제</button>
           </div>
