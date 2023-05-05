@@ -192,6 +192,14 @@ const changeSchedule = (schedule) => {
     localStorage.setItem("schedules", JSON.stringify(schedules));
     replaceSchedule();
   });
+  document.querySelector("#delete-button").addEventListener("click", () => {
+    delete schedules[
+      addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())
+    ][addPad(clickedDate.toString())][
+      schedule.firstChild.innerText.replace(" : ", "")
+    ];
+    localStorage.setItem("schedules", JSON.stringify(schedules));
+  });
 };
 
 const drawSchedule = () => {
