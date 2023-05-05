@@ -100,6 +100,10 @@ input[type="time"] {
   border: none;
 }
 
+.bar:hover {
+  border: 1px solid rgba(229, 133, 253, 0.7);
+}
+
 .bar p {
   margin: 0 0.7vw;
 }
