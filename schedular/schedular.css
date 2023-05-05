@@ -173,7 +173,8 @@ input[type="time"] {
 
 #submit-button,
 #change-button,
-#delete-button {
+#delete-button,
+.reset-button {
   width: 5vw;
   height: 3.5vh;
   border: none;

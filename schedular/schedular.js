@@ -138,6 +138,12 @@ const saveSchedule = () => {
 
 let button = document.querySelector("#submit-button");
 button.addEventListener("click", saveSchedule);
+document.querySelector("#reset-button").addEventListener("click", () => {
+  document.querySelector("#schedule-maker").classList.add("unshow");
+});
+document.querySelector("#reset-button2").addEventListener("click", () => {
+  document.querySelector("#schedule-changer").classList.add("unshow");
+});
 
 window.onload = () => {
   drawCalendar();
