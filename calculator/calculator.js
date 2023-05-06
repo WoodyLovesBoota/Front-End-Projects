@@ -41,6 +41,10 @@ numbers.forEach((e) => {
   });
 });
 
+// 여기부터 다시
+// tempValue 에 저장되는거 생각 다시
+// 하나씩 밀리는듯
+// equal 도 다시보기
 plus.addEventListener("click", () => {
   if (tempValue.length === 0) {
     tempValue.push(now);
