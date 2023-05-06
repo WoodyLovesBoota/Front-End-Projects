@@ -30,3 +30,10 @@ td {
   font-size: 3vh;
   margin-top: 0;
 }
+
+.arith,
+.number {
+  width: 15vw;
+  text-align: center;
+  font-size: 4vh;
+}
