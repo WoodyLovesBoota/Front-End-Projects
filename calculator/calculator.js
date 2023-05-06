@@ -66,5 +66,11 @@ backspace.addEventListener("click", () => {
     : (resultNumber.innerText = now);
 });
 
-cancelAll.addEventListener("click", () => {});
+cancelAll.addEventListener("click", () => {
+  now = "";
+  past = "";
+  result = "";
+
+  resultNumber.innerText = now;
+});
 cancelNow.addEventListener("click", () => {});
