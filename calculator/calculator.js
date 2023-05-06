@@ -23,7 +23,16 @@ let pastNumber = document.querySelector("#past-num");
 let result = "";
 let now = "";
 let past = "";
-// let temp = [];
+let tempValue = [];
+
+const calcValue = (num) => {
+  let result = 0;
+  if (tempValue[1] === "+") result = Number(tempValue[0]) + num;
+
+  tempValue = [];
+  tempValue.push(result);
+  return result;
+};
 
 numbers.forEach((e) => {
   e.addEventListener("click", () => {
@@ -32,7 +41,23 @@ numbers.forEach((e) => {
   });
 });
 
-plus.addEventListener("click", () => {});
+plus.addEventListener("click", () => {
+  if (tempValue.length === 0) {
+    tempValue.push(now);
+    past = now + "+";
+    tempValue.push("+");
+    pastNumber.innerText = past;
+    now = "";
+    resultNumber.innerText = "0";
+  } else {
+    let temp = calcValue(Number(now));
+    pastNumber.innerText += now + "+";
+    now = "";
+    resultNumber.innerText = temp;
+    tempValue.push("+");
+  }
+});
+
 minus.addEventListener("click", () => {});
 multi.addEventListener("click", () => {});
 divider.addEventListener("click", () => {});
@@ -73,7 +98,12 @@ spot.addEventListener("click", () => {
   resultNumber.innerText = now;
 });
 
-equal.addEventListener("click", () => {});
+equal.addEventListener("click", () => {
+  let temp = calcValue(Number(now));
+  pastNumber.innerText += now;
+  now = "";
+  resultNumber.innerText = temp;
+});
 
 backspace.addEventListener("click", () => {
   let temp = [...now];
@@ -90,11 +120,11 @@ cancelAll.addEventListener("click", () => {
   past = "";
   result = "";
   pastNumber.innerText = "";
+  tempValue = [];
   resultNumber.innerText = "0";
 });
 
 cancelNow.addEventListener("click", () => {
   now = "";
-  pastNumber.innerText = "";
   resultNumber.innerText = "0";
 });
