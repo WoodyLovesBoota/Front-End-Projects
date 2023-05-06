@@ -38,13 +38,21 @@ divider.addEventListener("click", () => {});
 rootArith.addEventListener("click", () => {});
 powArith.addEventListener("click", () => {});
 reciporal.addEventListener("click", () => {});
+
 plusMinus.addEventListener("click", () => {
   let temp = [...now];
   temp[0] === "-" ? temp.shift() : temp.unshift("-");
   now = temp.join("");
   resultNumber.innerText = now;
 });
-spot.addEventListener("click", () => {});
+
+spot.addEventListener("click", () => {
+  let temp = [...now];
+  if (temp.indexOf(".") === -1) temp.push(".");
+  now = temp.join("");
+  resultNumber.innerText = now;
+});
+
 equal.addEventListener("click", () => {});
 backspace.addEventListener("click", () => {});
 cancelAll.addEventListener("click", () => {});
