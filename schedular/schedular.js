@@ -248,4 +248,5 @@ const drawSchedule = () => {
   1. 그냥 날짜 시간 선택 가능하게 해서 schedule 입력가능하게
   2. js 코드 중복 정리 (코드 이쁘게)
   3. style도 class 이용해서 정리 (ex. button)
+  4. year, month 선택하는 toggle 만들기
 */
