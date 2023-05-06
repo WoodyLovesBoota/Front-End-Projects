@@ -38,7 +38,12 @@ multi.addEventListener("click", () => {});
 divider.addEventListener("click", () => {});
 rootArith.addEventListener("click", () => {});
 powArith.addEventListener("click", () => {});
-reciporal.addEventListener("click", () => {});
+
+reciporal.addEventListener("click", () => {
+  let res = 1 / Number(now);
+  now = res.toString();
+  resultNumber.innerText = now;
+});
 
 plusMinus.addEventListener("click", () => {
   let temp = [...now];
