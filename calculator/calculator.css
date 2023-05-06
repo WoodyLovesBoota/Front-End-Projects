@@ -1,0 +1,32 @@
+table {
+  height: 80vh;
+  width: 80vw;
+  border-collapse: collapse;
+}
+
+td {
+  border: 2px black solid;
+}
+
+#result-cell {
+  position: relative;
+  height: 15vh;
+}
+
+#result-num {
+  position: absolute;
+  background-color: blue;
+  right: 5vw;
+  bottom: 0.5vh;
+  font-size: 5vh;
+  margin-bottom: 0;
+}
+
+#past-num {
+  position: absolute;
+  background-color: green;
+  right: 3vw;
+  top: 1vh;
+  font-size: 3vh;
+  margin-top: 0;
+}
