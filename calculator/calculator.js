@@ -22,6 +22,7 @@ let pastNumber = document.querySelector("past-num");
 
 let result = "";
 let now = "";
+// let temp = [];
 
 numbers.forEach((e) => {
   e.addEventListener("click", () => {
@@ -37,7 +38,12 @@ divider.addEventListener("click", () => {});
 rootArith.addEventListener("click", () => {});
 powArith.addEventListener("click", () => {});
 reciporal.addEventListener("click", () => {});
-plusMinus.addEventListener("click", () => {});
+plusMinus.addEventListener("click", () => {
+  let temp = [...now];
+  temp[0] === "-" ? temp.shift() : temp.unshift("-");
+  now = temp.join("");
+  resultNumber.innerText = now;
+});
 spot.addEventListener("click", () => {});
 equal.addEventListener("click", () => {});
 backspace.addEventListener("click", () => {});
