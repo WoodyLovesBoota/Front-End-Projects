@@ -22,6 +22,7 @@ let pastNumber = document.querySelector("past-num");
 
 let result = "";
 let now = "";
+let past = "";
 // let temp = [];
 
 numbers.forEach((e) => {
@@ -54,6 +55,16 @@ spot.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {});
-backspace.addEventListener("click", () => {});
+
+backspace.addEventListener("click", () => {
+  let temp = [...now];
+  temp.pop();
+  now = temp.join("");
+
+  temp.length === 0
+    ? (resultNumber.innerText = "0")
+    : (resultNumber.innerText = now);
+});
+
 cancelAll.addEventListener("click", () => {});
 cancelNow.addEventListener("click", () => {});
