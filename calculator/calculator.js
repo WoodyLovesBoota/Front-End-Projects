@@ -18,7 +18,7 @@ let cancelNow = document.querySelector("#cancel-now");
 
 // Get result cell
 let resultNumber = document.querySelector("#result-num");
-let pastNumber = document.querySelector("past-num");
+let pastNumber = document.querySelector("#past-num");
 
 let result = "";
 let now = "";
@@ -36,11 +36,20 @@ plus.addEventListener("click", () => {});
 minus.addEventListener("click", () => {});
 multi.addEventListener("click", () => {});
 divider.addEventListener("click", () => {});
-rootArith.addEventListener("click", () => {});
+
+rootArith.addEventListener("click", () => {
+  let res = Math.sqrt(Number(now));
+  past = "Math.sqrt(" + now + ")";
+  now = res.toString();
+  pastNumber.innerText = past;
+  resultNumber.innerText = now;
+});
 
 powArith.addEventListener("click", () => {
   let res = Math.pow(Number(now), 2);
+  past = "Math.pow(" + now + ", 2)";
   now = res.toString();
+  pastNumber.innerText = past;
   resultNumber.innerText = now;
 });
 
@@ -80,11 +89,12 @@ cancelAll.addEventListener("click", () => {
   now = "";
   past = "";
   result = "";
-
+  pastNumber.innerText = "";
   resultNumber.innerText = "0";
 });
 
 cancelNow.addEventListener("click", () => {
   now = "";
+  pastNumber.innerText = "";
   resultNumber.innerText = "0";
 });
