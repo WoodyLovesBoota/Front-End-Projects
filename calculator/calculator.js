@@ -37,7 +37,12 @@ minus.addEventListener("click", () => {});
 multi.addEventListener("click", () => {});
 divider.addEventListener("click", () => {});
 rootArith.addEventListener("click", () => {});
-powArith.addEventListener("click", () => {});
+
+powArith.addEventListener("click", () => {
+  let res = Math.pow(Number(now), 2);
+  now = res.toString();
+  resultNumber.innerText = now;
+});
 
 reciporal.addEventListener("click", () => {
   let res = 1 / Number(now);
