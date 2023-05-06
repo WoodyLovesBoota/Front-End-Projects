@@ -71,6 +71,7 @@ cancelAll.addEventListener("click", () => {
   past = "";
   result = "";
 
-  resultNumber.innerText = now;
+  resultNumber.innerText = "0";
 });
+
 cancelNow.addEventListener("click", () => {});
