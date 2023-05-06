@@ -74,4 +74,7 @@ cancelAll.addEventListener("click", () => {
   resultNumber.innerText = "0";
 });
 
-cancelNow.addEventListener("click", () => {});
+cancelNow.addEventListener("click", () => {
+  now = "";
+  resultNumber.innerText = "0";
+});
