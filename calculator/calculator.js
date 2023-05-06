@@ -29,3 +29,17 @@ numbers.forEach((e) => {
     resultNumber.innerText = now;
   });
 });
+
+plus.addEventListener("click", () => {});
+minus.addEventListener("click", () => {});
+multi.addEventListener("click", () => {});
+divider.addEventListener("click", () => {});
+rootArith.addEventListener("click", () => {});
+powArith.addEventListener("click", () => {});
+reciporal.addEventListener("click", () => {});
+plusMinus.addEventListener("click", () => {});
+spot.addEventListener("click", () => {});
+equal.addEventListener("click", () => {});
+backspace.addEventListener("click", () => {});
+cancelAll.addEventListener("click", () => {});
+cancelNow.addEventListener("click", () => {});
