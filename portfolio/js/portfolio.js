@@ -1,20 +1,20 @@
 import projects from "../projects.js";
 
-projects["basic"].forEach((e, i) => {
-  let cardArr = document.getElementsByClassName("project-cards")[0];
-  let card = document.createElement("div");
-  card.setAttribute("class", "card");
-  let link = document.createElement("a");
-  link.setAttribute("href", e["code"]);
-  let text = document.createElement("p");
-  text.innerText = e["name"];
-  let image = document.createElement("img");
-  image.setAttribute("src", e["image"]);
-  link.append(text, image);
-  card.appendChild(link);
-  cardArr.appendChild(card);
-});
+// Get HTML element
+let title = document.querySelector("#project-subject-title");
+let subTitle = document.querySelector("#project-subject-subtitle");
+let meaning = document.querySelector("#project-meaning");
+let spec = document.querySelector("#project-background");
+let desc = document.querySelector("#project-desc");
 
+const drawProject = (project) => {
+  console.log(project);
+  title.innerHTML = project.title;
+  subTitle.innerHTML = project.subTitle;
+  meaning.innerHTML = project.detail;
+};
+
+drawProject(projects["basic"][0]);
 /* 
 TODO 
 - survey form like google form
