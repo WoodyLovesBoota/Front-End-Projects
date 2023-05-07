@@ -1,47 +1,14 @@
-body {
-  background-color: rgb(48, 46, 46);
-  font-size: 14px;
-  font-weight: 500;
-  color: lightgray;
-  letter-spacing: 1px;
-}
-
 a {
   text-decoration: none;
-  color: lightgray;
-}
-
-h1 {
-  font-size: 40px;
-  text-align: center;
-}
-
-h1 span {
-  color: rgb(252, 101, 1);
-}
-
-nav {
-  margin-top: 30px;
-  font-weight: 550;
+  color: black;
 }
 
 nav ul {
-  display: flex;
-  justify-content: flex-start;
   list-style: none;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 5px;
-  border-bottom: 2px solid lightgray;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav ul li {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 0px;
-  cursor: pointer;
-}
-
-nav ul li:nth-child(1) {
-  background: linear-gradient(to right, rgb(252, 101, 1), transparent);
+  margin-left: 2vw;
 }
