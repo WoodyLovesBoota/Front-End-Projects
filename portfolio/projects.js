@@ -21,6 +21,19 @@ const project2Detail = [
     <br>of\
     <br>project2",
 ];
+
+const project3Detail = [
+  "index 1 . meaning\
+    <br>of\
+    <br>project3",
+  "index 2 . background\
+    <br>of\
+    <br>project3",
+  "index 3 . description\
+    <br>of\
+    <br>project3",
+];
+
 const projects = {
   basic: [
     {
@@ -36,6 +49,13 @@ const projects = {
       code: "../../Schedular/Schedular.html",
       image: "",
       detail: project2Detail,
+    },
+    {
+      title: "Project3",
+      subTitle: "subtitle of project3",
+      code: "../../Schedular/Schedular.html",
+      image: "",
+      detail: project3Detail,
     },
   ],
 };

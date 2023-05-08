@@ -8,6 +8,8 @@ let background = document.querySelector("#project-background");
 let desc = document.querySelector("#project-desc");
 let prev = document.querySelector("#prev-button");
 let next = document.querySelector("#next-button");
+let prevSubject = document.querySelector("#prev-subject");
+let nextSubject = document.querySelector("#next-subject");
 
 // Set project number : now
 let now = 0;
@@ -35,6 +37,14 @@ const drawProject = (index) => {
   meaning.innerHTML = project.detail[0];
   background.innerHTML = project.detail[1];
   desc.innerHTML = project.detail[2];
+  prevSubject.innerHTML =
+    index === 0
+      ? projects["basic"][total].title
+      : projects["basic"][index - 1].title;
+  nextSubject.innerHTML =
+    index === total
+      ? projects["basic"][0].title
+      : projects["basic"][index + 1].title;
 };
 
 window.onload = () => {
