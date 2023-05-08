@@ -10,6 +10,8 @@ let prev = document.querySelector("#prev-button");
 let next = document.querySelector("#next-button");
 let prevSubject = document.querySelector("#prev-subject");
 let nextSubject = document.querySelector("#next-subject");
+let spec = document.querySelector("#project-spec-part");
+let language = document.querySelector("#project-spec-language");
 
 // Set project number : now
 let now = 0;
@@ -37,6 +39,9 @@ const drawProject = (index) => {
   meaning.innerHTML = project.detail[0];
   background.innerHTML = project.detail[1];
   desc.innerHTML = project.detail[2];
+  spec.innerHTML = project.detail[3];
+  language.innerHTML = project.detail[4];
+
   prevSubject.innerHTML =
     index === 0
       ? projects["basic"][total].title

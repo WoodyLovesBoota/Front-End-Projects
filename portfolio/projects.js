@@ -8,6 +8,8 @@ const schedularDetail = [
   "index 3 . description\
     <br>of\
     <br>schedular",
+  "index 4 . spec",
+  "index 5 . language",
 ];
 
 const project2Detail = [
@@ -20,6 +22,8 @@ const project2Detail = [
   "index 3 . description\
     <br>of\
     <br>project2",
+  "index 4 . spec",
+  "index 5 . language",
 ];
 
 const project3Detail = [
@@ -32,6 +36,8 @@ const project3Detail = [
   "index 3 . description\
     <br>of\
     <br>project3",
+  "index 4 . spec",
+  "index 5 . language",
 ];
 
 const projects = {
