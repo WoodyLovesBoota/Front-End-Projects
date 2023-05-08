@@ -114,5 +114,31 @@ main {
 }
 
 .button {
+  text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.arrow {
+  height: 100%;
+  margin: 0 1vw;
+}
+
+.arrow p {
+  margin: 0.3vh 0;
+  font-size: min(5vh, 3vw);
+  color: rgb(148, 148, 148);
+}
+
+#prev-subject,
+#next-subject {
+  margin: 0;
+  font-size: min(3vh, 2vw);
+}
+
+.button-desc p:last-child {
+  font-size: min(2vh, 1vw);
+  color: rgb(148, 148, 148);
 }
