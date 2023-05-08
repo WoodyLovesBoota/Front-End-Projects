@@ -6,15 +6,39 @@ let subTitle = document.querySelector("#project-subject-subtitle");
 let meaning = document.querySelector("#project-meaning");
 let spec = document.querySelector("#project-background");
 let desc = document.querySelector("#project-desc");
+let prev = document.querySelector("#prev-button");
+let next = document.querySelector("#next-button");
 
-const drawProject = (project) => {
-  console.log(project);
+// Set project number : now
+let now = 0;
+let total = projects["basic"].length - 1;
+
+// Implement functions
+const prevPage = () => {
+  now === 0 ? (now = total) : now--;
+  drawProject(now);
+};
+
+const nextPage = () => {
+  now === total ? (now = 0) : now++;
+  drawProject(now);
+};
+
+// Set EventListener
+prev.addEventListener("click", prevPage);
+next.addEventListener("click", nextPage);
+
+const drawProject = (index) => {
+  let project = projects["basic"][index];
   title.innerHTML = project.title;
   subTitle.innerHTML = project.subTitle;
   meaning.innerHTML = project.detail;
 };
 
-drawProject(projects["basic"][0]);
+window.onload = () => {
+  drawProject(0);
+};
+
 /* 
 TODO 
 - survey form like google form

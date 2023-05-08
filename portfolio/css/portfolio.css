@@ -101,3 +101,12 @@ main {
 #project-desc-box p:first-child {
   font-size: min(5vh, 3vw);
 }
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  cursor: pointer;
+}

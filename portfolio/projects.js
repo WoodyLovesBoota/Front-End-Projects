@@ -4,6 +4,8 @@ const schedularMeaning = [
     <br>특정 날짜를 클릭하면 색이 바뀌는 기능과 오늘 날짜를 표시하는 기능을 구현하였다.",
 ];
 
+const project2Meaning = ["project 2 의 meaning"];
+
 const projects = {
   basic: [
     {
@@ -12,6 +14,13 @@ const projects = {
       code: "../../Schedular/Schedular.html",
       image: "",
       detail: schedularMeaning,
+    },
+    {
+      title: "Project2",
+      subTitle: "subtitle of project2",
+      code: "../../Schedular/Schedular.html",
+      image: "",
+      detail: project2Meaning,
     },
   ],
 };
