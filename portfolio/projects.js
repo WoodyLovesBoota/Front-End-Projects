@@ -10,8 +10,17 @@ const schedularDetail = [
     <br>schedular",
 ];
 
-const project2Meaning = ["project 2 의 meaning"];
-
+const project2Detail = [
+  "index 1 . meaning\
+    <br>of\
+    <br>project2",
+  "index 2 . background\
+    <br>of\
+    <br>project2",
+  "index 3 . description\
+    <br>of\
+    <br>project2",
+];
 const projects = {
   basic: [
     {
@@ -26,7 +35,7 @@ const projects = {
       subTitle: "subtitle of project2",
       code: "../../Schedular/Schedular.html",
       image: "",
-      detail: project2Meaning,
+      detail: project2Detail,
     },
   ],
 };
