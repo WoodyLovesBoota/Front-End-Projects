@@ -1,7 +1,13 @@
-const schedularMeaning = [
-  "JavaScript 의 Date object 를 이용하여 간단한 calendar 를 만들었다.\
-    <br>< table > element 를 이용하여 달력의 frame 을 구현하였다.\
-    <br>특정 날짜를 클릭하면 색이 바뀌는 기능과 오늘 날짜를 표시하는 기능을 구현하였다.",
+const schedularDetail = [
+  "index 1 . meaning\
+    <br>of\
+    <br>schedular",
+  "index 2 . background\
+    <br>of\
+    <br>schedular",
+  "index 3 . description\
+    <br>of\
+    <br>schedular",
 ];
 
 const project2Meaning = ["project 2 의 meaning"];
@@ -13,7 +19,7 @@ const projects = {
       subTitle: "schedule handler",
       code: "../../Schedular/Schedular.html",
       image: "",
-      detail: schedularMeaning,
+      detail: schedularDetail,
     },
     {
       title: "Project2",

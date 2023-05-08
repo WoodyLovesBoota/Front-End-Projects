@@ -4,7 +4,7 @@ import projects from "../projects.js";
 let title = document.querySelector("#project-subject-title");
 let subTitle = document.querySelector("#project-subject-subtitle");
 let meaning = document.querySelector("#project-meaning");
-let spec = document.querySelector("#project-background");
+let background = document.querySelector("#project-background");
 let desc = document.querySelector("#project-desc");
 let prev = document.querySelector("#prev-button");
 let next = document.querySelector("#next-button");
@@ -32,7 +32,9 @@ const drawProject = (index) => {
   let project = projects["basic"][index];
   title.innerHTML = project.title;
   subTitle.innerHTML = project.subTitle;
-  meaning.innerHTML = project.detail;
+  meaning.innerHTML = project.detail[0];
+  background.innerHTML = project.detail[1];
+  desc.innerHTML = project.detail[2];
 };
 
 window.onload = () => {
