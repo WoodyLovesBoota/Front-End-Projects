@@ -153,6 +153,9 @@ main {
   margin: 0 1vw;
 }
 
+/* 
+TODO : button 으로 바꾸기.
+*/
 #project-button p {
   margin-top: 1vh;
   border: 1px solid gray;
