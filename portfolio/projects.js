@@ -13,9 +13,6 @@ const schedularDetail = [
     목표의식을 갖게 되었다. Calendar - Schedule Handler는 이전의 \
     Javascript를 사용하여 완성했던 작업물들과 달리 Javascript를 \
     이용하여 사용자와 상호작용 하는 부분을 구현하였다는 것에 의의를 둔다.",
-  "index 3 . description\
-    <br>of\
-    <br>schedular",
   "Front-End Development",
   "HTML . CSS . Javascript",
 ];

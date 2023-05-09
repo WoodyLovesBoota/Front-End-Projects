@@ -171,13 +171,13 @@ main {
   margin: 0 1vw;
 }
 
-/* 
-TODO : button 으로 바꾸기.
-*/
-#project-button p {
-  margin-top: 1vh;
-  border: 1px solid gray;
-  height: 4vh;
+#project-button {
+  margin-top: 3vh;
+  border: 1px solid rgb(156, 155, 155);
+  height: 5vh;
+  width: 9vw;
   padding: 0.5vh 0.5vw;
   text-align: center;
+  color: rgb(119, 118, 118);
+  cursor: pointer;
 }

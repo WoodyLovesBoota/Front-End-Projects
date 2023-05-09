@@ -12,6 +12,7 @@ let prevSubject = document.querySelector("#prev-subject");
 let nextSubject = document.querySelector("#next-subject");
 let spec = document.querySelector("#project-spec-part");
 let language = document.querySelector("#project-spec-language");
+let viewButton = document.querySelector("#project-button");
 
 // Set project number : now
 let now = 0;
@@ -31,6 +32,9 @@ const nextPage = () => {
 // Set EventListener
 prev.addEventListener("click", prevPage);
 next.addEventListener("click", nextPage);
+viewButton.addEventListener("click", (event) => {
+  event.preventDefault();
+});
 
 const drawProject = (index) => {
   let project = projects["basic"][index];
@@ -49,6 +53,10 @@ const drawProject = (index) => {
     index === total
       ? projects["basic"][0].title
       : projects["basic"][index + 1].title;
+
+  viewButton.addEventListener("click", () => {
+    location.href = project.code;
+  });
 };
 
 window.onload = () => {
