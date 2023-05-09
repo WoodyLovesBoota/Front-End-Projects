@@ -38,9 +38,8 @@ const drawProject = (index) => {
   subTitle.innerHTML = project.subTitle;
   meaning.innerHTML = project.detail[0];
   background.innerHTML = project.detail[1];
-  desc.innerHTML = project.detail[2];
-  spec.innerHTML = project.detail[3];
-  language.innerHTML = project.detail[4];
+  spec.innerHTML = project.detail[2];
+  language.innerHTML = project.detail[3];
 
   prevSubject.innerHTML =
     index === 0
