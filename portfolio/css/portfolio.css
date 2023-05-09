@@ -95,14 +95,10 @@ main {
   height: 25vh;
 }
 
-#project-desc-box {
-  width: 100%;
-  height: 25vh;
-}
-
 #project-preview-box {
   width: 100%;
   height: 35vh;
+  margin: 10vh 0;
 }
 
 #project-subject-title {
@@ -117,17 +113,12 @@ main {
 
 #project-background-box p:first-child {
   font-size: min(4vh, 2vw);
-  margin-bottom: 0;
-}
-
-#project-desc-box p:first-child {
-  font-size: min(4vh, 2vw);
-  margin-bottom: 0;
+  margin-bottom: 3vh;
 }
 
 #project-preview-box p:first-child {
   font-size: min(4vh, 2vw);
-  margin-bottom: 0;
+  margin-bottom: 3vh;
 }
 
 #buttons {

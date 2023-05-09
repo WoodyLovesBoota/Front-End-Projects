@@ -12,7 +12,10 @@ const schedularDetail = [
     HTML CSS Javascript를 이용한 간단한 Application을 만들어 보자는 \
     목표의식을 갖게 되었다. Calendar - Schedule Handler는 이전의 \
     Javascript를 사용하여 완성했던 작업물들과 달리 Javascript를 \
-    이용하여 사용자와 상호작용 하는 부분을 구현하였다는 것에 의의를 둔다.",
+    이용하여 사용자와 상호작용 하는 부분을 구현하였다는 것에 의의를 둔다. \
+    또한 개발 초기단계에서 의도했던 방식으로 작업물이 구현이 완료된 후, \
+    비효율적으로 작성된 코드를 수정하는 등의 refactoring 과정을 처음으로 \
+    수행한 project이기도 하다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
 ];
