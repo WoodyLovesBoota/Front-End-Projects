@@ -29,7 +29,16 @@ nav ul li {
   margin-left: 2vw;
 }
 
+nav ul li a:hover {
+  font-weight: 600;
+}
+
+#nav-portfolio {
+  color: rgb(191, 126, 252);
+}
+
 main {
+  margin-top: 10vh;
   height: 90%;
   width: 100%;
 }
