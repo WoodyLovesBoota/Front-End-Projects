@@ -1,5 +1,3 @@
-import projects from "../portfolio/projects.js";
-
 let date = new Date();
 let todos =
   localStorage.getItem("todos") === null

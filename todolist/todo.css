@@ -4,18 +4,6 @@ body {
   height: 1000px;
 }
 
-header p {
-  font-size: 80px;
-  font-weight: bolder;
-  margin: 20px 40px;
-  word-spacing: 10px;
-  color: lightgray;
-}
-
-header p span {
-  color: rgb(252, 101, 1);
-}
-
 main {
   margin: 50px auto;
 }
