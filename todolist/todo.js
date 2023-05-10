@@ -1,22 +1,21 @@
 let date = new Date();
+
+// Get localStorage date
 let todos =
   localStorage.getItem("todos") === null
     ? {}
     : JSON.parse(localStorage.getItem("todos"));
 let checkedTodo =
-  localStorage.getItem("cheks") === null
+  localStorage.getItem("checks") === null
     ? []
     : localStorage.getItem("checks").split(",");
 
 const setTodo = () => {
-  let todoItem = document.getElementById("todo-input").value;
+  let todoItem = input.value;
   todos[date.getTime()] = todoItem;
   localStorage.setItem("todos", JSON.stringify(todos));
   drawTodos();
 };
-
-let input = document.querySelector("#todo-input");
-input.addEventListener("change", setTodo);
 
 const setChecks = () => {
   localStorage.setItem("checks", checkedTodo);
@@ -39,10 +38,13 @@ const deleteTodo = (item) => {
 };
 
 const drawTodos = () => {
+  // delete all todo item
   let list = document.getElementById("todos");
   while (list.children.length > 0) {
     list.removeChild(list.lastChild);
   }
+
+  // rewrite todo via todos & checks
   Object.values(todos).forEach((e) => {
     let todoList = document.getElementById("todos");
     let item = document.createElement("li");
@@ -58,15 +60,15 @@ const drawTodos = () => {
     content.innerText = e;
     button.innerHTML = "X";
 
-    checkBox.addEventListener("change", (event) => {
+    if (checkedTodo.indexOf(e) !== -1) {
+      item.classList.add("checked");
+    }
+
+    checkBox.addEventListener("change", () => {
       if (!item.classList.contains("checked")) checkedTodo.push(e);
       else checkedTodo.splice(checkedTodo.indexOf(e), 1);
       setChecks();
     });
-
-    if (checkedTodo.indexOf(e) !== -1) {
-      item.classList.add("checked");
-    }
 
     todoList.appendChild(item);
     item.append(checkBox, label, content, button);
@@ -75,6 +77,9 @@ const drawTodos = () => {
     });
   });
 };
+
+let input = document.querySelector("#todo-input");
+input.addEventListener("change", setTodo);
 
 window.onload = () => {
   drawTodos();

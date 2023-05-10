@@ -58,6 +58,7 @@ ul li label {
   height: 17px;
   top: 30%;
   position: absolute;
+  cursor: pointer;
 }
 
 #todo-input {
