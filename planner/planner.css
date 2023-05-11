@@ -47,3 +47,71 @@ body {
   width: 35vw;
   height: 45vh;
 }
+
+ul {
+  list-style: none;
+}
+
+#todos {
+  margin: 0;
+}
+
+#todos li input {
+  display: none;
+}
+
+#todos li {
+  margin: 0 0 10px 0;
+  vertical-align: center;
+}
+
+#todos li span {
+  margin: 0px 30px;
+  width: 300px;
+  color: lightgray;
+}
+
+#todos li label {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 2px solid lightgray;
+  cursor: pointer;
+}
+
+#todos li button {
+  margin: 0px;
+  border: none;
+  font-weight: bolder;
+  background-color: rgb(48, 46, 46);
+  color: lightgray;
+}
+
+.checked input ~ span {
+  text-decoration: line-through;
+}
+
+.checked input + label::after {
+  content: "V";
+  color: lightgray;
+  top: -5px;
+  left: 1px;
+  position: absolute;
+  font-weight: 700;
+}
+
+#todo-input {
+  border: none;
+  width: 600px;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  word-spacing: 3px;
+}
+
+#todo-input:focus {
+  outline: none;
+}
