@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  height: 95vh;
+  margin: 0;
+}
+
+#left-side {
+  background-color: aquamarine;
+  width: 60vw;
+  height: 95vh;
+}
+
+#right-side {
+  background-color: rosybrown;
+  width: 35vw;
+  height: 95vh;
+}
+
+#time {
+  background-color: brown;
+  width: 60vw;
+  height: 55vh;
+}
+
+#todo-input {
+  background-color: burlywood;
+  width: 60vw;
+  height: 40vh;
+}
+
+#location {
+  background-color: rgb(135, 222, 181);
+  width: 35vw;
+  height: 20vh;
+}
+
+#dday {
+  background-color: rgb(222, 135, 186);
+  width: 35vw;
+  height: 30vh;
+}
+
+#todo-list {
+  background-color: rgb(135, 183, 222);
+  width: 35vw;
+  height: 45vh;
+}

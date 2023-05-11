@@ -1,4 +1,4 @@
-import projects from "../portfolio/projects.js";
+import projects from "../../portfolio/projects.js";
 
 let target = new Date(2024, 1, 1);
 let main = document.getElementById("clock");
