@@ -18,31 +18,31 @@ body {
   height: 95vh;
 }
 
-#time {
+#time-box {
   background-color: brown;
   width: 60vw;
   height: 55vh;
 }
 
-#todo-input {
+#todo-input-box {
   background-color: burlywood;
   width: 60vw;
   height: 40vh;
 }
 
-#location {
+#location-box {
   background-color: rgb(135, 222, 181);
   width: 35vw;
   height: 20vh;
 }
 
-#dday {
+#dday-box {
   background-color: rgb(222, 135, 186);
   width: 35vw;
   height: 30vh;
 }
 
-#todo-list {
+#todo-box {
   background-color: rgb(135, 183, 222);
   width: 35vw;
   height: 45vh;

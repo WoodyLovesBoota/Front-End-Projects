@@ -1,4 +1,4 @@
-import todolist from "./todolist/todo.js";
+import * as todo from "./todolist/todo.js";
 /*
     main 화면에 현재 날짜 시간 초단위 
     옆에 todolist
@@ -7,3 +7,8 @@ import todolist from "./todolist/todo.js";
     memo 도 추가할까 말까
     배경 이미지...
 */
+
+let todoInput = document.querySelector("#todo-input");
+todoInput.addEventListener("change", todo.setTodo);
+
+todo.drawTodos();

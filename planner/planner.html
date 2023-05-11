@@ -8,13 +8,26 @@
   </head>
   <body>
     <section id="left-side">
-      <section id="time"></section>
-      <section id="todo-input"></section>
+      <section id="time-box"></section>
+      <section id="todo-input-box">
+        <form>
+          <input
+            id="todo-input"
+            autofocus
+            required
+            type="text"
+            placeholder="Add your todo & Press Enter"
+          />
+        </form>
+      </section>
     </section>
     <section id="right-side">
-      <section id="location"></section>
-      <section id="dday"></section>
-      <section id="todo-list"></section>
+      <section id="location-box"></section>
+      <section id="dday-box"></section>
+      <section id="todo-box">
+        <ul id="todos"></ul>
+      </section>
     </section>
+    <script type="module" src="./planner.js"></script>
   </body>
 </html>

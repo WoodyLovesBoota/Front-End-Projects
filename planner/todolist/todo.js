@@ -11,7 +11,8 @@ let checkedTodo =
     : localStorage.getItem("checks").split(",");
 
 const setTodo = () => {
-  let todoItem = input.value;
+  let todoItem = document.querySelector("#todo-input").value;
+  console.log(todoItem);
   todos[date.getTime()] = todoItem;
   localStorage.setItem("todos", JSON.stringify(todos));
   drawTodos();
@@ -81,6 +82,12 @@ const drawTodos = () => {
 let input = document.querySelector("#todo-input");
 input.addEventListener("change", setTodo);
 
-window.onload = () => {
-  drawTodos();
+export {
+  todos,
+  checkedTodo,
+  setTodo,
+  setChecks,
+  getKeyByValue,
+  deleteTodo,
+  drawTodos,
 };
