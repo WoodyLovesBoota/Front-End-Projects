@@ -11,7 +11,36 @@ import * as todo from "./todolist/todo.js";
     배경 이미지...
 */
 
+let date = new Date();
+
+console.log(date);
+
+// todo part
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
 
 todo.drawTodos();
+
+// dday part
+let ddays =
+  localStorage.getItem("ddays") === null
+    ? []
+    : localStorage.getItem("ddays").split(",");
+
+let addButton = document.querySelector("#add-dday");
+let addDdayBox = document.querySelector("#add-dday-box");
+let ddayInput = document.querySelector("#dday-input");
+
+addButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  addDdayBox.classList.remove("unshow");
+});
+
+ddayInput.addEventListener("change", () => {
+  let target = ddayInput.value;
+  console.log(target);
+  ddays.push(target);
+  localStorage.setItem("ddays", ddays);
+
+  addDdayBox.classList.add("unshow");
+});
