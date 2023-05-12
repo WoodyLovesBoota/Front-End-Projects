@@ -1,4 +1,5 @@
 import * as todo from "./todolist/todo.js";
+import * as dday from "./dday/dday.js";
 /*
     main 화면에 현재 날짜 시간 초단위 
     옆에 todolist - done
@@ -11,10 +12,6 @@ import * as todo from "./todolist/todo.js";
     배경 이미지...
 */
 
-let date = new Date();
-
-console.log(date);
-
 // todo part
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
@@ -22,25 +19,30 @@ todoInput.addEventListener("change", todo.setTodo);
 todo.drawTodos();
 
 // dday part
-let ddays =
-  localStorage.getItem("ddays") === null
-    ? []
-    : localStorage.getItem("ddays").split(",");
-
 let addButton = document.querySelector("#add-dday");
 let addDdayBox = document.querySelector("#add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
+let ddayName = document.querySelector("#dday-name");
+let ddaySubmit = document.querySelector("#submit");
 
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
   addDdayBox.classList.remove("unshow");
 });
 
-ddayInput.addEventListener("change", () => {
-  let target = ddayInput.value;
-  console.log(target);
-  ddays.push(target);
-  localStorage.setItem("ddays", ddays);
+ddaySubmit.addEventListener("click", (event) => {
+  let ddaySubject = ddayName.value;
+  let ddayTarget = ddayInput.value;
+  ddays[ddaySubject] = ddayTarget;
+  localStorage.setItem("ddays", JSON.stringify(ddays));
 
   addDdayBox.classList.add("unshow");
 });
+
+setInterval(() => {
+  let main = document.getElementById("dday-list");
+  while (main.children.length > 0) {
+    main.removeChild(main.lastChild);
+  }
+  dday.drawDday();
+}, 1000);

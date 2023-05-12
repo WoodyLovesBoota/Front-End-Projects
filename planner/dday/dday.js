@@ -1,9 +1,7 @@
-import projects from "../../portfolio/projects.js";
-
-let target = new Date(2024, 1, 1);
-let main = document.getElementById("clock");
-let content = document.createElement("p");
-let content2 = document.createElement("p");
+let ddays =
+  localStorage.getItem("ddays") === null
+    ? {}
+    : JSON.parse(localStorage.getItem("ddays"));
 
 const padInt = (n) => {
   let res = String(n);
@@ -15,11 +13,19 @@ const padInt = (n) => {
   return res;
 };
 
-const calcTime = () => {
+const calcTime = (name, target) => {
+  let main = document.getElementById("dday-list");
+  let ddayElement = document.createElement("div");
+  let content = document.createElement("p");
+  let content2 = document.createElement("p");
+
+  ddayElement.classList.add("dday-element");
+
   let now = new Date();
   let nowTime = now.getTime();
   let targetTime = target.getTime();
   let lest = Math.floor((targetTime - nowTime) / 1000);
+
   let lestDate = Math.floor(lest / (60 * 60 * 24));
   let lestHour = padInt(
     Math.floor((lest - lestDate * (60 * 60 * 24)) / (60 * 60))
@@ -33,40 +39,29 @@ const calcTime = () => {
     )
   );
 
-  let clockMessage = lestDate + "일";
-
-  let clockMessage2 = lestHour + " : " + lestMinute + " : " + lestSecond;
-
+  let clockMessage = name;
   content.innerHTML = clockMessage;
-  main.appendChild(content);
+
+  let clockMessage2 =
+    lestDate + "일 " + lestHour + " : " + lestMinute + " : " + lestSecond;
   content2.innerHTML = clockMessage2;
-  main.appendChild(content2);
+
+  ddayElement.appendChild(content);
+  ddayElement.appendChild(content2);
+  main.appendChild(ddayElement);
 };
 
-// let desc = projects.basic[1].detail;
-// let descDiv = document.querySelector("#description");
-// let due = document.createElement("p");
-// let dueLabel = document.createElement("span");
-// let dueContent = document.createElement("span");
-// dueLabel.innerText = "구현 기간 : ";
-// dueContent.innerText = desc[0];
-// due.append(dueLabel, dueContent);
-// let hour = document.createElement("p");
-// let hourLabel = document.createElement("span");
-// let hourContent = document.createElement("span");
-// hourLabel.innerText = "소모 시간 : ";
-// hourContent.innerText = desc[1];
-// hour.append(hourLabel, hourContent);
-// let skill = document.createElement("p");
-// let skillLabel = document.createElement("span");
-// let skillContent = document.createElement("span");
-// skillLabel.innerText = "사용한 기능 : ";
-// skillContent.innerText = desc[2];
-// skill.append(skillLabel, skillContent);
-// let detail = document.createElement("p");
-// let detailContent = document.createElement("span");
-// detailContent.innerHTML = desc[3];
-// detail.append(detailContent);
-// descDiv.append(due, hour, skill, detail);
+const drawDday = () => {
+  Object.entries(ddays).forEach(([key, value]) => {
+    let targetDay = new Date(
+      value.substring(0, 4),
+      value.substring(5, 7) - 1,
+      value.substring(8, 10)
+    );
+    calcTime(key, targetDay);
+  });
+};
 
-setInterval(calcTime, 1000);
+//setInterval(calcTime, 1000);
+
+export { calcTime, drawDday };
