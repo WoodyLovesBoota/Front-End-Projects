@@ -20,10 +20,11 @@ todo.drawTodos();
 
 // dday part
 let addButton = document.querySelector("#add-dday");
-let addDdayBox = document.querySelector("#add-dday-box");
+let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
 let ddayName = document.querySelector("#dday-name");
 let ddaySubmit = document.querySelector("#submit");
+addDdayBox.classList.add("unshow");
 
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
