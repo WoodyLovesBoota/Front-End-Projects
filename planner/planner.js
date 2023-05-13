@@ -60,34 +60,30 @@ const padInt = (n) => {
   return res;
 };
 
-let now = new Date();
-let nowDay;
-if (now.getDay() === 1) nowDay = "월요일";
-else if (now.getDay() === 2) nowDay = "화요일";
-else if (now.getDay() === 3) nowDay = "수요일";
-else if (now.getDay() === 4) nowDay = "목요일";
-else if (now.getDay() === 5) nowDay = "금요일";
-else if (now.getDay() === 6) nowDay = "토요일";
-else nowDay = "일요일";
-let nowMonth = padInt(now.getMonth() + 1);
-let nowYear = now.getFullYear();
-let nowDate = padInt(now.getDate());
-let nowHour = padInt(now.getHours());
-let nowMinute = padInt(now.getMinutes());
-let nowSecond = padInt(now.getSeconds());
-
-let nowYearMonthDate = nowYear + "년 " + nowMonth + "월 " + nowDate + "일";
-let nowHourMinutesSecond = nowHour + " : " + nowMinute + " : " + nowSecond;
-console.log(nowYearMonthDate);
-console.log(nowDay);
-console.log(nowHourMinutesSecond);
-
-let dateBox = document.querySelector("#time-date-text");
-let hourBox = document.querySelector("#time-hour-text");
-
 const drawClock = () => {
+  let now = new Date();
+  let nowDay;
+  if (now.getDay() === 1) nowDay = "월요일";
+  else if (now.getDay() === 2) nowDay = "화요일";
+  else if (now.getDay() === 3) nowDay = "수요일";
+  else if (now.getDay() === 4) nowDay = "목요일";
+  else if (now.getDay() === 5) nowDay = "금요일";
+  else if (now.getDay() === 6) nowDay = "토요일";
+  else nowDay = "일요일";
+  let nowMonth = padInt(now.getMonth() + 1);
+  let nowYear = now.getFullYear();
+  let nowDate = padInt(now.getDate());
+  let nowHour = padInt(now.getHours());
+  let nowMinute = padInt(now.getMinutes());
+  let nowSecond = padInt(now.getSeconds());
+
+  let nowYearMonthDate = nowYear + "년 " + nowMonth + "월 " + nowDate + "일";
+  let nowHourMinutesSecond = nowHour + " : " + nowMinute + " : " + nowSecond;
+  let dateBox = document.querySelector("#time-date-text");
+  let hourBox = document.querySelector("#time-hour-text");
+
   dateBox.innerHTML = nowYearMonthDate;
   hourBox.innerHTML = nowHourMinutesSecond;
 };
 
-drawClock();
+setInterval(drawClock, 1000);
