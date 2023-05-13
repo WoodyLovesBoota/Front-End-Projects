@@ -49,6 +49,17 @@ setInterval(() => {
 }, 1000);
 
 // clock part
+
+const padInt = (n) => {
+  let res = String(n);
+  if (String(n).length === 1) {
+    let arr = String(n).split("");
+    arr.unshift("0");
+    res = arr.join("");
+  }
+  return res;
+};
+
 let now = new Date();
 let nowDay;
 if (now.getDay() === 1) nowDay = "월요일";
@@ -58,15 +69,25 @@ else if (now.getDay() === 4) nowDay = "목요일";
 else if (now.getDay() === 5) nowDay = "금요일";
 else if (now.getDay() === 6) nowDay = "토요일";
 else nowDay = "일요일";
-let nowMonth = now.getMonth() + 1;
+let nowMonth = padInt(now.getMonth() + 1);
 let nowYear = now.getFullYear();
-let nowDate = now.getDate();
-let nowHour = now.getHours();
-let nowMinute = now.getMinutes();
-let nowSecond = now.getSeconds();
+let nowDate = padInt(now.getDate());
+let nowHour = padInt(now.getHours());
+let nowMinute = padInt(now.getMinutes());
+let nowSecond = padInt(now.getSeconds());
 
 let nowYearMonthDate = nowYear + "년 " + nowMonth + "월 " + nowDate + "일";
 let nowHourMinutesSecond = nowHour + " : " + nowMinute + " : " + nowSecond;
 console.log(nowYearMonthDate);
 console.log(nowDay);
 console.log(nowHourMinutesSecond);
+
+let dateBox = document.querySelector("#time-date-text");
+let hourBox = document.querySelector("#time-hour-text");
+
+const drawClock = () => {
+  dateBox.innerHTML = nowYearMonthDate;
+  hourBox.innerHTML = nowHourMinutesSecond;
+};
+
+drawClock();
