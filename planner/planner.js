@@ -58,11 +58,15 @@ else if (now.getDay() === 4) nowDay = "목요일";
 else if (now.getDay() === 5) nowDay = "금요일";
 else if (now.getDay() === 6) nowDay = "토요일";
 else nowDay = "일요일";
-
 let nowMonth = now.getMonth() + 1;
 let nowYear = now.getFullYear();
 let nowDate = now.getDate();
+let nowHour = now.getHours();
+let nowMinute = now.getMinutes();
+let nowSecond = now.getSeconds();
 
 let nowYearMonthDate = nowYear + "년 " + nowMonth + "월 " + nowDate + "일";
+let nowHourMinutesSecond = nowHour + " : " + nowMinute + " : " + nowSecond;
 console.log(nowYearMonthDate);
 console.log(nowDay);
+console.log(nowHourMinutesSecond);
