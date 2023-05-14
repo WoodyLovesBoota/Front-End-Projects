@@ -62,6 +62,4 @@ const drawDday = () => {
   });
 };
 
-//setInterval(calcTime, 1000);
-
-export { calcTime, drawDday };
+export { ddays, calcTime, drawDday };

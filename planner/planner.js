@@ -19,6 +19,10 @@ todoInput.addEventListener("change", todo.setTodo);
 todo.drawTodos();
 
 // dday part
+let ddays =
+  localStorage.getItem("ddays") === null
+    ? {}
+    : JSON.parse(localStorage.getItem("ddays"));
 let addButton = document.querySelector("#add-dday");
 let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
@@ -40,16 +44,7 @@ ddaySubmit.addEventListener("click", (event) => {
   addDdayBox.classList.add("unshow");
 });
 
-setInterval(() => {
-  let main = document.getElementById("dday-list");
-  while (main.children.length > 0) {
-    main.removeChild(main.lastChild);
-  }
-  dday.drawDday();
-}, 1000);
-
 // clock part
-
 const padInt = (n) => {
   let res = String(n);
   if (String(n).length === 1) {
@@ -86,4 +81,11 @@ const drawClock = () => {
   hourBox.innerHTML = nowHourMinutesSecond;
 };
 
-setInterval(drawClock, 1000);
+setInterval(() => {
+  let main = document.getElementById("dday-list");
+  while (main.children.length > 0) {
+    main.removeChild(main.lastChild);
+  }
+  drawClock();
+  dday.drawDday();
+}, 1000);
