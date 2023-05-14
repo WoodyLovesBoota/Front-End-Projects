@@ -88,6 +88,7 @@ const drawLocation = (location) => {
     location.coords.longitude,
   ];
   console.log(latitude, longitude);
+  // TODO : 여기서 부터 geocoding 으로 해야될듯..
 };
 
 const successCallback = async (position) => {
