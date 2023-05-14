@@ -81,6 +81,30 @@ const drawClock = () => {
   hourBox.innerHTML = nowHourMinutesSecond;
 };
 
+// locaton part
+const drawLocation = (location) => {
+  let [latitude, longitude] = [
+    location.coords.latitude,
+    location.coords.longitude,
+  ];
+  console.log(latitude, longitude);
+};
+
+const successCallback = async (position) => {
+  let nowGeo = await position;
+  drawLocation(nowGeo);
+};
+
+const errorCallback = (error) => {
+  console.log(error);
+};
+
+const getLocation = async () => {
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+};
+
+getLocation();
+
 setInterval(() => {
   let main = document.getElementById("dday-list");
   while (main.children.length > 0) {
