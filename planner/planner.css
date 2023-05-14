@@ -48,12 +48,17 @@ body {
   height: 45vh;
 }
 
+#todo-box > p {
+  margin: 0;
+}
+
 ul {
   list-style: none;
 }
 
 #todos {
   margin: 0;
+  padding: 0;
 }
 
 #todos li input {
@@ -61,7 +66,7 @@ ul {
 }
 
 #todos li {
-  margin: 0 0 10px 0;
+  margin: 10px 0;
   vertical-align: center;
 }
 
@@ -136,4 +141,20 @@ ul {
 
 .unshow {
   display: none;
+}
+
+#time-date-text {
+  margin: 0;
+}
+
+#dday-list {
+  width: 100%;
+  height: 90%;
+}
+
+.dday-element {
+  display: flex;
+  height: 3vh;
+  justify-content: space-between;
+  margin: 0.5vh 2vw;
 }
