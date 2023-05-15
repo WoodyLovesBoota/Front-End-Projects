@@ -58,13 +58,13 @@ const padInt = (n) => {
 const drawClock = () => {
   let now = new Date();
   let nowDay;
-  if (now.getDay() === 1) nowDay = "월요일";
-  else if (now.getDay() === 2) nowDay = "화요일";
-  else if (now.getDay() === 3) nowDay = "수요일";
-  else if (now.getDay() === 4) nowDay = "목요일";
-  else if (now.getDay() === 5) nowDay = "금요일";
-  else if (now.getDay() === 6) nowDay = "토요일";
-  else nowDay = "일요일";
+  if (now.getDay() === 1) nowDay = "MON";
+  else if (now.getDay() === 2) nowDay = "TUE";
+  else if (now.getDay() === 3) nowDay = "WED";
+  else if (now.getDay() === 4) nowDay = "THU";
+  else if (now.getDay() === 5) nowDay = "FRI";
+  else if (now.getDay() === 6) nowDay = "SAT";
+  else nowDay = "SUN";
   let nowMonth = padInt(now.getMonth() + 1);
   let nowYear = now.getFullYear();
   let nowDate = padInt(now.getDate());
@@ -72,7 +72,8 @@ const drawClock = () => {
   let nowMinute = padInt(now.getMinutes());
   let nowSecond = padInt(now.getSeconds());
 
-  let nowYearMonthDate = nowYear + "년 " + nowMonth + "월 " + nowDate + "일";
+  let nowYearMonthDate =
+    nowYear + " / " + nowMonth + " / " + nowDate + " " + nowDay;
   let nowHourMinutesSecond = nowHour + " : " + nowMinute + " : " + nowSecond;
   let dateBox = document.querySelector("#time-date-text");
   let hourBox = document.querySelector("#time-hour-text");
