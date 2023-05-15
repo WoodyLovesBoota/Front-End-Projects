@@ -4,6 +4,7 @@ body {
   width: 95vw;
   height: 95vh;
   margin: 0;
+  font-weight: 500;
 }
 
 #left-side {
@@ -31,13 +32,12 @@ body {
 #location-box {
   background-color: rgb(135, 222, 181);
   width: 35vw;
-  height: 20vh;
+  height: 15vh;
 }
 
 #dday-box {
-  background-color: rgb(222, 135, 186);
   width: 35vw;
-  height: 30vh;
+  height: 35vh;
 }
 
 #todo-box {
@@ -80,6 +80,7 @@ ul {
 #todos li span {
   margin: 0px 3vw;
   font-size: 1.5vw;
+  font-weight: 500;
 }
 
 #todos li label {
@@ -173,7 +174,17 @@ ul {
   display: flex;
   height: 3vh;
   justify-content: space-between;
-  margin: 0.5vh 2vw;
+  margin: 10px 0;
+  font-size: 1.7vw;
+}
+
+.dday-element p:last-child {
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+.dday-element p {
+  margin: 0;
 }
 
 #time-date-text {
@@ -199,4 +210,22 @@ ul {
 #todo-box p:first-child {
   font-size: 1.5vw;
   margin-bottom: 2vh;
+  font-weight: 600;
+}
+
+#dday-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#dday-header > p {
+  font-size: 1.5vw;
+  margin: 0;
+  font-weight: 600;
+}
+
+#dday-header > button {
+  border: none;
+  font-size: 1vw;
+  cursor: pointer;
 }
