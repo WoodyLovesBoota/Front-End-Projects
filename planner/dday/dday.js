@@ -17,15 +17,6 @@ const getKeyByValue = (object, value) => {
   return Object.keys(object).find((key) => object[key] === value);
 };
 
-// let target = item.querySelector("span").innerText;
-// let key = getKeyByValue(todos, target);
-// delete todos[key];
-// localStorage.setItem("todos", JSON.stringify(todos));
-// if (checkedTodo.indexOf(target) !== -1)
-//   checkedTodo.splice(checkedTodo.indexOf(target), 1);
-// localStorage.setItem("checks", checkedTodo);
-// drawTodos();
-
 const deleteDday = (element) => {
   let target = element.firstChild.innerText;
   delete ddays[target];
