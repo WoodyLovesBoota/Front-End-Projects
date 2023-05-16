@@ -79,6 +79,5 @@ https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE
 - job listing
   https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt
 
-  
 https://dev.to/frontendmentor/16-front-end-projects-with-designs-to-help-improve-your-coding-skills-5ajl
 */
