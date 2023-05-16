@@ -177,6 +177,17 @@ ul {
   justify-content: space-between;
   margin: 10px 0;
   font-size: 1.7vw;
+  position: relative;
+}
+
+.dday-element > button {
+  border: none;
+  top: 0.5vw;
+  right: 0.3vw;
+  font-size: 1vw;
+  position: absolute;
+  right: 15vw;
+  cursor: pointer;
 }
 
 .dday-element p:last-child {
