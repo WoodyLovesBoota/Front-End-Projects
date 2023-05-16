@@ -19,10 +19,6 @@ todoInput.addEventListener("change", todo.setTodo);
 todo.drawTodos();
 
 // dday part
-let ddays =
-  localStorage.getItem("ddays") === null
-    ? {}
-    : JSON.parse(localStorage.getItem("ddays"));
 
 let addButton = document.querySelector("#add-dday");
 let addDdayBox = document.querySelector(".add-dday-box");
@@ -38,6 +34,10 @@ addButton.addEventListener("click", (event) => {
 });
 
 ddaySubmit.addEventListener("click", (event) => {
+  let ddays =
+    localStorage.getItem("ddays") === null
+      ? {}
+      : JSON.parse(localStorage.getItem("ddays"));
   let ddaySubject = ddayName.value;
   let ddayTarget = ddayInput.value;
   ddays[ddaySubject] = ddayTarget;

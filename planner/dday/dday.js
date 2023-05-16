@@ -27,9 +27,7 @@ const getKeyByValue = (object, value) => {
 // drawTodos();
 
 const deleteDday = (element) => {
-  console.log(element.children);
   let target = element.firstChild.innerText;
-  console.log(target);
   delete ddays[target];
   localStorage.setItem("ddays", JSON.stringify(ddays));
 };
