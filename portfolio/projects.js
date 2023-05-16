@@ -20,6 +20,7 @@ const schedularDetail = [
   "HTML . CSS . Javascript",
 ];
 
+// TODO : background 설명 추가
 const plannerDetail = [
   "Calendar - Schedule Handler는 HTML CSS Javascript\
   를 이용한 Web Application이다. \
