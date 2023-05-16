@@ -12,7 +12,6 @@ let checkedTodo =
 
 const setTodo = () => {
   let todoItem = document.querySelector("#todo-input").value;
-  console.log(todoItem);
   todos[date.getTime()] = todoItem;
   localStorage.setItem("todos", JSON.stringify(todos));
   drawTodos();
