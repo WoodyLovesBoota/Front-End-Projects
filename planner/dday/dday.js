@@ -13,6 +13,27 @@ const padInt = (n) => {
   return res;
 };
 
+const getKeyByValue = (object, value) => {
+  return Object.keys(object).find((key) => object[key] === value);
+};
+
+// let target = item.querySelector("span").innerText;
+// let key = getKeyByValue(todos, target);
+// delete todos[key];
+// localStorage.setItem("todos", JSON.stringify(todos));
+// if (checkedTodo.indexOf(target) !== -1)
+//   checkedTodo.splice(checkedTodo.indexOf(target), 1);
+// localStorage.setItem("checks", checkedTodo);
+// drawTodos();
+
+const deleteDday = (element) => {
+  console.log(element.children);
+  let target = element.firstChild.innerText;
+  console.log(target);
+  delete ddays[target];
+  localStorage.setItem("ddays", JSON.stringify(ddays));
+};
+
 const calcTime = (name, target) => {
   let main = document.getElementById("dday-list");
   let ddayElement = document.createElement("div");
@@ -22,6 +43,10 @@ const calcTime = (name, target) => {
   ddayDelete.innerHTML = "X";
 
   ddayElement.classList.add("dday-element");
+
+  ddayDelete.addEventListener("click", () => {
+    deleteDday(ddayDelete.parentNode);
+  });
 
   let now = new Date();
   let nowTime = now.getTime();

@@ -29,6 +29,7 @@ let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
 let ddayName = document.querySelector("#dday-name");
 let ddaySubmit = document.querySelector("#submit");
+
 addDdayBox.classList.add("unshow");
 
 addButton.addEventListener("click", (event) => {
@@ -89,7 +90,6 @@ const drawLocation = (location) => {
     location.coords.latitude,
     location.coords.longitude,
   ];
-  console.log(latitude, longitude);
   // TODO : 여기서 부터 geocoding 으로 해야될듯..
 };
 
