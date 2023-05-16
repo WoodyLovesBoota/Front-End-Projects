@@ -18,6 +18,8 @@ const calcTime = (name, target) => {
   let ddayElement = document.createElement("div");
   let content = document.createElement("p");
   let content2 = document.createElement("p");
+  let ddayDelete = document.createElement("button");
+  ddayDelete.innerHTML = "X";
 
   ddayElement.classList.add("dday-element");
 
@@ -47,6 +49,7 @@ const calcTime = (name, target) => {
   content2.innerHTML = clockMessage2;
 
   ddayElement.appendChild(content);
+  ddayElement.appendChild(ddayDelete);
   ddayElement.appendChild(content2);
   main.appendChild(ddayElement);
 };

@@ -151,10 +151,11 @@ ul {
   align-items: center;
 }
 
-#add-dday-box section {
+#add-dday-form {
   background-color: white;
   width: 50vw;
   height: 50vh;
+  text-align: center;
 }
 
 .unshow {

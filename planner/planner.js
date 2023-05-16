@@ -23,6 +23,7 @@ let ddays =
   localStorage.getItem("ddays") === null
     ? {}
     : JSON.parse(localStorage.getItem("ddays"));
+
 let addButton = document.querySelector("#add-dday");
 let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
