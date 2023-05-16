@@ -20,15 +20,18 @@ const schedularDetail = [
   "HTML . CSS . Javascript",
 ];
 
-const project2Detail = [
-  "index 1 . meaning\
-    <br>of\
-    <br>project2",
+const plannerDetail = [
+  "Calendar - Schedule Handler는 HTML CSS Javascript\
+  를 이용한 Web Application이다. \
+  이전에 구현했던 여러가지 간단한 프로젝트들을 하나의 Application에 담으려 시도하였다.\
+  <br>1. Clock - 현재 날짜와 시각을 표시해준다.\
+  <br>2. D-day - 오늘부터 목표한 날까지의 남은 시간을 계산해준다.\
+  <br>3. Todo - 사용자의 할 일을 기록하고 화면에 표시해준다.",
   "index 2 . background\
     <br>of\
     <br>project2",
-  "index 4 . spec",
-  "index 5 . language",
+  "Front-End Development",
+  "HTML . CSS . Javascript",
 ];
 
 const project3Detail = [
@@ -52,11 +55,11 @@ const projects = {
       detail: schedularDetail,
     },
     {
-      title: "Project2",
-      subTitle: "subtitle of project2",
-      code: "../../Schedular/Schedular.html",
+      title: "Planner",
+      subTitle: "",
+      code: "../../planner/planner.html",
       image: "",
-      detail: project2Detail,
+      detail: plannerDetail,
     },
     {
       title: "Project3",
