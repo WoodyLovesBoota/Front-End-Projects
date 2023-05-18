@@ -28,9 +28,13 @@ const plannerDetail = [
   <br>1. Clock - 현재 날짜와 시각을 표시해준다.\
   <br>2. D-day - 오늘부터 목표한 날까지의 남은 시간을 계산해준다.\
   <br>3. Todo - 사용자의 할 일을 기록하고 화면에 표시해준다.",
-  "index 2 . background\
-    <br>of\
-    <br>project2",
+  "Javascript를 이용한 application을 만들어 보기로 결심한 후, Schedular를 만드릭 전까지 여러 간단한\
+  Project를 진행했었다. 각각을 만드는데 3-4시간 정도가 걸릴정도로 HTML CSS Javascript를 이용하는 방법을\
+  익히기 위한 결과물들 이었다. 이 중 몇개를 합쳐서 하나의 Project로 만들어 볼 수 있겠다는 생각을 하게되었고\
+  여러 코드를 합쳐서 Chrome 의 Momentum과 비슷한 application을 만들게 되었다. 이전까지 하나의 JS 파일로\
+  작업을 진행하였지만, 이미 작성된 여러 코드들을 하나의 JS 파일에 합치다보니 문제점이 생기기 시작하였고, export 와 import 등\
+  상속을 이용하여 문제를 해결하였다. 코드를 합치는 법을 공부하다 보니 JS framework인 React의 component를 이용하면 작업을\
+  더욱 효울적으로 할 수 있다는 사실을 알게되었고 따라서 Planner 프로젝트는 이후 React를 이용해서 다시 진행할 계획이다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
 ];
