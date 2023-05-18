@@ -13,6 +13,7 @@ let nextSubject = document.querySelector("#next-subject");
 let spec = document.querySelector("#project-spec-part");
 let language = document.querySelector("#project-spec-language");
 let viewButton = document.querySelector("#project-button");
+let sourcecode = document.querySelector("#project-code-address");
 
 // Set project number : now
 let now = 0;
@@ -44,7 +45,7 @@ const drawProject = (index) => {
   background.innerHTML = project.detail[1];
   spec.innerHTML = project.detail[2];
   language.innerHTML = project.detail[3];
-
+  sourcecode.href = project.sourcecode;
   prevSubject.innerHTML =
     index === 0
       ? projects["basic"][total].title

@@ -163,7 +163,8 @@ main {
   margin: 0 1vw;
 }
 
-#project-button {
+#project-button,
+#project-code-button {
   margin-top: 3vh;
   border: 1px solid rgb(156, 155, 155);
   height: 5vh;

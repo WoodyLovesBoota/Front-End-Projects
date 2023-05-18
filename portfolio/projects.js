@@ -54,6 +54,8 @@ const projects = {
       code: "../../Schedular/Schedular.html",
       image: "",
       detail: schedularDetail,
+      sourcecode:
+        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
     },
     {
       title: "Planner",
@@ -61,6 +63,8 @@ const projects = {
       code: "../../planner/planner.html",
       image: "",
       detail: plannerDetail,
+      sourcecode:
+        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
     },
     {
       title: "Project3",
@@ -68,6 +72,8 @@ const projects = {
       code: "../../Schedular/Schedular.html",
       image: "",
       detail: project3Detail,
+      sourcecode:
+        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
     },
   ],
 };
