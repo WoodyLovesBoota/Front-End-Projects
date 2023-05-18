@@ -202,11 +202,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 3vh;
 }
 
-.today p {
+.today {
   background: linear-gradient(
-    to right,
-    rgb(207, 129, 231),
+    to right bottom,
     rgb(253, 233, 250),
-    rgb(207, 129, 231)
+    rgb(178, 255, 188)
   );
 }
