@@ -68,7 +68,7 @@ const projects = {
       image: "",
       detail: plannerDetail,
       sourcecode:
-        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
+        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/planner",
     },
     {
       title: "Project3",
