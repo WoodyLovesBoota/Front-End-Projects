@@ -197,3 +197,7 @@ input[type="time"] {
 input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: lightgray;
 }
+
+#space {
+  height: 3vh;
+}
