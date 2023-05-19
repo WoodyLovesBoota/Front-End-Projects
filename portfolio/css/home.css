@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   width: 70vw;
-  height: 200vh;
+  height: 150vh;
   background: linear-gradient(to top, rgba(212, 174, 221, 0.7), white);
 }
 
@@ -37,6 +37,16 @@ main {
   margin-top: 10vh;
   height: 90%;
   width: 100%;
+}
+
+#main-image {
+  width: 70vw;
+  height: 30vh;
+  margin: 0;
+  background-color: green;
+}
+
+#main-box {
   display: flex;
   justify-content: space-between;
 }
@@ -44,13 +54,13 @@ main {
 #left-side {
   background-color: blue;
   width: 35vw;
-  height: 100vh;
+  height: 70vh;
   margin: 0;
 }
 
 #right-side {
   background-color: red;
   width: 35vw;
-  height: 100vh;
+  height: 70vh;
   margin: 0;
 }
