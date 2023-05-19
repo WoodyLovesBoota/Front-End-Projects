@@ -68,6 +68,7 @@ window.onload = () => {
 
 /* 
 TODO 
+- 프로젝트 description 에 implementation 내용 추가하기
 - survey form like google form
 - landing page 
   https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0
