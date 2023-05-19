@@ -18,6 +18,7 @@ const schedularDetail = [
     수행한 project이기도 하다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
+  "implementation",
 ];
 
 // TODO : background 설명 추가
@@ -37,6 +38,7 @@ const plannerDetail = [
   더욱 효울적으로 할 수 있다는 사실을 알게되었고 따라서 Planner 프로젝트는 이후 React를 이용해서 다시 진행할 계획이다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
+  "implementation",
 ];
 
 const project3Detail = [
@@ -48,6 +50,7 @@ const project3Detail = [
     <br>project3",
   "index 4 . spec",
   "index 5 . language",
+  "index 6. implementation",
 ];
 
 const projects = {
