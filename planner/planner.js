@@ -85,6 +85,15 @@ const drawLocation = (location) => {
     location.coords.longitude,
   ];
   // TODO : 여기서 부터 geocoding 으로 해야될듯..
+  // let geocoder = new google.maps.Geocoder();
+  // let geolocation = new google.maps.LatLng(latitude, longitude); // turn coordinates into an object
+  // geocoder.geocode({ latLng: geolocation }, (results, status) => {
+  //   if (status == google.maps.GeocoderStatus.OK) {
+  //     // if geocode success
+  //     var add = results[0].formatted_address;
+  //     console.log(add);
+  //   }
+  // });
 };
 
 const successCallback = async (position) => {
