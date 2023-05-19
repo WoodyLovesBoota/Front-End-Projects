@@ -5,6 +5,9 @@ body {
   height: 95vh;
   margin: 0;
   font-weight: 500;
+  background-image: url("./forest.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #left-side {
@@ -133,6 +136,7 @@ ul {
   font-weight: 600;
   letter-spacing: 0.2vw;
   word-spacing: 0.4vw;
+  background-color: transparent;
 }
 
 #todo-input:focus {
