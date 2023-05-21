@@ -8,10 +8,7 @@ body {
   background-image: url("./forest.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-p {
-  color: aliceblue;
+  color: white;
 }
 
 #left-side {
@@ -109,6 +106,8 @@ ul {
   top: 0.5vw;
   right: 0.3vw;
   font-size: 1vw;
+  color: white;
+  background-color: transparent;
 }
 
 #todos li button :hover {
@@ -141,6 +140,7 @@ ul {
   letter-spacing: 0.2vw;
   word-spacing: 0.4vw;
   background-color: transparent;
+  color: white;
 }
 
 #todo-input:focus {
