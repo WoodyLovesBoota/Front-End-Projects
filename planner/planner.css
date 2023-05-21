@@ -220,21 +220,29 @@ ul {
 
 .dday-element {
   display: flex;
-  height: 3vh;
+  height: 5vh;
   justify-content: space-between;
   margin: 10px 0;
   font-size: 1.7vw;
   position: relative;
+  align-items: center;
+}
+
+.dday-element > div:first-child > p:last-child {
+  color: rgb(172, 172, 172);
+  font-size: 1vw;
 }
 
 .dday-element > button {
   border: none;
-  top: 0.5vw;
+  top: 1vw;
   right: 0.3vw;
   font-size: 1vw;
   position: absolute;
   right: 15vw;
   cursor: pointer;
+  background-color: transparent;
+  color: white;
 }
 
 .dday-element p:last-child {

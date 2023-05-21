@@ -25,10 +25,12 @@ const deleteDday = (element) => {
 
 const calcTime = (name, target) => {
   let main = document.getElementById("dday-list");
+  let ddayContent = document.createElement("div");
   let ddayElement = document.createElement("div");
   let content = document.createElement("p");
   let content2 = document.createElement("p");
   let ddayDelete = document.createElement("button");
+  let ddayDate = document.createElement("p");
   ddayDelete.innerHTML = "X";
 
   ddayElement.classList.add("dday-element");
@@ -55,14 +57,23 @@ const calcTime = (name, target) => {
     )
   );
 
+  ddayDate.innerHTML =
+    target.getFullYear() +
+    "-" +
+    (Number(target.getMonth()) + 1) +
+    "-" +
+    target.getDate();
+
   let clockMessage = name;
   content.innerHTML = clockMessage;
 
   let clockMessage2 =
     lestDate + "일 " + lestHour + " : " + lestMinute + " : " + lestSecond;
   content2.innerHTML = clockMessage2;
+  ddayContent.appendChild(content);
+  ddayContent.appendChild(ddayDate);
+  ddayElement.appendChild(ddayContent);
 
-  ddayElement.appendChild(content);
   ddayElement.appendChild(ddayDelete);
   ddayElement.appendChild(content2);
   main.appendChild(ddayElement);
