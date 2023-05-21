@@ -160,7 +160,7 @@ ul {
 }
 
 #add-dday-form {
-  background-color: white;
+  background-color: rgb(71, 71, 71);
   width: 50vw;
   height: 50vh;
   text-align: center;
@@ -229,8 +229,11 @@ ul {
 
 #todo-box p:first-child {
   font-size: 1.5vw;
-  margin-bottom: 2vh;
   font-weight: 600;
+}
+
+#todo-box hr {
+  margin-bottom: 2vh;
 }
 
 #dday-header {
