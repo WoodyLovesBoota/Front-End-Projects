@@ -19,6 +19,7 @@ let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
 let ddayName = document.querySelector("#dday-name");
 let ddaySubmit = document.querySelector("#submit");
+let ddayReset = document.querySelector("#reset");
 
 addDdayBox.classList.add("unshow");
 
@@ -37,6 +38,10 @@ ddaySubmit.addEventListener("click", (event) => {
   ddays[ddaySubject] = ddayTarget;
   localStorage.setItem("ddays", JSON.stringify(ddays));
 
+  addDdayBox.classList.add("unshow");
+});
+
+ddayReset.addEventListener("click", () => {
   addDdayBox.classList.add("unshow");
 });
 

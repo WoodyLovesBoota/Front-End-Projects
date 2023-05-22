@@ -154,17 +154,26 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 #add-dday-form {
-  width: 50vw;
+  width: 30vw;
   height: 50vh;
   text-align: center;
   background-color: bisque;
+  position: absolute;
+  top: -3vh;
+  right: 30vw;
+  border: 2px solid rgb(150, 150, 20);
+}
+
+#add-dday-form > p {
+  font-size: 2vh;
+  font-weight: 600;
 }
 
 #dday-name {
@@ -172,9 +181,9 @@ ul {
   border: none;
   border-bottom: 2px gray solid;
   color: gray;
-  width: 30%;
-  height: 5vh;
-  font-size: 2vh;
+  width: 50%;
+  height: 3vh;
+  font-size: 1.5vh;
   font-weight: 550;
   margin-top: 3vh;
 }
@@ -188,9 +197,9 @@ ul {
   color: gray;
   border: none;
   border-bottom: 2px gray solid;
-  width: 30%;
-  height: 5vh;
-  font-size: 2vh;
+  width: 50%;
+  height: 3vh;
+  font-size: 1.5vh;
   margin-top: 3vh;
 }
 
@@ -201,9 +210,23 @@ ul {
   cursor: pointer;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  width: 50%;
   height: 10%;
   background-color: rgb(123, 123, 252);
+}
+
+#reset {
+  background-color: transparent;
+  color: gray;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 10%;
+  background-color: rgb(219, 219, 252);
 }
 
 .unshow {
@@ -304,7 +327,7 @@ ul {
 
 #add-dday {
   background-color: transparent;
-  color: aliceblue;
+  color: black;
 }
 
 #dday-input::before {
