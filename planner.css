@@ -1,0 +1,353 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  height: 95vh;
+  margin: 0;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+}
+
+#left-side {
+  width: 60vw;
+  height: 95vh;
+}
+
+#right-side {
+  width: 35vw;
+  height: 95vh;
+}
+
+#time-box {
+  width: 60vw;
+  height: 55vh;
+  position: relative;
+}
+
+#todo-input-box {
+  width: 60vw;
+  height: 40vh;
+  position: relative;
+}
+
+#location-box {
+  background-color: rgb(135, 222, 181);
+  width: 35vw;
+  height: 15vh;
+}
+
+#dday-box {
+  width: 35vw;
+  height: 35vh;
+}
+
+#todo-box {
+  width: 35vw;
+  height: 45vh;
+}
+
+#todo-box > p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+#todos {
+  margin: 0;
+  padding: 0;
+}
+
+#todos li input {
+  display: none;
+}
+
+#todos li {
+  margin: 10px 0;
+  vertical-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+#todos li :hover {
+  font-weight: 800;
+}
+
+#todos li :hover ~ span {
+  font-weight: 800;
+}
+
+#todos li span {
+  margin: 0px 3vw;
+  font-size: 1.5vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+}
+
+#todos li label {
+  display: inline-block;
+  position: absolute;
+  width: 1vw;
+  height: 1vw;
+  border: 2px solid lightgray;
+  cursor: pointer;
+  top: 0.5vw;
+  left: 0.3vw;
+}
+
+#todos li button {
+  margin: 0px;
+  border: none;
+  font-weight: 550;
+  position: absolute;
+  top: 0.5vw;
+  right: 0.3vw;
+  font-size: 1vw;
+  color: lightgray;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#todos li button :hover {
+  border: 1px solid lightgrey;
+}
+
+.checked input ~ span {
+  text-decoration: line-through;
+}
+
+.checked input + label::after {
+  content: "V";
+  color: lightgrey;
+  top: -5px;
+  left: 1px;
+  position: absolute;
+  font-weight: 700;
+}
+
+#todo-input {
+  position: absolute;
+  top: 15vh;
+  left: 8vw;
+  border: none;
+  border-bottom: 4px solid gray;
+  width: 40vw;
+  height: 5vh;
+  font-size: 1.5vw;
+  font-weight: 600;
+  letter-spacing: 0.2vw;
+  word-spacing: 0.4vw;
+  background-color: transparent;
+  color: gray;
+}
+
+#todo-input:focus {
+  outline: none;
+}
+
+.add-dday-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#add-dday-form {
+  width: 30vw;
+  height: 50vh;
+  text-align: center;
+  background-color: bisque;
+  position: absolute;
+  top: -3vh;
+  right: 30vw;
+  border: 2px solid rgb(150, 150, 20);
+}
+
+#add-dday-form > p {
+  font-size: 2vh;
+  font-weight: 600;
+}
+
+#dday-name {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px gray solid;
+  color: gray;
+  width: 50%;
+  height: 3vh;
+  font-size: 1.5vh;
+  font-weight: 550;
+  margin-top: 3vh;
+}
+
+#dday-name:focus {
+  outline: none;
+}
+
+#dday-input {
+  background-color: transparent;
+  color: gray;
+  border: none;
+  border-bottom: 2px gray solid;
+  width: 50%;
+  height: 3vh;
+  font-size: 1.5vh;
+  margin-top: 3vh;
+}
+
+#submit {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 10%;
+  background-color: rgb(123, 123, 252);
+}
+
+#reset {
+  background-color: transparent;
+  color: gray;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 10%;
+  background-color: rgb(219, 219, 252);
+}
+
+.unshow {
+  display: none;
+}
+
+#time-date-text {
+  margin: 0;
+}
+
+#dday-list {
+  width: 100%;
+  height: 90%;
+}
+
+.dday-element {
+  display: flex;
+  height: 5vh;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1.7vw;
+  position: relative;
+  align-items: center;
+  letter-spacing: 0.1vw;
+}
+
+.dday-element > div:first-child > p:last-child {
+  color: rgb(172, 172, 172);
+  font-size: 1vw;
+}
+
+.dday-element > button {
+  border: none;
+  top: 1vw;
+  right: 0.3vw;
+  font-size: 1vw;
+  position: absolute;
+  right: 15vw;
+  cursor: pointer;
+  background-color: transparent;
+  color: gray;
+}
+
+.dday-element p:last-child {
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+.dday-element p {
+  margin: 0;
+}
+
+#time-date-text {
+  position: absolute;
+  font-size: 1.5vw;
+  left: 10vw;
+  top: 20vh;
+  font-weight: 600;
+  color: rgb(187, 187, 187);
+}
+
+#time-hour-text {
+  position: absolute;
+  top: 25vh;
+  left: 9vw;
+  text-align: center;
+  margin-top: 0;
+  font-size: 8vw;
+  font-weight: 700;
+  color: black;
+}
+
+#todo-box p:first-child {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+#todo-box hr {
+  margin-bottom: 2vh;
+}
+
+#dday-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#dday-header > p {
+  font-size: 1.5vw;
+  margin: 0;
+  font-weight: 600;
+}
+
+#dday-header > button {
+  border: none;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+#add-dday {
+  background-color: transparent;
+  color: black;
+}
+
+#dday-input::before {
+  content: attr(data-placeholder);
+  width: 100%;
+}
+
+#dday-input:focus::before,
+#dday-input:valid::before {
+  display: none;
+}
+
+#add-dday-form > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-dday-form {
+  position: relative;
+  color: gray;
+}
