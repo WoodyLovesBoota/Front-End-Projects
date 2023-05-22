@@ -1,0 +1,190 @@
+body {
+  margin: 0 auto;
+  width: 70vw;
+  height: 200vh;
+  background: linear-gradient(to top, rgba(212, 174, 221, 0.7), white);
+}
+
+p {
+  font-size: min(1.6vh, 0.8vw);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  width: 100%;
+  height: 7%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 2vw;
+}
+
+nav ul li a:hover {
+  font-weight: 600;
+}
+
+main {
+  margin-top: 10vh;
+  height: 90%;
+  width: 100%;
+}
+
+#project-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-image {
+  background-color: pink;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 5vh;
+}
+
+#project-page {
+  width: 100%;
+  height: 100vh;
+}
+
+#left-side {
+  width: 28vw;
+  height: 100vh;
+  margin-right: 10vw;
+}
+
+#right-side {
+  width: 55vw;
+  height: 100vh;
+}
+
+#project-subject {
+  width: 100%;
+  height: 12%;
+  margin-bottom: 0;
+}
+
+#project-meaning,
+#project-spec-part,
+#project-spec-language,
+#project-background,
+#project-implementation {
+  word-break: break-all;
+  letter-spacing: 0.05vw;
+  line-height: min(1.5vw, 3vh);
+}
+
+#project-meaning-box {
+  width: 100%;
+  height: 90vh;
+}
+
+#project-background-box {
+  width: 100%;
+  height: 25vh;
+}
+
+#project-implementation-box {
+  width: 100%;
+  height: 25vh;
+  margin: 15vh 0;
+}
+
+#project-preview-box {
+  width: 100%;
+  height: 35vh;
+  margin: 15vh 0;
+}
+
+#project-subject-title {
+  font-size: min(5vh, 3vw);
+  margin-bottom: 0;
+}
+
+#project-subject-subtitle {
+  font-size: min(3vh, 1.5vw);
+  margin: 0;
+  color: rgb(148, 148, 148);
+}
+
+#project-background-box p:first-child {
+  font-size: min(4vh, 2vw);
+  margin-bottom: 3vh;
+}
+
+#project-implementation-box p:first-child {
+  font-size: min(4vh, 2vw);
+  margin-bottom: 3vh;
+}
+
+#project-preview-box p:first-child {
+  font-size: min(4vh, 2vw);
+  margin-bottom: 3vh;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.arrow {
+  height: 100%;
+  margin: 0 1vw;
+}
+
+.arrow p {
+  margin: 0.3vh 0;
+  font-size: min(5vh, 3vw);
+  color: rgb(148, 148, 148);
+}
+
+#prev-subject,
+#next-subject {
+  margin: 0;
+  font-size: min(3vh, 2vw);
+}
+
+.button-desc p:last-child {
+  color: rgb(148, 148, 148);
+}
+
+#project-spec-part,
+#project-spec-language {
+  color: rgb(102, 201, 135);
+  font-weight: 600;
+  margin: 0 1vw;
+}
+
+#project-button,
+#project-code-button {
+  margin-top: 3vh;
+  border: 1px solid rgb(156, 155, 155);
+  height: 5vh;
+  width: 9vw;
+  padding: 0.5vh 0.5vw;
+  text-align: center;
+  color: rgb(119, 118, 118);
+  cursor: pointer;
+}
+
+#project-code {
+  display: flex;
+  justify-content: flex-start;
+}

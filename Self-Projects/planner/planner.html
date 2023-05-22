@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./planner.css" />
+    <title>Planner</title>
+  </head>
+  <body>
+    <section id="left-side">
+      <section id="time-box">
+        <section id="time-date">
+          <p id="time-date-text"></p>
+        </section>
+        <section id="time-hour">
+          <p id="time-hour-text"></p>
+        </section>
+      </section>
+      <section id="todo-input-box">
+        <form>
+          <input
+            id="todo-input"
+            autofocus
+            required
+            type="text"
+            placeholder="Add your todo & Press Enter"
+          />
+        </form>
+      </section>
+    </section>
+    <section id="right-side">
+      <section id="location-box"></section>
+      <section id="dday-box">
+        <div id="dday-header">
+          <p>D-Day</p>
+          <button id="add-dday">+추가</button>
+        </div>
+        <hr />
+        <section id="dday-list"></section>
+      </section>
+      <section id="todo-box">
+        <p>Todo</p>
+        <hr />
+        <ul id="todos"></ul>
+      </section>
+    </section>
+    <section class="add-dday-box">
+      <section id="add-dday-form">
+        <p>D-Day를 추가하세요!</p>
+        <form>
+          <input
+            id="dday-name"
+            type="text"
+            placeholder="제목 - ex)생일"
+            required
+          />
+          <input
+            id="dday-input"
+            type="date"
+            data-placeholder="날짜 선택"
+            required
+            aria-required="true"
+          />
+          <section id="add-dday-buttons">
+            <button id="submit" type="submit">저장</button>
+            <button id="reset" type="reset">취소</button>
+          </section>
+        </form>
+      </section>
+    </section>
+
+    <script type="module" src="./planner.js"></script>
+  </body>
+</html>
