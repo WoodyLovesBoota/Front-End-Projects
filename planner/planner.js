@@ -13,7 +13,6 @@ todoInput.addEventListener("change", todo.setTodo);
 todo.drawTodos();
 
 // dday part
-
 let addButton = document.querySelector("#add-dday");
 let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
