@@ -5,8 +5,7 @@ body {
   height: 95vh;
   margin: 0;
   font-weight: 500;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(to bottom, white, rgb(200, 250, 200));
   color: black;
 }
 
