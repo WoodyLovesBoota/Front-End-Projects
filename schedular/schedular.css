@@ -25,6 +25,10 @@ body {
   vertical-align: top;
 }
 
+.cell:hover {
+  border: 2px solid lightgray;
+}
+
 .cell p {
   margin: 5px 0;
 }
@@ -176,6 +180,7 @@ input[type="time"] {
   background-color: rgb(255, 75, 120);
   color: lightgray;
   font-weight: 800;
+  cursor: pointer;
 }
 
 #schedule-input-time,
