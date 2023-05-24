@@ -117,17 +117,17 @@ main {
 }
 
 #project-background-box p:first-child {
-  font-size: min(4vh, 2vw);
+  font-size: min(3vh, 1.5vw);
   margin-bottom: 3vh;
 }
 
 #project-implementation-box p:first-child {
-  font-size: min(4vh, 2vw);
+  font-size: min(3vh, 1.5vw);
   margin-bottom: 3vh;
 }
 
 #project-preview-box p:first-child {
-  font-size: min(4vh, 2vw);
+  font-size: min(3vh, 1.5vw);
   margin-bottom: 3vh;
 }
 
