@@ -1,21 +1,17 @@
 const schedularDetail = [
   "Calendar - Schedule Handler는 HTML CSS Javascript\
   를 이용한 Web Application이다. \
-   JS의 내장 모듈인 Date object를 사용하여 calendar의 \
-   frame 을 생성하였다. 단순히 개발자가 의도한 정보를 Web Site에 표현하는 \
-   것이 아닌 사용자와 상호작용 하는 Application을 구현하기 위해 \
-   JS의 addEventListener method를 이용하여 사용자의 schedule을 \
-   calendar에 표시하는 기능을 구현하였다.",
-  "Front End 개발을 시작하면서 가장 먼저 HTML과 CSS를 이용하여 Web Site를\
-   구현하는 방법을 공부하였다. 이후, 좀 더 복잡한 Web Site 혹은 Application을\
-    만들기 위한 해결책으로 JS의 필요성을 알게 되었고 \
-    HTML CSS JS를 이용한 간단한 Application을 만들어 보자는 \
-    목표의식을 갖게 되었다. Calendar - Schedule Handler는 이전의 \
-    기존의 작업물들과 달리 JS를 \
-    이용하여 사용자와 상호작용 하는 부분을 구현하였다는 것에 의의를 둔다. \
-    또한 개발 초기단계에서 의도했던 방식으로 작업물이 구현이 완료된 후, \
-    비효율적으로 작성된 코드를 수정하는 등의 Re-factoring 과정을 처음으로 \
-    수행한 project이기도 하다.",
+  Javascript를 이용하여 달력을 생성하고 사용자의 일정을 달력에 표시하는 기능을 구현하였다.",
+  "Front End 개발을 공부하며 가장 먼저 HTML과 CSS를 이용하여 Web Site를\
+   구현하였다. 이후, 좀 더 복잡한 Web Site / Application을\
+    만들기 위해 Javascript가 필요하다는 것을 알게 되었고 \
+    HTML CSS Javascript를 이용해 간단한 Application을 만들어 보자는 \
+    목표의식을 갖고 진행한 프로젝트 이다. Calendar - Schedule Handler는 단순히 \
+    개발자가 제공하는 정보를 화면에 표시하는 것 뿐만 아니라, Javascript를 \
+    이용하여 사용자와 상호작용 하는 Web site를 구현했다는 것에 의의를 두었다. \
+    비교적 간단한 프로젝트이지만 Javascript가 Front end 개발에 어떻게 사용되는지 \
+    알게되었고, 구현 전 설계부터 프로젝트를 완성하기 까지의 과정을 혼자서 경험함으로써\
+    스스로 보완할 점이나 앞으로 노력해 나가야 할 방향성을 결정 할 수 있었다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
   "implementation",
