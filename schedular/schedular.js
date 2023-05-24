@@ -54,7 +54,8 @@ const drawCalendar = () => {
     nowCols.appendChild(nowText);
     nowCols.classList.add("cell");
     if (i === 7 - firstDay) nowText.classList.add("sat");
-    if (firstDay === 0) nowText.classList.add("sun");
+    // error 고치기
+    if (i === firstDay - 1) nowText.classList.add("sun");
     nowCols.addEventListener("click", (e) => {
       if (e.target.nodeName === "TD") {
         clicked(nowText);
