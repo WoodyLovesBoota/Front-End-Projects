@@ -14,7 +14,13 @@ const schedularDetail = [
     스스로 보완할 점이나 앞으로 노력해 나가야 할 방향성을 결정 할 수 있었다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
-  "implementation",
+  "Schedular에서 제공하는 기능은 크게 두가지 이다.\
+  <br>1. 월 별 달력 제공\
+  <br>2. 사용자가 추가한 일정을 표시\
+  <br>Javascript의 Date Object를 이용하여 각각의 달의 첫 날과 마지막 날의 요일을 계산하였다. 이후 table tag를 이용하여 해달 월의 달력을 화면에 표시하였다.\
+  각각의 cell은 날짜에 해당하는 영역이고 이를 클릭하면 해당 날짜에 사용자의 일정을 추가하는 기능을 구현하였다. \
+  사용자는 시간과 일정을 저장할 수 있고, 이는 local storage에 {날짜 : 시간 : 일정}의 Object 형태로 저장된다. \
+  각각의 일정은 bar 형태로 cell에 표현되고 사용자는 bar를 클릭함으로써 일정을 변경 혹은 삭제할 수 있다.",
 ];
 
 // TODO : background 설명 추가
