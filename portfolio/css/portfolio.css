@@ -188,3 +188,7 @@ main {
   display: flex;
   justify-content: flex-start;
 }
+
+#project-code-button {
+  width: 10vw;
+}
