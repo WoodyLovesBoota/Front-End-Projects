@@ -23,7 +23,6 @@ const schedularDetail = [
   각각의 일정은 bar 형태로 cell에 표현되고 사용자는 bar를 클릭함으로써 일정을 변경 혹은 삭제할 수 있다.",
 ];
 
-// TODO : background 설명 추가
 const plannerDetail = [
   "Planner는 HTML CSS Javascript를 이용하여 구현한 Web Application이다.\
   이전에 구현했던 몇가지 간단한 프로젝트들을 하나의 Application에 합쳐서 \
@@ -40,7 +39,17 @@ const plannerDetail = [
   여러 code를 하나로 합치는 부분에서 어려움을 겪어서 모든 part가 완벽하게 분리되어 있지는 않는다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
-  "implementation",
+  "Planner는 크게 3가지 section으로 나누어져 있다.\
+  <br>1. Clock - 현재 날짜와 시각 제공\
+  <br>2. D-day - 사용자가 추가한 목표 날까지의 남은 시간 표시\
+  <br>3. Todo - 사용자가 추가한 일정 표시\
+  <br>Javascript의 Date Object와 setInterval 함수를 이용하여 \
+  현재 날짜와 시각을 매초마다 계산하여 화면에 나타내는 방식으로 Clock을 구현하였다. \
+  D-day 역시 같은 방법으로 목표한 날짜까지의 timestamp와 \
+  현재의 timestamp를 이용하여 남은 시간을 일/시/분/초 단위로 표시해준다.\
+  사용자가 입력한 목표 날에 대한 정보는 {일정 : 날짜} 형태로 local storage에 저장된다.\
+  사용자가 입력한 Todo 역시 local storage에 저장되며, checkbox와 delete button을 이용해 \
+  자신의 Todo를 체크하거나 삭제할 수 있도록 구현하였다.",
 ];
 
 const project3Detail = [
