@@ -58,11 +58,11 @@ const calcTime = (name, target) => {
   );
 
   ddayDate.innerHTML =
-    target.getFullYear() +
+    padInt(target.getFullYear()) +
     "-" +
-    (Number(target.getMonth()) + 1) +
+    padInt(Number(target.getMonth()) + 1) +
     "-" +
-    target.getDate();
+    padInt(target.getDate());
 
   let clockMessage = name;
   content.innerHTML = clockMessage;
