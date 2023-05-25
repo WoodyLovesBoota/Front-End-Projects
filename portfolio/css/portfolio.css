@@ -184,6 +184,12 @@ main {
   cursor: pointer;
 }
 
+#project-button:hover,
+#project-code-button:hover {
+  border: 2px solid rgb(156, 155, 155);
+  font-weight: 550;
+}
+
 #project-code {
   display: flex;
   justify-content: flex-start;
