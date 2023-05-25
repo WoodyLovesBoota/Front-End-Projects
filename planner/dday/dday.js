@@ -13,10 +13,6 @@ const padInt = (n) => {
   return res;
 };
 
-const getKeyByValue = (object, value) => {
-  return Object.keys(object).find((key) => object[key] === value);
-};
-
 const deleteDday = (element) => {
   let target = element.firstChild.firstChild.innerText;
   delete ddays[target];
