@@ -1,10 +1,5 @@
 import * as todo from "./todolist/todo.js";
 import * as dday from "./dday/dday.js";
-/*
-    현재 지역, 날씨
-        현재 지역 가져오는 code, 날씨 가져오는 code 찾아봐야 함
-    배경 이미지...
-*/
 
 // todo part
 let todoInput = document.querySelector("#todo-input");
