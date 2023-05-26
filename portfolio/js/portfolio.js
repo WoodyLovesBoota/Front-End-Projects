@@ -5,7 +5,6 @@ let title = document.querySelector("#project-subject-title");
 let subTitle = document.querySelector("#project-subject-subtitle");
 let meaning = document.querySelector("#project-meaning");
 let background = document.querySelector("#project-background");
-let desc = document.querySelector("#project-desc");
 let prev = document.querySelector("#prev-button");
 let next = document.querySelector("#next-button");
 let prevSubject = document.querySelector("#prev-subject");
