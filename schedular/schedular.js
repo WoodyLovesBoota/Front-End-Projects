@@ -113,7 +113,7 @@ const next = () => {
   drawSchedule();
 };
 
-const addPad = (num) => {
+const padInt = (num) => {
   let res = num.length < 2 ? "0" + num : num;
   return res;
 };
@@ -152,11 +152,11 @@ const clicked = (cell) => {
   let clickedDate = Number(cell.innerText);
   document.querySelector("#schedule-maker").classList.remove("unshow");
   document.querySelector("#target-date").innerText =
-    addPad(nowYear.toString()) +
+    padInt(nowYear.toString()) +
     "-" +
-    addPad(nowMonth.toString()) +
+    padInt(nowMonth.toString()) +
     "-" +
-    addPad(clickedDate.toString());
+    padInt(clickedDate.toString());
 };
 
 const replaceSchedule = () => {
@@ -180,17 +180,17 @@ const changeSchedule = (schedule) => {
   let clickedDate = Number(schedule.parentNode.firstChild.innerText);
   document.querySelector("#schedule-changer").classList.remove("unshow");
   document.querySelector("#target-change-date").innerText =
-    addPad(nowYear.toString()) +
+    padInt(nowYear.toString()) +
     "-" +
-    addPad(nowMonth.toString()) +
+    padInt(nowMonth.toString()) +
     "-" +
-    addPad(clickedDate.toString());
+    padInt(clickedDate.toString());
   document.querySelector("#schedule-change-input-content").value =
     schedule.lastChild.innerText;
   document.querySelector("#change-button").addEventListener("click", () => {
     delete schedules[
-      addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())
-    ][addPad(clickedDate.toString())][
+      padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())
+    ][padInt(clickedDate.toString())][
       schedule.firstChild.innerText.replace(" : ", "")
     ];
     localStorage.setItem("schedules", JSON.stringify(schedules));
@@ -198,8 +198,8 @@ const changeSchedule = (schedule) => {
   });
   document.querySelector("#delete-button").addEventListener("click", () => {
     delete schedules[
-      addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())
-    ][addPad(clickedDate.toString())][
+      padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())
+    ][padInt(clickedDate.toString())][
       schedule.firstChild.innerText.replace(" : ", "")
     ];
     localStorage.setItem("schedules", JSON.stringify(schedules));
@@ -215,11 +215,11 @@ const drawSchedule = () => {
   });
 
   let targetSchedules =
-    schedules[addPad(nowYear.toString()) + "-" + addPad(nowMonth.toString())];
+    schedules[padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())];
   cells.forEach((e) => {
     if (targetSchedules !== undefined && e.firstChild !== null) {
-      if (targetSchedules[addPad(e.firstChild.innerText)] !== undefined) {
-        let targetDate = addPad(e.firstChild.innerText);
+      if (targetSchedules[padInt(e.firstChild.innerText)] !== undefined) {
+        let targetDate = padInt(e.firstChild.innerText);
         let dateSchedule = targetSchedules[targetDate];
         Object.entries(dateSchedule).forEach(([key, value]) => {
           let bar = document.createElement("div");
