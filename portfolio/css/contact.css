@@ -46,7 +46,10 @@ main {
 }
 
 hr {
-  color: blueviolet;
+  width: 40%;
+  height: 3px;
+  background-color: rgb(141, 84, 194);
+  border: none;
   margin-bottom: 5vh;
 }
 
