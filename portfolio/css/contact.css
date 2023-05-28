@@ -35,8 +35,8 @@ nav ul li a:hover {
 
 main {
   margin-top: 10vh;
-  height: 90%;
-  width: 100%;
+  height: 70vh;
+  width: 70%;
   text-align: center;
 }
 
@@ -50,15 +50,16 @@ hr {
   height: 3px;
   background-color: rgb(141, 84, 194);
   border: none;
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
 }
 
 form {
   width: 100%;
-  height: 50%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 0;
 }
 
 #name-email {
@@ -70,21 +71,20 @@ form {
 
 #name,
 #email {
-  width: 22vw;
+  width: 15vw;
   height: 5vh;
   font-size: min(3vh, 1.5vw);
   padding-left: 1vh;
 }
 
 #message {
-  margin-top: 3vh;
+  margin-top: 7vh;
   height: 20vh;
   font-size: min(3vh, 1.5vw);
   padding: 1vh;
 }
 
 #submit-button {
-  margin-top: 3vh;
   width: 10vw;
   height: 5vh;
   background-color: rgb(195, 133, 248);
@@ -92,7 +92,7 @@ form {
   font-weight: 550;
   cursor: pointer;
   position: absolute;
-  bottom: 0;
+  bottom: 6vh;
   right: 0;
   border: none;
 }
