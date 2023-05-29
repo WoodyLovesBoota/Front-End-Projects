@@ -71,8 +71,6 @@ TODO
 - survey form like google form
 - landing page 
   https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0
-- restaurant
-  https://www.geeksforgeeks.org/design-a-webpage-for-online-food-delivery-system-using-html-and-css/
 - portfolio (home aboutus projects achivement contact)
 https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE
 - weather app
@@ -81,6 +79,7 @@ https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE
   https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1
 - job listing
   https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt
-
+- clone coding
+  노마드코더
 https://dev.to/frontendmentor/16-front-end-projects-with-designs-to-help-improve-your-coding-skills-5ajl
 */
