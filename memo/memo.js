@@ -1,5 +1,3 @@
-import projects from "../portfolio/projects.js";
-
 let memos =
   localStorage.getItem("memos") === null
     ? {}
