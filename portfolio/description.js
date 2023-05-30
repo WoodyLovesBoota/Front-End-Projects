@@ -1,5 +1,3 @@
-// TODO : change link code
-
 const schedularDetail = [
   "Calendar - Schedule Handler는 HTML CSS Javascript\
   를 이용하여 구현한 Web Application이다. \
