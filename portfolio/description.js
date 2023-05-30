@@ -1,4 +1,4 @@
-//TODO : change file name
+// TODO : change link code
 
 const schedularDetail = [
   "Calendar - Schedule Handler는 HTML CSS Javascript\
