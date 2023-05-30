@@ -1,4 +1,4 @@
-import projects from "../projects.js";
+import projects from "../description.js";
 
 // Get HTML element
 let title = document.querySelector("#project-subject-title");
