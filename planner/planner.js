@@ -1,5 +1,3 @@
-// TODO : dday todolist file 밖으로 빼고 경로바꾸기
-
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
