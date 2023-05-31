@@ -1,7 +1,7 @@
 // TODO : dday todolist file 밖으로 빼고 경로바꾸기
 
-import * as todo from "./todolist/todo.js";
-import * as dday from "./dday/dday.js";
+import * as todo from "./todo.js";
+import * as dday from "./dday.js";
 
 // todo part
 let todoInput = document.querySelector("#todo-input");
