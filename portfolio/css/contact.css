@@ -34,6 +34,7 @@ nav ul li a:hover {
 }
 
 main {
+  margin-left: 10vw;
   margin-top: 10vh;
   height: 70vh;
   width: 70%;
