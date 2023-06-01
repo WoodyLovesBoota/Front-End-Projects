@@ -68,3 +68,22 @@ main {
 #button-portfolio {
   cursor: pointer;
 }
+
+#name {
+  font-size: min(2vw, 4vh);
+  font-weight: 550;
+}
+
+#name span {
+  font-size: min(1vw, 2vh);
+}
+
+.subject {
+  font-size: min(1vw, 2vh);
+  font-weight: 550;
+}
+
+.content {
+  font-size: min(1.1vw, 2vh);
+  font-weight: 500;
+}
