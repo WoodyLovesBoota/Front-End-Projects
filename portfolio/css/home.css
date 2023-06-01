@@ -81,9 +81,11 @@ main {
 .subject {
   font-size: min(1vw, 2vh);
   font-weight: 550;
+  margin-bottom: 0;
 }
 
 .content {
   font-size: min(1.1vw, 2vh);
   font-weight: 500;
+  margin-top: 0;
 }
