@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  width: 50vw;
+  width: 70vw;
   height: 100vh;
   background: linear-gradient(to top, rgba(212, 174, 221, 0.7), white);
 }
@@ -71,7 +71,7 @@ form {
 
 #name,
 #email {
-  width: 15vw;
+  width: 45%;
   height: 5vh;
   font-size: min(3vh, 1.5vw);
   padding-left: 1vh;
@@ -95,4 +95,11 @@ form {
   bottom: 6vh;
   right: 0;
   border: none;
+}
+
+#name:focus,
+#email:focus,
+#message:focus {
+  border: none;
+  outline: 2px solid rgb(207, 144, 223);
 }
