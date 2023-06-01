@@ -1,5 +1,7 @@
 // TODO
 // form 에 연결되는 js 만들기
+// https://sweeteuna.tistory.com/106
+
 let contactForm = document.querySelector("#contact-form");
 let contactSubmit = document.querySelector("#submit-button");
 let contactName = document.querySelector("#name");
