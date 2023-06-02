@@ -78,6 +78,7 @@ const drawClock = () => {
 };
 
 // locaton part
+// TODO : location 도 js 붙여서
 const drawLocation = (location) => {
   let [latitude, longitude] = [
     location.coords.latitude,
