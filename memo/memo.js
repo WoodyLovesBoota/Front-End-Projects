@@ -15,7 +15,7 @@ const setMemo = (event) => {
   localStorage.setItem("memos", JSON.stringify(memos));
 };
 
-const openLightBox = (event, content) => {
+const openLightBox = (content) => {
   let key = getKeyByValue(memos, content);
   console.log(memos[key]);
   if (memos[key] !== undefined) {
