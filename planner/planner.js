@@ -22,7 +22,7 @@ addButton.addEventListener("click", (event) => {
   addDdayBox.classList.remove("unshow");
 });
 
-ddaySubmit.addEventListener("click", (event) => {
+ddaySubmit.addEventListener("click", () => {
   let ddays =
     localStorage.getItem("ddays") === null
       ? {}
