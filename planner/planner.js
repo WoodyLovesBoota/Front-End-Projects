@@ -78,22 +78,15 @@ const drawClock = () => {
 };
 
 // locaton part
-// TODO : location 도 js 붙여서
 const drawLocation = (location) => {
+  let key = "5132c9a4171667e7f4424f1e7cee62c0";
   let [latitude, longitude] = [
     location.coords.latitude,
     location.coords.longitude,
   ];
-  // TODO : 여기서 부터 geocoding 으로 해야될듯..
-  // let geocoder = new google.maps.Geocoder();
-  // let geolocation = new google.maps.LatLng(latitude, longitude); // turn coordinates into an object
-  // geocoder.geocode({ latLng: geolocation }, (results, status) => {
-  //   if (status == google.maps.GeocoderStatus.OK) {
-  //     // if geocode success
-  //     var add = results[0].formatted_address;
-  //     console.log(add);
-  //   }
-  // });
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+  console.log(url);
+  fetch(url);
 };
 
 const successCallback = async (position) => {
