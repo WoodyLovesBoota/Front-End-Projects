@@ -95,6 +95,7 @@ const drawLocation = async (location) => {
   let city = data.name;
   let temp = data.main.temp;
   let sky = data.weather[0].main;
+  // TODO : HTML 에 정보 붙이기
   console.log(city, temp, sky);
 };
 
