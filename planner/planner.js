@@ -77,16 +77,19 @@ const drawClock = () => {
   hourBox.innerHTML = nowHourMinutesSecond;
 };
 
+const getLocation = async () => {
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+};
+
 // locaton part
-const drawLocation = (location) => {
+const drawLocation = async (location) => {
   let key = "5132c9a4171667e7f4424f1e7cee62c0";
   let [latitude, longitude] = [
     location.coords.latitude,
     location.coords.longitude,
   ];
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
-  console.log(url);
-  fetch(url);
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
+  let response = await fetch(url);
 };
 
 const successCallback = async (position) => {
@@ -96,10 +99,6 @@ const successCallback = async (position) => {
 
 const errorCallback = (error) => {
   console.log(error);
-};
-
-const getLocation = async () => {
-  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 };
 
 getLocation();
