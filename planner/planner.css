@@ -91,7 +91,7 @@ ul {
   position: absolute;
   width: 1vw;
   height: 1vw;
-  border: 2px solid lightgray;
+  border: 2px solid rgb(153, 153, 153);
   cursor: pointer;
   top: 0.5vw;
   left: 0.3vw;
@@ -105,22 +105,23 @@ ul {
   top: 0.5vw;
   right: 0.3vw;
   font-size: 1vw;
-  color: lightgray;
+  color: rgb(158, 158, 158);
   background-color: transparent;
   cursor: pointer;
 }
 
 #todos li button :hover {
-  border: 1px solid lightgrey;
+  border: 1px solid rgb(161, 161, 161);
 }
 
 .checked input ~ span {
   text-decoration: line-through;
+  color: rgb(148, 148, 148);
 }
 
 .checked input + label::after {
   content: "V";
-  color: lightgrey;
+  color: rgb(156, 156, 156);
   top: -5px;
   left: 1px;
   position: absolute;
@@ -212,7 +213,7 @@ ul {
   left: 0;
   width: 50%;
   height: 10%;
-  background-color: rgb(123, 123, 252);
+  background-color: rgb(58, 194, 153);
 }
 
 #reset {
