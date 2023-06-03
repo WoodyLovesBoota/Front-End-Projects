@@ -90,6 +90,12 @@ const drawLocation = async (location) => {
   ];
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
   let response = await fetch(url);
+  let data = await response.json();
+  console.log(data);
+  let city = data.name;
+  let temp = data.main.temp;
+  let sky = data.weather[0].main;
+  console.log(city, temp, sky);
 };
 
 const successCallback = async (position) => {
