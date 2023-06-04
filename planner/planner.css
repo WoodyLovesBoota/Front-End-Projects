@@ -353,3 +353,14 @@ ul {
   position: relative;
   color: gray;
 }
+
+#weather-box {
+  display: flex;
+}
+
+#location-box {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+}
