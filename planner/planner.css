@@ -364,3 +364,15 @@ ul {
   align-items: end;
   justify-content: start;
 }
+
+#location-box p {
+  margin: 0;
+  font-size: 1.2vw;
+  font-weight: 550;
+}
+
+#location-box span {
+  margin: 0;
+  font-size: 1.2vw;
+  font-weight: 550;
+}
