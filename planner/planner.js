@@ -85,8 +85,9 @@ const getLocation = async () => {
 const drawLocation = async (location) => {
   let cityName = document.querySelector("#city");
   let temperature = document.querySelector("#weather");
+  let skyw = document.querySelector("#sky");
   // cabhnm
-  let key = "a0da403921hnmb72edbfc43c1abe7772";
+  let key = "a0da403921cabb72edbfc43c1abe7772";
   let [latitude, longitude] = [
     location.coords.latitude,
     location.coords.longitude,
@@ -102,6 +103,7 @@ const drawLocation = async (location) => {
   console.log(city, temp, sky);
   cityName.innerHTML = city;
   temperature.innerHTML = temp;
+  skyw.innerHTML = sky;
 };
 
 const successCallback = async (position) => {
