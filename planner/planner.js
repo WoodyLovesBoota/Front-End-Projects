@@ -83,7 +83,9 @@ const getLocation = async () => {
 
 // locaton part
 const drawLocation = async (location) => {
-  let key = "5132c9a4171667e7f4424f1e7cee62c0";
+  let cityName = document.querySelector("#city");
+  let temperature = document.querySelector("#weather");
+  let key = "";
   let [latitude, longitude] = [
     location.coords.latitude,
     location.coords.longitude,
@@ -97,6 +99,8 @@ const drawLocation = async (location) => {
   let sky = data.weather[0].main;
   // TODO : HTML 에 정보 붙이기
   console.log(city, temp, sky);
+  cityName.innerHTML = city;
+  temperature.innerHTML = temp;
 };
 
 const successCallback = async (position) => {
