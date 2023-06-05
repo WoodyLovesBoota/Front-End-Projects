@@ -86,7 +86,6 @@ const drawLocation = async (location) => {
   let cityName = document.querySelector("#city");
   let temperature = document.querySelector("#weather");
   let skyw = document.querySelector("#sky");
-  // cabhnm
   let key = "a0da403921cabb72edbfc43c1abe7772";
   let [latitude, longitude] = [
     location.coords.latitude,
@@ -99,7 +98,6 @@ const drawLocation = async (location) => {
   let city = data.name;
   let temp = data.main.temp;
   let sky = data.weather[0].main;
-  // TODO : HTML 에 정보 붙이기
   console.log(city, temp, sky);
   cityName.innerHTML = city;
   temperature.innerHTML = temp;
