@@ -363,13 +363,13 @@ ul {
 #location-box p {
   margin: 0;
   font-size: 1.6vw;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #location-box span {
   margin: 0;
   font-size: 1.3vw;
-  font-weight: 550;
+  font-weight: 500;
 }
 
 #weather {
