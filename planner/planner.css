@@ -331,6 +331,10 @@ ul {
   color: black;
 }
 
+#add-dday :hover {
+  border: 1px gray solid;
+}
+
 #dday-input::before {
   content: attr(data-placeholder);
   width: 100%;
