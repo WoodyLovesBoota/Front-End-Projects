@@ -354,10 +354,6 @@ ul {
   color: gray;
 }
 
-#weather-box {
-  display: flex;
-}
-
 #location-box {
   display: flex;
   flex-direction: column;
@@ -375,4 +371,9 @@ ul {
   margin: 0;
   font-size: 1.2vw;
   font-weight: 550;
+}
+
+#weather {
+  display: inline-block;
+  padding-left: 1vw;
 }
