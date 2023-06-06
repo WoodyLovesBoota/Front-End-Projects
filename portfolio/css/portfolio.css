@@ -6,7 +6,8 @@ body {
 }
 
 p {
-  font-size: min(1.6vh, 0.8vw);
+  /* font-size: min(1.6vh, 0.8vw); */
+  font-size: 15px;
 }
 
 a {
