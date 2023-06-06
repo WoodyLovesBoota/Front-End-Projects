@@ -29,7 +29,8 @@ const plannerDetail = [
   구현하였으며 각각의 기능은 다음과 같다.\
   <br>1. Clock - 현재 날짜와 시각을 표시해준다.\
   <br>2. D-day - 목표한 날까지의 남은 시간을 화면에 나타낸다.\
-  <br>3. Todo - 사용자가 입력한 TODO를 화면에 표시해준다.",
+  <br>3. Todo - 사용자가 입력한 TODO를 화면에 표시해준다.\
+  <br>4. Location - 사용자의 현재 위치와 날씨를 표시해준다.",
   "Vanila JS를 이용하여 구현한 Schedular를 만들기 전까지 여러가지 간단한 \
   Project를 진행했었다. Web developing 환경에서 Javascript를 이용하는 방법을\
   익히기 위한 간단한 프로젝트들이다. Javascript에서의 상속, 모듈화 등 \
@@ -43,13 +44,15 @@ const plannerDetail = [
   <br>1. Clock - 현재 날짜와 시각 제공\
   <br>2. D-day - 사용자가 추가한 목표 날까지의 남은 시간 표시\
   <br>3. Todo - 사용자가 추가한 일정 표시\
+  <br>4. Location - 현재 위치와 날씨 제공\
   <br>Javascript의 Date Object와 setInterval 함수를 이용하여 \
   현재 날짜와 시각을 매초마다 계산하여 화면에 나타내는 방식으로 Clock을 구현하였다. \
   D-day 역시 같은 방법으로 목표한 날짜까지의 timestamp와 \
   현재의 timestamp를 이용하여 남은 시간을 일/시/분/초 단위로 표시해준다.\
   사용자가 입력한 목표 날에 대한 정보는 {일정 : 날짜} 형태로 local storage에 저장된다.\
   사용자가 입력한 Todo 역시 local storage에 저장되며, checkbox와 delete button을 이용해 \
-  자신의 Todo를 체크하거나 삭제할 수 있도록 구현하였다.",
+  자신의 Todo를 체크하거나 삭제할 수 있도록 구현하였다. Geolocation을 이용하여 사용자의 현재 위치를 \
+  가져온 후, open API를 이용하여 도시 이름과 현재 날씨를 화면에 표시해준다.",
 ];
 
 const project3Detail = [
