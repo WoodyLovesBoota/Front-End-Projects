@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 95vw;
-  height: 95vh;
+  height: 100vh;
   margin: 0;
   font-weight: 500;
   background: linear-gradient(to bottom, white, rgb(200, 250, 200));
