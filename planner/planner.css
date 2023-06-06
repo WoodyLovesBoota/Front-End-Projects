@@ -320,19 +320,17 @@ ul {
   font-weight: 600;
 }
 
-#dday-header > button {
+#add-dday {
   border: none;
   font-size: 1vw;
   cursor: pointer;
-}
-
-#add-dday {
   background-color: transparent;
   color: black;
 }
 
-#add-dday :hover {
-  border: 1px gray solid;
+#add-dday:hover {
+  box-shadow: 0px 0px 2px 2px rgb(177, 248, 169);
+  transition: 0.5s;
 }
 
 #dday-input::before {
@@ -366,13 +364,13 @@ ul {
 
 #location-box p {
   margin: 0;
-  font-size: 1.6vw;
+  font-size: 1vw;
   font-weight: 500;
 }
 
 #location-box span {
   margin: 0;
-  font-size: 1.3vw;
+  font-size: 1vw;
   font-weight: 500;
 }
 
