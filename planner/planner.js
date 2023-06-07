@@ -86,6 +86,8 @@ const drawLocation = async (location) => {
   let cityName = document.querySelector("#city");
   let temperature = document.querySelector("#weather");
   let skyw = document.querySelector("#sky");
+  let weatherIcon = document.querySelector("#weather-icon");
+
   let key = "a0da403921cabb72edbfc43c1abe7772";
   let [latitude, longitude] = [
     location.coords.latitude,
@@ -98,7 +100,10 @@ const drawLocation = async (location) => {
   let city = data.name;
   let temp = data.main.temp;
   let sky = data.weather[0].main;
-  console.log(city, temp, sky);
+  let weatherCode = data.weather[0].icon;
+  let weatherUrl = `https://openweathermap.org/img/wn/${weatherCode}@2x.png`;
+
+  weatherIcon.src = weatherUrl;
   cityName.innerHTML = city;
   temperature.innerHTML = temp;
   skyw.innerHTML = sky;
