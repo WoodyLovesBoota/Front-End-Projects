@@ -241,7 +241,3 @@ const drawSchedule = () => {
     }
   });
 };
-
-/* TODO
-  style도 class 이용해서 정리 (ex. button)
-*/
