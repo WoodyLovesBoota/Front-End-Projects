@@ -1,6 +1,5 @@
 let date = new Date();
 
-// Get localStorage date
 let todos =
   localStorage.getItem("todos") === null
     ? {}
@@ -38,13 +37,11 @@ const deleteTodo = (item) => {
 };
 
 const drawTodos = () => {
-  // delete all todo item
   let list = document.getElementById("todos");
   while (list.children.length > 0) {
     list.removeChild(list.lastChild);
   }
 
-  // rewrite todo via todos & checks
   Object.values(todos).forEach((e) => {
     let todoList = document.getElementById("todos");
     let item = document.createElement("li");
