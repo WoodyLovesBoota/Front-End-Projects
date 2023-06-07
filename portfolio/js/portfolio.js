@@ -1,6 +1,5 @@
 import projects from "../description.js";
 
-// Get HTML element
 let title = document.querySelector("#project-subject-title");
 let subTitle = document.querySelector("#project-subject-subtitle");
 let meaning = document.querySelector("#project-meaning");
@@ -15,11 +14,9 @@ let viewButton = document.querySelector("#project-button");
 let sourcecode = document.querySelector("#project-code-address");
 let implementation = document.querySelector("#project-implementation");
 
-// Set project number : now
 let now = 0;
 let total = projects["basic"].length - 1;
 
-// Implement functions
 const prevPage = () => {
   now === 0 ? (now = total) : now--;
   drawProject(now);
@@ -30,7 +27,6 @@ const nextPage = () => {
   drawProject(now);
 };
 
-// Set EventListener
 prev.addEventListener("click", prevPage);
 next.addEventListener("click", nextPage);
 viewButton.addEventListener("click", (event) => {
@@ -67,7 +63,6 @@ window.onload = () => {
 
 /* 
 TODO 
-- 프로젝트 description 에 implementation 내용 추가하기
 - survey form like google form
 - landing page 
   https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0
