@@ -359,7 +359,7 @@ ul {
 #location-box {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 #location-box p {
@@ -381,4 +381,12 @@ ul {
 
 #location-icon {
   width: 1vw;
+}
+
+#weather-icon {
+  width: 4vw;
+}
+
+#weather-box {
+  text-align: end;
 }
