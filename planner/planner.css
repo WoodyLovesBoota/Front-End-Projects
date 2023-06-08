@@ -378,3 +378,7 @@ ul {
   display: inline-block;
   padding-left: 0.5vw;
 }
+
+#location-icon {
+  width: 1vw;
+}
