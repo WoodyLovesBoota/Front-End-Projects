@@ -8,5 +8,5 @@ contactSubmit.addEventListener("click", () => {
   let cName = contactName.value;
   let email = contactEmail.value;
   let message = contactMessage.value;
-  console.log(cName, email, message);
+  // console.log(cName, email, message);
 });
