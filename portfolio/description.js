@@ -66,7 +66,7 @@ const project3Detail = [
   "index 5 . language",
   "index 6. implementation",
 ];
-1
+1;
 const projects = {
   basic: [
     {
@@ -99,6 +99,7 @@ const projects = {
   ],
 };
 
-const introduce = "자기소개"
+// TODO : 자기소개 내용 만들기
+const introduce = "자기소개";
 
-export default {projects, introduce};
+export default { projects, introduce };
