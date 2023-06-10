@@ -69,7 +69,6 @@ TODO
 - portfolio (home aboutus projects achivement contact)
 https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE
 - weather app
-- calculator
 - sign up form
   https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1
 - job listing
