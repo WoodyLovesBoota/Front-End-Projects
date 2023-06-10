@@ -6,7 +6,6 @@ body {
 }
 /* 전체 font size static으로 바꾸기*/
 p {
-  /* font-size: min(1.6vh, 0.8vw); */
   font-size: 15px;
 }
 
