@@ -100,6 +100,6 @@ const projects = {
 };
 
 // TODO : 자기소개 내용 만들기
-const introduce = "자기소개";
+const introduce = ["저는 ..."];
 
-export default { projects, introduce };
+export { projects, introduce };

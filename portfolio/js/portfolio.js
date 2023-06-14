@@ -1,4 +1,4 @@
-import projects from "../description.js";
+import { projects } from "../description.js";
 
 let title = document.querySelector("#project-subject-title");
 let subTitle = document.querySelector("#project-subject-subtitle");
