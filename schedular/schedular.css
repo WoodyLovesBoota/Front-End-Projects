@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  cursor: pointer;
   color: black;
   font-weight: bold;
   margin: 50px;
@@ -10,6 +9,7 @@ body {
   width: 80vw;
   height: 85vh;
   border-collapse: collapse;
+  cursor: pointer;
 }
 
 .choiced {
@@ -77,6 +77,7 @@ input[type="time"] {
   font-size: 14px;
   width: 180px;
   height: 30px;
+  cursor: pointer;
 }
 
 .unshow {
