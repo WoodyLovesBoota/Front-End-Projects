@@ -4,7 +4,7 @@ body {
   height: 100vh;
   background: linear-gradient(to top, rgba(212, 174, 221, 0.7), white);
 }
-
+/* TODO : font size static으로 .. 고민*/
 p {
   font-size: min(1.6vh, 0.8vw);
 }
