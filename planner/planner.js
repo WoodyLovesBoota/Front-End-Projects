@@ -1,13 +1,11 @@
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
-// todo part
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
 
 todo.drawTodos();
 
-// dday part
 let addButton = document.querySelector("#add-dday");
 let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
@@ -39,7 +37,6 @@ ddayReset.addEventListener("click", () => {
   addDdayBox.classList.add("unshow");
 });
 
-// clock part
 const padInt = (n) => {
   let res = String(n);
   if (String(n).length === 1) {
@@ -81,7 +78,6 @@ const getLocation = async () => {
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 };
 
-// locaton part
 const drawLocation = async (location) => {
   let cityName = document.querySelector("#city");
   let temperature = document.querySelector("#weather");
