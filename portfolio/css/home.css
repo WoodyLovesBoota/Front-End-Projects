@@ -70,12 +70,15 @@ main {
   cursor: pointer;
 }
 
-#name {
+#name,
+#eng-name {
   font-size: min(2vw, 4vh);
   font-weight: 550;
+  margin: 0;
+  text-align: center;
 }
 
-#name span {
+#eng-name {
   font-size: min(1vw, 2vh);
 }
 
