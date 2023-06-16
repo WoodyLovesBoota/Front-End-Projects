@@ -89,3 +89,9 @@ main {
   font-weight: 500;
   margin-top: 0;
 }
+
+#name-box {
+  position: absolute;
+  top: 40vh;
+  left: 40vw;
+}
