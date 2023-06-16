@@ -49,6 +49,7 @@ main {
 #main-box {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 #left-side {
@@ -92,6 +93,6 @@ main {
 
 #name-box {
   position: absolute;
-  top: 40vh;
-  left: 40vw;
+  top: 20vh;
+  left: 20vw;
 }
