@@ -90,3 +90,7 @@ main {
 #name-box {
   width: 35vw;
 }
+
+#introduce {
+  text-align: start;
+}
