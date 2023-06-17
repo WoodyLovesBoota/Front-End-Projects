@@ -94,3 +94,7 @@ main {
 #introduce {
   text-align: start;
 }
+
+#face-image {
+  width: 30vw;
+}
