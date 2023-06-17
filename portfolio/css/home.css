@@ -85,6 +85,9 @@ main {
   font-size: min(1vw, 2vh);
   font-weight: 500;
   margin-top: 0;
+  word-break: break-all;
+  letter-spacing: 0.05vw;
+  line-height: min(1.5vw, 3vh);
 }
 
 #name-box {
@@ -97,4 +100,5 @@ main {
 
 #face-image {
   width: 30vw;
+  margin: 4vh 0;
 }
