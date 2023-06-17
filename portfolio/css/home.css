@@ -39,13 +39,6 @@ main {
   width: 100%;
 }
 
-#main-image {
-  width: 70vw;
-  height: 30vh;
-  margin: 0;
-  background-color: green;
-}
-
 #main-box {
   display: flex;
   justify-content: space-between;
@@ -55,14 +48,14 @@ main {
 #left-side {
   background-color: blue;
   width: 35vw;
-  height: 70vh;
+  height: 130vh;
   margin: 0;
 }
 
 #right-side {
   background-color: red;
   width: 35vw;
-  height: 70vh;
+  height: 130vh;
   margin: 0;
 }
 
