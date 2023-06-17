@@ -65,14 +65,14 @@ main {
 
 #name,
 #eng-name {
-  font-size: min(2vw, 4vh);
-  font-weight: 550;
+  font-size: min(6vw, 12vh);
+  font-weight: 350;
   margin: 0;
-  text-align: center;
+  text-align: start;
 }
 
 #eng-name {
-  font-size: min(1vw, 2vh);
+  font-size: min(3vw, 6vh);
 }
 
 .subject {
@@ -89,6 +89,6 @@ main {
 
 #name-box {
   position: absolute;
-  top: 20vh;
+  top: 50vh;
   left: 20vw;
 }
