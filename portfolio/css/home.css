@@ -85,11 +85,12 @@ main {
 
 .content {
   font-size: min(1vw, 2vh);
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 0;
   word-break: break-all;
   letter-spacing: 0.05vw;
   line-height: min(1.5vw, 3vh);
+  color: gray;
 }
 
 #name-box {
@@ -98,6 +99,12 @@ main {
 
 #introduce {
   text-align: start;
+  font-size: min(1vw, 2vh);
+  font-weight: 500;
+  margin-top: 0;
+  word-break: break-all;
+  letter-spacing: 0.05vw;
+  line-height: min(1.5vw, 3vh);
 }
 
 #face-image {
