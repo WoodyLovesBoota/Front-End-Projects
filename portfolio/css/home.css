@@ -42,6 +42,7 @@ main {
 #main-box {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 #left-side {
@@ -106,4 +107,15 @@ main {
 
 .content > span {
   font-size: min(2vw, 4vh);
+}
+
+#word {
+  position: absolute;
+  top: 45vh;
+  left: 10vw;
+}
+
+#word p {
+  font-size: min(7vw, 14vh);
+  margin: 0;
 }
