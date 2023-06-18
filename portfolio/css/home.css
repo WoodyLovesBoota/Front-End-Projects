@@ -59,7 +59,8 @@ main {
   text-align: end;
 }
 
-#button-portfolio {
+#button-portfolio,
+#button-github {
   cursor: pointer;
 }
 
@@ -101,4 +102,8 @@ main {
 #face-image {
   width: 30vw;
   margin: 4vh 0;
+}
+
+.content > span {
+  font-size: min(2vw, 4vh);
 }
