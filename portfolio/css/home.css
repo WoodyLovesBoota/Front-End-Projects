@@ -2,7 +2,6 @@ body {
   margin: 0 auto;
   width: 70vw;
   height: 150vh;
-  background: linear-gradient(to top, rgba(212, 174, 221, 0.7), white);
 }
 
 p {
@@ -105,9 +104,9 @@ main {
 
 #introduce {
   text-align: start;
-  font-size: min(1vw, 2vh);
+  font-size: min(0.9vw, 1.8vh);
   font-weight: 500;
-  margin-top: 0;
+  margin-top: 5vh;
   word-break: break-all;
   letter-spacing: 0.05vw;
   line-height: min(1.5vw, 3vh);
@@ -124,11 +123,15 @@ main {
 
 #word {
   position: absolute;
-  top: 45vh;
-  left: 10vw;
+  top: 30vh;
+  left: 5vw;
 }
 
 #word p {
   font-size: min(7vw, 14vh);
   margin: 0;
+}
+
+#not {
+  text-align: center;
 }
