@@ -1,3 +1,9 @@
+/*
+  1. schedular
+  2. planner
+  3. kokoa talk
+*/
+
 const schedularDetail = [
   "Calendar - Schedule Handler는 HTML CSS Javascript\
   를 이용하여 구현한 Web Application이다. \
