@@ -63,10 +63,8 @@ window.onload = () => {
 
 /* 
 TODO 
-- survey form like google form
 - landing page 
   https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0
-- portfolio (home aboutus projects achivement contact)
 https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE
 - sign up form
   https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1
