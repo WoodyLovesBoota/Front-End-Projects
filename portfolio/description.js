@@ -94,6 +94,15 @@ const projects = {
         "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/planner",
     },
     {
+      title: "Kokoa Talk",
+      subTitle: "Kakao Talk clone coding",
+      code: "../../kokoatalk/html/main.html",
+      image: "",
+      detail: project3Detail,
+      sourcecode:
+        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
+    },
+    {
       title: "Project3",
       subTitle: "subtitle of project3",
       code: "../../Schedular/Schedular.html",
