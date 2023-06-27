@@ -61,6 +61,18 @@ const plannerDetail = [
   가져온 후, open API를 이용하여 도시 이름과 현재 날씨를 화면에 표시해준다.",
 ];
 
+const kokoaDetail = [
+  "index 1 . meaning\
+    <br>of\
+    <br>project3",
+  "index 2 . background\
+    <br>of\
+    <br>project3",
+  "index 4 . spec",
+  "index 5 . language",
+  "index 6. implementation",
+];
+
 const project3Detail = [
   "index 1 . meaning\
     <br>of\
@@ -72,7 +84,7 @@ const project3Detail = [
   "index 5 . language",
   "index 6. implementation",
 ];
-1;
+
 const projects = {
   basic: [
     {
@@ -98,9 +110,9 @@ const projects = {
       subTitle: "Kakao Talk clone coding",
       code: "../../kokoatalk/html/main.html",
       image: "",
-      detail: project3Detail,
+      detail: kokoaDetail,
       sourcecode:
-        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
+        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/kokoatalk",
     },
     {
       title: "Project3",
