@@ -78,7 +78,7 @@ const projects = {
     {
       title: "Calendar",
       subTitle: "Schedule Handler",
-      code: "../../Schedular/Schedular.html",
+      code: "../../schedular/schedular.html",
       image: "",
       detail: schedularDetail,
       sourcecode:
