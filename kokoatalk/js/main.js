@@ -1,1 +1,1 @@
-// page rular redux - chrome extension
+// page ruler redux - chrome extension
