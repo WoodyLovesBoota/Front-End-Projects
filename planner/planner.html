@@ -8,15 +8,7 @@
     <title>Planner</title>
   </head>
   <body>
-    <section id="left-side">
-      <section id="time-box">
-        <section id="time-date">
-          <p id="time-date-text"></p>
-        </section>
-        <section id="time-hour">
-          <p id="time-hour-text"></p>
-        </section>
-      </section>
+    <section class="column-left">
       <section id="todo-input-box">
         <form>
           <input
@@ -29,15 +21,25 @@
         </form>
       </section>
     </section>
-    <section id="right-side">
+    <section class="column-center">
+      <section id="time-box">
+        <section id="time-date">
+          <p id="time-date-text"></p>
+        </section>
+        <section id="time-hour">
+          <p id="time-hour-text"></p>
+        </section>
+      </section>
+    </section>
+    <section class="column-right">
       <section id="location-box">
-        <img id="weather-icon">
+        <img id="weather-icon" />
         <section id="location-text">
-          <img id="location-icon" src="./images/location.jpg">
+          <img id="location-icon" src="./images/location.jpg" />
           <span id="city"></span>
           <section id="weather-box">
             <span id="weather"></span>
-            <span>&#8451</span>
+            <!--<span>&#8451</span>-->
           </section>
         </section>
       </section>
