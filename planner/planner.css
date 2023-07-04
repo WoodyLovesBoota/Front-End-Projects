@@ -1,3 +1,5 @@
+@import "reset.css";
+
 body {
   display: flex;
   justify-content: space-between;
@@ -10,13 +12,18 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-#left-side {
-  width: 60vw;
+.column-left {
+  width: 25vw;
   height: 95vh;
 }
 
-#right-side {
-  width: 35vw;
+.column-center {
+  width: 50vw;
+  height: 95vh;
+}
+
+.column-right {
+  width: 25vw;
   height: 95vh;
 }
 
