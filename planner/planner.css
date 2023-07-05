@@ -7,6 +7,7 @@ body {
   color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100vw;
 }
 
 .column-left {
@@ -28,8 +29,8 @@ body {
 }
 
 #time-box {
-  width: 60vw;
-  height: 55vh;
+  width: 100%;
+  height: 30%;
   position: relative;
 }
 
@@ -40,18 +41,18 @@ body {
 }
 
 #location-box {
-  width: 35vw;
+  width: 100%;
   height: 15vh;
   display: flex;
 }
 
 #dday-box {
-  width: 35vw;
+  width: 100%;
   height: 35vh;
 }
 
 #todo-box {
-  width: 35vw;
+  width: 100%;
   height: 45vh;
 }
 
@@ -293,14 +294,14 @@ ul {
   position: absolute;
   font-size: 1.5vw;
   left: 10vw;
-  top: 20vh;
+  top: 10vh;
   font-weight: 600;
   color: rgb(187, 187, 187);
 }
 
 #time-hour-text {
   position: absolute;
-  top: 25vh;
+  top: 20vh;
   left: 9vw;
   text-align: center;
   margin-top: 0;
@@ -397,4 +398,11 @@ ul {
 
 #weather-box {
   text-align: end;
+}
+
+#links {
+  width: 100%;
+  height: 50%;
+  background-color: rgb(134, 98, 51);
+  margin-top: 30px;
 }
