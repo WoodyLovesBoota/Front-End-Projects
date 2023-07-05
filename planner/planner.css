@@ -35,7 +35,7 @@ body {
 }
 
 #todo-input-box {
-  width: 60vw;
+  width: 90%;
   height: 40vh;
   position: relative;
 }
@@ -140,17 +140,9 @@ ul {
 #todo-input {
   position: absolute;
   top: 15vh;
-  left: 8vw;
-  border: none;
-  border-bottom: 4px solid gray;
-  width: 40vw;
-  height: 5vh;
+  width: 100%;
   font-size: 1.5vw;
-  font-weight: 600;
-  letter-spacing: 0.2vw;
-  word-spacing: 0.4vw;
   background-color: transparent;
-  color: gray;
 }
 
 #todo-input:focus {
