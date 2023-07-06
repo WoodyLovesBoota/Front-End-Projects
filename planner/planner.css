@@ -94,41 +94,6 @@ ul {
   display: none;
 }
 
-#location-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-#location-box p {
-  margin: 0;
-  font-size: 1.3vw;
-  font-weight: 500;
-}
-
-#location-box span {
-  margin: 0;
-  font-size: 1vw;
-  font-weight: 500;
-}
-
-#weather {
-  display: inline-block;
-  padding-left: 0.5vw;
-}
-
-#location-icon {
-  width: 1vw;
-}
-
-#weather-icon {
-  width: 4vw;
-}
-
-#weather-box {
-  text-align: end;
-}
-
 #links {
   width: 100%;
   height: 50%;
