@@ -1,6 +1,8 @@
 @import "reset.css";
 @import "todo.css";
 @import "dday.css";
+@import "time.css";
+@import "location.css";
 
 body {
   display: flex;
@@ -62,34 +64,6 @@ ul {
   list-style: none;
 }
 
-.add-dday-box {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-#add-dday-form {
-  width: 30vw;
-  height: 50vh;
-  text-align: center;
-  background-color: bisque;
-  position: absolute;
-  top: -3vh;
-  right: 30vw;
-  border: 2px solid rgb(150, 150, 20);
-}
-
-#add-dday-form > p {
-  font-size: 2vh;
-  font-weight: 600;
-}
-
 #submit {
   background-color: transparent;
   color: white;
@@ -118,30 +92,6 @@ ul {
 
 .unshow {
   display: none;
-}
-
-#time-date-text {
-  margin: 0;
-}
-
-#time-date-text {
-  position: absolute;
-  font-size: 1.5vw;
-  left: 10vw;
-  top: 10vh;
-  font-weight: 600;
-  color: rgb(187, 187, 187);
-}
-
-#time-hour-text {
-  position: absolute;
-  top: 20vh;
-  left: 9vw;
-  text-align: center;
-  margin-top: 0;
-  font-size: 4vw;
-  font-weight: 500;
-  color: black;
 }
 
 #location-box {

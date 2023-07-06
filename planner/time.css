@@ -1,0 +1,23 @@
+#time-date-text {
+  margin: 0;
+}
+
+#time-date-text {
+  position: absolute;
+  font-size: 1.5vw;
+  left: 10vw;
+  top: 10vh;
+  font-weight: 600;
+  color: rgb(187, 187, 187);
+}
+
+#time-hour-text {
+  position: absolute;
+  top: 20vh;
+  left: 9vw;
+  text-align: center;
+  margin-top: 0;
+  font-size: 4vw;
+  font-weight: 500;
+  color: black;
+}
