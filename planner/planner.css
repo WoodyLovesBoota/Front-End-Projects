@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "todo.css";
+@import "dday.css";
 
 body {
   display: flex;
@@ -41,6 +42,17 @@ body {
   display: flex;
 }
 
+#todo-input-box {
+  width: 90%;
+  height: 40vh;
+  position: relative;
+}
+
+#todo-box {
+  width: 100%;
+  height: 45vh;
+}
+
 #dday-box {
   width: 100%;
   height: 35vh;
@@ -78,33 +90,6 @@ ul {
   font-weight: 600;
 }
 
-#dday-name {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px gray solid;
-  color: gray;
-  width: 50%;
-  height: 3vh;
-  font-size: 1.5vh;
-  font-weight: 550;
-  margin-top: 3vh;
-}
-
-#dday-name:focus {
-  outline: none;
-}
-
-#dday-input {
-  background-color: transparent;
-  color: gray;
-  border: none;
-  border-bottom: 2px gray solid;
-  width: 50%;
-  height: 3vh;
-  font-size: 1.5vh;
-  margin-top: 3vh;
-}
-
 #submit {
   background-color: transparent;
   color: white;
@@ -139,50 +124,6 @@ ul {
   margin: 0;
 }
 
-#dday-list {
-  width: 100%;
-  height: 90%;
-}
-
-.dday-element {
-  display: flex;
-  height: 5vh;
-  justify-content: space-between;
-  margin: 0;
-  margin-bottom: 2.4vh;
-  font-size: min(1.4vw, 2.5vh);
-  position: relative;
-  align-items: center;
-  letter-spacing: 0.1vw;
-}
-
-.dday-element > div:first-child > p:last-child {
-  color: rgb(172, 172, 172);
-  font-size: min(0.8vw, 1.8vh);
-}
-
-.dday-element > button {
-  border: none;
-  top: 1vw;
-  right: 0.3vw;
-  font-size: 1vw;
-  position: absolute;
-  right: 15vw;
-  cursor: pointer;
-  background-color: transparent;
-  color: gray;
-}
-
-.dday-element p:last-child {
-  font-size: 1.3vw;
-  font-weight: 550;
-  color: rgb(90, 90, 90);
-}
-
-.dday-element p {
-  margin: 0;
-}
-
 #time-date-text {
   position: absolute;
   font-size: 1.5vw;
@@ -201,61 +142,6 @@ ul {
   font-size: 4vw;
   font-weight: 500;
   color: black;
-}
-
-#todo-box p:first-child {
-  font-size: 1.5vw;
-  font-weight: 600;
-}
-
-#todo-box hr {
-  margin-bottom: 2vh;
-}
-
-#dday-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-#dday-header > p {
-  font-size: 1.5vw;
-  margin: 0;
-  font-weight: 600;
-}
-
-#add-dday {
-  border: none;
-  font-size: 1vw;
-  cursor: pointer;
-  background-color: transparent;
-  color: black;
-}
-
-#add-dday:hover {
-  box-shadow: 0px 0px 2px 2px rgb(177, 248, 169);
-  transition: 0.5s;
-}
-
-#dday-input::before {
-  content: attr(data-placeholder);
-  width: 100%;
-}
-
-#dday-input:focus::before,
-#dday-input:valid::before {
-  display: none;
-}
-
-#add-dday-form > form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#add-dday-form {
-  position: relative;
-  color: gray;
 }
 
 #location-box {
