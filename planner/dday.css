@@ -1,47 +1,56 @@
 #dday-box {
-  width: 100%;
-  height: 35vh;
-  background-color: rgba(255, 255, 255, 0.7);
+  width: 60%;
+  height: 50vh;
+  background-color: rgba(197, 197, 197, 0.7);
+  margin: 5vh 5vw;
+  padding: 30px;
+  color: black;
+  border-radius: 10px;
+  position: relative;
+  font-weight: 550;
 }
 
 .add-dday-box {
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 17%;
+  left: 28vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 #add-dday-form {
   width: 30vw;
   height: 50vh;
   text-align: center;
-  background-color: bisque;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: -3vh;
   right: 30vw;
-  border: 2px solid rgb(150, 150, 20);
+  padding: 20px;
 }
 
 #add-dday-form > p {
-  font-size: 2vh;
+  font-size: 25px;
   font-weight: 600;
+  color: rgb(199, 197, 197);
 }
 
 #dday-name {
   background-color: transparent;
   border: none;
-  border-bottom: 2px gray solid;
-  color: gray;
-  width: 50%;
+  border-bottom: 2px rgb(226, 226, 226) solid;
+  color: rgb(211, 210, 210);
+  width: 70%;
   height: 3vh;
-  font-size: 1.5vh;
-  font-weight: 550;
-  margin-top: 3vh;
+  font-size: 15px;
+  margin-top: 50px;
+}
+
+#dday-name::placeholder {
+  color: rgb(211, 210, 210);
 }
 
 #dday-name:focus {
@@ -50,18 +59,19 @@
 
 #dday-input {
   background-color: transparent;
-  color: gray;
+  color: rgb(211, 210, 210);
   border: none;
-  border-bottom: 2px gray solid;
-  width: 50%;
+  border-bottom: 2px rgb(226, 226, 226) solid;
+  width: 70%;
   height: 3vh;
-  font-size: 1.5vh;
-  margin-top: 3vh;
+  font-size: 15px;
+  margin-top: 40px;
 }
 
 #dday-list {
   width: 100%;
   height: 90%;
+  margin-top: 20px;
 }
 
 .dday-element {
@@ -69,23 +79,22 @@
   height: 5vh;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 2.4vh;
-  font-size: min(1.4vw, 2.5vh);
+  margin-bottom: 20px;
+  font-size: 15px;
   position: relative;
   align-items: center;
-  letter-spacing: 0.1vw;
 }
 
 .dday-element > div:first-child > p:last-child {
-  color: rgb(172, 172, 172);
-  font-size: min(0.8vw, 1.8vh);
+  color: rgb(138, 137, 137);
+  font-size: 12px;
 }
 
 .dday-element > button {
   border: none;
-  top: 1vw;
-  right: 0.3vw;
-  font-size: 1vw;
+  top: 10px;
+  left: 50%;
+  font-size: 17px;
   position: absolute;
   right: 15vw;
   cursor: pointer;
@@ -94,13 +103,9 @@
 }
 
 .dday-element p:last-child {
-  font-size: 1.3vw;
+  font-size: 17px;
   font-weight: 550;
   color: rgb(90, 90, 90);
-}
-
-.dday-element p {
-  margin: 0;
 }
 
 #dday-header {
@@ -109,14 +114,14 @@
 }
 
 #dday-header > p {
-  font-size: 1.5vw;
+  font-size: 30px;
   margin: 0;
   font-weight: 600;
 }
 
 #add-dday {
   border: none;
-  font-size: 1vw;
+  font-size: 12px;
   cursor: pointer;
   background-color: transparent;
   color: black;
