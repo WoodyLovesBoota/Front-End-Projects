@@ -15,8 +15,7 @@ body {
 }
 
 .column-left {
-  margin: 0 5vw;
-  width: 25vw;
+  width: 30vw;
   height: 95vh;
   background-color: aqua;
 }
@@ -28,7 +27,7 @@ body {
 }
 
 .column-right {
-  width: 25vw;
+  width: 30vw;
   height: 95vh;
   background-color: brown;
 }
