@@ -115,15 +115,11 @@ const errorCallback = (error) => {
   console.log(error);
 };
 
+// TODO : timer 코드 추가
+
 getLocation();
 
 setInterval(() => {
-  /*
-  let main = document.getElementById("dday-list");
-  while (main.children.length > 0) {
-    main.removeChild(main.lastChild);
-  }
-  */
   drawClock();
 }, 1000);
 
