@@ -1,17 +1,17 @@
 #todo-input-box {
   width: 90%;
   position: relative;
+  margin: 40px 0;
 }
 
 #todo-box {
-  width: 80%;
+  width: 60%;
   height: 70vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 10vh 5vw;
-}
-
-#todo-box > p {
-  margin: 0;
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
 }
 
 #todos {
@@ -24,36 +24,27 @@
 }
 
 #todos li {
-  margin: 10px 0;
+  margin: 15px 0;
   vertical-align: center;
   position: relative;
   cursor: pointer;
 }
 
-#todos li :hover {
-  font-weight: 800;
-}
-
-#todos li :hover ~ span {
-  font-weight: 800;
-}
-
 #todos li span {
   margin: 0px 3vw;
-  font-size: 1.5vw;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1vw;
+  vertical-align: center;
 }
 
 #todos li label {
   display: inline-block;
   position: absolute;
-  width: 1vw;
-  height: 1vw;
+  width: 13px;
+  height: 13px;
   border: 2px solid rgb(153, 153, 153);
   cursor: pointer;
-  top: 0.5vw;
-  left: 0.3vw;
 }
 
 #todos li button {
@@ -61,16 +52,12 @@
   border: none;
   font-weight: 550;
   position: absolute;
-  top: 0.5vw;
-  right: 0.3vw;
-  font-size: 1vw;
+  top: 5px;
+  right: 5px;
+  font-size: 15px;
   color: rgb(158, 158, 158);
   background-color: transparent;
   cursor: pointer;
-}
-
-#todos li button :hover {
-  border: 1px solid rgb(161, 161, 161);
 }
 
 .checked input ~ span {
@@ -80,24 +67,38 @@
 
 .checked input + label::after {
   content: "V";
+  background-color: rgb(156, 156, 156);
   color: rgb(156, 156, 156);
-  top: -5px;
-  left: 1px;
+  width: 13px;
+  height: 13px;
   position: absolute;
   font-weight: 700;
 }
 
 #todo-input {
   width: 100%;
-  font-size: 1.5vw;
+  font-size: 15px;
+  font-weight: 550;
   background-color: transparent;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 1.5px solid white;
+  color: white;
+  padding: 3px;
+  letter-spacing: 1.5px;
 }
 
 #todo-input:focus {
   outline: none;
 }
 
-#todo-box p:first-child {
-  font-size: 1.5vw;
+#todo-box > p {
+  font-size: 30px;
   font-weight: 600;
+}
+
+#todo-input-box p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 550;
 }
