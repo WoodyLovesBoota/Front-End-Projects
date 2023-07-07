@@ -8,20 +8,14 @@
   </head>
   <body>
     <section class="column-left">
-      <section id="todo-input-box">
-        <form>
-          <input
-            id="todo-input"
-            autofocus
-            required
-            type="text"
-            placeholder="Add your todo & Press Enter"
-          />
-        </form>
-      </section>
       <section id="todo-box">
         <p>Todo</p>
-        <hr />
+        <section id="todo-input-box">
+          <p>오늘의 할 일은 무엇인가요?</p>
+          <form>
+            <input id="todo-input" autofocus required type="text" />
+          </form>
+        </section>
         <ul id="todos"></ul>
       </section>
     </section>
