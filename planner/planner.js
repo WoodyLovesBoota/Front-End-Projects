@@ -118,10 +118,13 @@ const errorCallback = (error) => {
 getLocation();
 
 setInterval(() => {
+  /*
   let main = document.getElementById("dday-list");
   while (main.children.length > 0) {
     main.removeChild(main.lastChild);
   }
+  */
   drawClock();
-  dday.drawDday();
 }, 1000);
+
+dday.drawDday();
