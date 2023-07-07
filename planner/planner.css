@@ -3,6 +3,7 @@
 @import "dday.css";
 @import "clock.css";
 @import "location.css";
+@import "timer.css";
 
 body {
   display: flex;
@@ -36,11 +37,6 @@ body {
   width: 100%;
   height: 15vh;
   display: flex;
-}
-
-#dday-box {
-  width: 100%;
-  height: 35vh;
 }
 
 ul {
