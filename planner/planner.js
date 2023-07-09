@@ -119,13 +119,32 @@ const errorCallback = (error) => {
 let nowTimer = 0;
 let startTimer = 0;
 let startTime;
+let isPaused = false;
+let isStarted = false;
 
 let startButton = document.querySelector(".timer-buttons__start");
 startButton.addEventListener("click", () => {
-  startTimer = new Date().getTime();
-  startTime = setInterval(() => {
-    calcTimer();
-  }, 1000);
+  if (!isStarted) {
+    if (!isPaused) {
+      startTimer = new Date().getTime();
+      startTime = setInterval(() => {
+        calcTimer();
+      }, 1000);
+    } else {
+      let nowClock =
+        document.getElementsByClassName("timer__time")[0].textContent;
+      let nowClockToTimestamp =
+        Number(nowClock.substring(0, 2)) * 3600 +
+        Number(nowClock.substring(3, 5)) * 60 +
+        Number(nowClock.substring(6, 8));
+      startTimer = new Date().getTime();
+      startTime = setInterval(() => {
+        calcTimerWhenPaused(nowClockToTimestamp);
+      }, 1000);
+      isPaused = false;
+    }
+    isStarted = true;
+  }
 });
 
 const calcTimer = () => {
@@ -139,11 +158,36 @@ const calcTimer = () => {
   timerValue.innerHTML = hourPart + ":" + minPart + ":" + secPart;
 };
 
+const calcTimerWhenPaused = (saved) => {
+  nowTimer = new Date().getTime();
+  let diff = nowTimer - startTimer;
+  let diffToSec = Math.floor(diff / 1000) + saved;
+  let hourPart = padInt(Math.floor(diffToSec / 3600));
+  let minPart = padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
+  let secPart = padInt(diffToSec - hourPart * 3600 - minPart * 60);
+  let timerValue = document.querySelector(".timer__time");
+  timerValue.innerHTML = hourPart + ":" + minPart + ":" + secPart;
+};
+
 let stopButton = document.querySelector(".timer-buttons__stop");
 stopButton.addEventListener("click", () => {
   clearInterval(startTime);
   let timerValue = document.querySelector(".timer__time");
   timerValue.innerHTML = "00:00:00";
+  isPaused = false;
+  isStarted = false;
+});
+
+let pauseButton = document.querySelector(".timer-buttons__pause");
+pauseButton.addEventListener("click", () => {
+  if (!isPaused) {
+    let nowClock =
+      document.getElementsByClassName("timer__time")[0].textContent;
+    document.querySelector(".timer__time").innerHTML = nowClock;
+    clearInterval(startTime);
+    isPaused = true;
+    isStarted = false;
+  }
 });
 
 getLocation();
