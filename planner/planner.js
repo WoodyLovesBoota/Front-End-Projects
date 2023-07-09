@@ -1,8 +1,6 @@
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
-// TODO : timer
-
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
 
@@ -115,7 +113,6 @@ const errorCallback = (error) => {
   console.log(error);
 };
 
-// TODO : timer 코드 추가
 let nowTimer = 0;
 let startTimer = 0;
 let startTime;
