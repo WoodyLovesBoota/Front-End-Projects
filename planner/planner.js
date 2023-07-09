@@ -81,7 +81,6 @@ const getLocation = async () => {
 const drawLocation = async (location) => {
   let cityName = document.querySelector("#city");
   let temperature = document.querySelector("#weather");
-  let skyw = document.querySelector("#sky");
   let weatherIcon = document.querySelector("#weather-icon");
 
   let key = "a0da403921cabb72edbfc43c1abe7772";
@@ -101,7 +100,6 @@ const drawLocation = async (location) => {
   weatherIcon.src = weatherUrl;
   cityName.innerHTML = city;
   temperature.innerHTML = temp;
-  skyw.innerHTML = sky;
 };
 
 const successCallback = async (position) => {
@@ -132,8 +130,8 @@ startButton.addEventListener("click", () => {
         document.getElementsByClassName("timer__time")[0].textContent;
       let nowClockToTimestamp =
         Number(nowClock.substring(0, 2)) * 3600 +
-        Number(nowClock.substring(3, 5)) * 60 +
-        Number(nowClock.substring(6, 8));
+        Number(nowClock.substring(5, 7)) * 60 +
+        Number(nowClock.substring(10, 12));
       startTimer = new Date().getTime();
       startTime = setInterval(() => {
         calcTimerWhenPaused(nowClockToTimestamp);
@@ -152,7 +150,7 @@ const calcTimer = () => {
   let minPart = padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
   let secPart = padInt(diffToSec - hourPart * 3600 - minPart * 60);
   let timerValue = document.querySelector(".timer__time");
-  timerValue.innerHTML = hourPart + ":" + minPart + ":" + secPart;
+  timerValue.innerHTML = hourPart + " : " + minPart + " : " + secPart;
 };
 
 const calcTimerWhenPaused = (saved) => {
@@ -163,14 +161,14 @@ const calcTimerWhenPaused = (saved) => {
   let minPart = padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
   let secPart = padInt(diffToSec - hourPart * 3600 - minPart * 60);
   let timerValue = document.querySelector(".timer__time");
-  timerValue.innerHTML = hourPart + ":" + minPart + ":" + secPart;
+  timerValue.innerHTML = hourPart + " : " + minPart + " : " + secPart;
 };
 
 let stopButton = document.querySelector(".timer-buttons__stop");
 stopButton.addEventListener("click", () => {
   clearInterval(startTime);
   let timerValue = document.querySelector(".timer__time");
-  timerValue.innerHTML = "00:00:00";
+  timerValue.innerHTML = "00 : 00 : 00";
   isPaused = false;
   isStarted = false;
 });
