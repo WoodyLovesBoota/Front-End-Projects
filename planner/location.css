@@ -1,11 +1,16 @@
+
+
 #location-box {
+  width: 70%;
+  height: 7vh;
+  margin: 0 3vw;
+  padding: 30px;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: flex-end;
 }
 
 #location-box p {
-  margin: 0;
   font-size: 1.3vw;
   font-weight: 500;
 }
