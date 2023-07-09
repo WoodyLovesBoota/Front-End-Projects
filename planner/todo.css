@@ -1,17 +1,18 @@
 #todo-input-box {
   width: 90%;
   position: relative;
-  margin: 40px 0;
+  margin: 7vh 0;
 }
 
 #todo-box {
   width: 60%;
   height: 70vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   margin: 10vh 5vw;
+  margin-bottom: 0;
   padding: 30px;
   color: white;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 #todos {
