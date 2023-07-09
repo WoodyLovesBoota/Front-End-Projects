@@ -118,11 +118,12 @@ const errorCallback = (error) => {
 // TODO : timer 코드 추가
 let nowTimer = 0;
 let startTimer = 0;
+let startTime;
 
 let startButton = document.querySelector(".timer-buttons__start");
 startButton.addEventListener("click", () => {
   startTimer = new Date().getTime();
-  setInterval(() => {
+  startTime = setInterval(() => {
     calcTimer();
   }, 1000);
 });
@@ -131,14 +132,19 @@ const calcTimer = () => {
   nowTimer = new Date().getTime();
   let diff = nowTimer - startTimer;
   let diffToSec = Math.floor(diff / 1000);
-  console.log(diffToSec);
   let hourPart = padInt(Math.floor(diffToSec / 3600));
   let minPart = padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
   let secPart = padInt(diffToSec - hourPart * 3600 - minPart * 60);
-  console.log(hourPart + ":" + minPart + ":" + secPart);
   let timerValue = document.querySelector(".timer__time");
   timerValue.innerHTML = hourPart + ":" + minPart + ":" + secPart;
 };
+
+let stopButton = document.querySelector(".timer-buttons__stop");
+stopButton.addEventListener("click", () => {
+  clearInterval(startTime);
+  let timerValue = document.querySelector(".timer__time");
+  timerValue.innerHTML = "00:00:00";
+});
 
 getLocation();
 
