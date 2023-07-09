@@ -117,9 +117,12 @@ let startTime;
 let isPaused = false;
 let isStarted = false;
 
+let timerBackground = document.querySelector("#timer-box");
 let startButton = document.querySelector(".timer-buttons__start");
 startButton.addEventListener("click", () => {
   if (!isStarted) {
+    timerBackground.style.backgroundColor =
+      "rgba(" + 247 + "," + 157 + "," + 157 + "," + 0.8 + ")";
     if (!isPaused) {
       startTimer = new Date().getTime();
       startTime = setInterval(() => {
@@ -167,6 +170,8 @@ const calcTimerWhenPaused = (saved) => {
 let stopButton = document.querySelector(".timer-buttons__stop");
 stopButton.addEventListener("click", () => {
   clearInterval(startTime);
+  timerBackground.style.backgroundColor =
+    "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.4 + ")";
   let timerValue = document.querySelector(".timer__time");
   timerValue.innerHTML = "00 : 00 : 00";
   isPaused = false;
@@ -176,6 +181,8 @@ stopButton.addEventListener("click", () => {
 let pauseButton = document.querySelector(".timer-buttons__pause");
 pauseButton.addEventListener("click", () => {
   if (!isPaused) {
+    timerBackground.style.backgroundColor =
+      "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.4 + ")";
     let nowClock =
       document.getElementsByClassName("timer__time")[0].textContent;
     document.querySelector(".timer__time").innerHTML = nowClock;

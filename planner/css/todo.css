@@ -91,6 +91,8 @@
 
 #todo-input:focus {
   outline: none;
+  border-bottom: 1.5px solid rgb(255, 225, 58);
+  transition: 0.3s ease-in-out;
 }
 
 #todo-box > p {

@@ -32,3 +32,7 @@
   border: none;
   cursor: pointer;
 }
+
+.timer__button:focus {
+  outline: none;
+}
