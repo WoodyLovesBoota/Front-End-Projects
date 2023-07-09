@@ -1,6 +1,8 @@
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
+//TODO : add link picture using icon in font awsome (youtube, github, instagram...)
+
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
 
