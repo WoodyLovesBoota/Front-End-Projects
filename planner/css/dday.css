@@ -127,11 +127,6 @@
   color: black;
 }
 
-#add-dday:hover {
-  box-shadow: 0px 0px 2px 2px rgb(177, 248, 169);
-  transition: 0.5s;
-}
-
 #dday-input::before {
   content: attr(data-placeholder);
   width: 100%;
