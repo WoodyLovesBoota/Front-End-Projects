@@ -1,8 +1,15 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
 body {
   text-align: center;
   color: black;
   font-weight: bold;
   margin: 50px;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 #calendar-table {
