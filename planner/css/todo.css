@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+#todos li:hover {
+  border: 1px solid transparent;
+}
+
 #todos li span {
   margin: 0px 3vw;
   font-size: 15px;
