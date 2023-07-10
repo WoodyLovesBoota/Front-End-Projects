@@ -1,7 +1,7 @@
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
-//TODO : dday 추가하는 창 옆에서 슬라이드로 나오게 해보기
+//TODO : font size 안넘어가게 vh vw 이용해서 바꿔보기
 
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
