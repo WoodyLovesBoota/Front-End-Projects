@@ -98,7 +98,7 @@ const drawLocation = async (location) => {
   let sky = data.weather[0].main;
   let weatherCode = data.weather[0].icon;
   let weatherUrl = `https://openweathermap.org/img/wn/${weatherCode}@2x.png`;
-
+  if (String(temp).length > 3) temp = String(temp).substring(0, 4);
   weatherIcon.src = weatherUrl;
   cityName.innerHTML = city;
   temperature.innerHTML = temp;
