@@ -137,10 +137,10 @@ const saveSchedule = () => {
 let button = document.querySelector("#submit-button");
 button.addEventListener("click", saveSchedule);
 document.querySelector("#reset-button").addEventListener("click", () => {
-  document.querySelector("#schedule-maker").classList.add("unshow");
+  document.querySelector(".schedule-maker").classList.remove("show");
 });
 document.querySelector("#reset-button2").addEventListener("click", () => {
-  document.querySelector("#schedule-changer").classList.add("unshow");
+  document.querySelector(".schedule-changer").classList.remove("show");
 });
 
 window.onload = () => {
@@ -150,7 +150,7 @@ window.onload = () => {
 
 const clicked = (cell) => {
   let clickedDate = Number(cell.innerText);
-  document.querySelector("#schedule-maker").classList.remove("unshow");
+  document.querySelector(".schedule-maker").classList.add("show");
   document.querySelector("#target-date").innerText =
     padInt(nowYear.toString()) +
     "-" +
@@ -178,7 +178,7 @@ const replaceSchedule = () => {
 const changeSchedule = (schedule) => {
   console.log(schedule);
   let clickedDate = Number(schedule.parentNode.firstChild.innerText);
-  document.querySelector("#schedule-changer").classList.remove("unshow");
+  document.querySelector(".schedule-changer").classList.add("show");
   document.querySelector("#target-change-date").innerText =
     padInt(nowYear.toString()) +
     "-" +
