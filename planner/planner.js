@@ -15,11 +15,9 @@ let ddayName = document.querySelector("#dday-name");
 let ddaySubmit = document.querySelector("#submit");
 let ddayReset = document.querySelector("#reset");
 
-addDdayBox.classList.add("unshow");
-
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
-  addDdayBox.classList.remove("unshow");
+  addDdayBox.classList.add("show");
 });
 
 ddaySubmit.addEventListener("click", () => {
@@ -32,11 +30,11 @@ ddaySubmit.addEventListener("click", () => {
   ddays[ddaySubject] = ddayTarget;
   localStorage.setItem("ddays", JSON.stringify(ddays));
 
-  addDdayBox.classList.add("unshow");
+  addDdayBox.classList.remove("show");
 });
 
 ddayReset.addEventListener("click", () => {
-  addDdayBox.classList.add("unshow");
+  addDdayBox.classList.remove("show");
 });
 
 const padInt = (n) => {
