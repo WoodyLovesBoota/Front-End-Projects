@@ -1,7 +1,7 @@
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
-//TODO : font size 안넘어가게 vh vw 이용해서 바꿔보기
+//TODO : bg img
 
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
