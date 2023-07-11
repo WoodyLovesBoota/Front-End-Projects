@@ -1,4 +1,6 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import "./nav.css";
+@import "reset.css";
 
 * {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
@@ -18,25 +20,6 @@ p {
 a {
   text-decoration: none;
   color: black;
-}
-
-nav {
-  width: 100%;
-  height: 7%;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-}
-
-nav ul li {
-  margin-left: 2vw;
-}
-
-nav ul li a:hover {
-  font-weight: 600;
 }
 
 main {
@@ -89,20 +72,12 @@ main {
   font-size: 30px;
 }
 
-.subject {
-  font-size: min(1vw, 2vh);
-  font-weight: 550;
-  margin-bottom: 0;
-}
-
 .content {
-  font-size: min(1vw, 2vh);
-  font-weight: 600;
+  font-size: 12px;
   margin-top: 0;
   word-break: break-all;
   letter-spacing: 0.05vw;
   line-height: min(1.5vw, 3vh);
-  color: gray;
 }
 
 #name-box {
@@ -111,7 +86,7 @@ main {
 
 #introduce {
   text-align: start;
-  font-size: min(0.9vw, 1.8vh);
+  font-size: 15px;
   font-weight: 500;
   margin-top: 5vh;
   word-break: break-all;
@@ -122,10 +97,6 @@ main {
 #face-image {
   width: 30vw;
   margin: 4vh 0;
-}
-
-.content > span {
-  font-size: min(2vw, 4vh);
 }
 
 #word {
