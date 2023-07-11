@@ -6,7 +6,7 @@
 }
 
 #time-date-text {
-  font-size: 27px;
+  font-size: min(1.4vw, 2.4vh);
   text-align: center;
   font-weight: 500;
   color: lightgrey;
@@ -15,7 +15,7 @@
 
 #time-hour-text {
   text-align: center;
-  font-size: 90px;
+  font-size: min(4.5vw, 7.7vh);
   font-weight: 400;
   color: black;
 }
