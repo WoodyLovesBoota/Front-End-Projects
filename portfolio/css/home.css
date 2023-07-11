@@ -9,12 +9,11 @@
 body {
   margin: 0 auto;
   width: 70vw;
-  height: 150vh;
+  height: 200vh;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 p {
-  font-size: min(1.6vh, 0.8vw);
 }
 
 a {
@@ -80,8 +79,8 @@ main {
   font-size: 12px;
   margin: 10px 0;
   word-break: break-all;
-  letter-spacing: 0.05vw;
-  line-height: min(1.5vw, 3vh);
+  letter-spacing: 1.5px;
+  line-height: 26px;
 }
 
 #name-box {
@@ -90,12 +89,12 @@ main {
 
 #introduce {
   text-align: start;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   margin-top: 5vh;
   word-break: break-all;
-  letter-spacing: 0.05vw;
-  line-height: min(1.5vw, 3vh);
+  letter-spacing: 1.5px;
+  line-height: 26px;
 }
 
 #face-image {
