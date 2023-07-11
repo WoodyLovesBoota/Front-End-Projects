@@ -13,9 +13,6 @@ body {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
-p {
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -47,6 +44,10 @@ main {
   height: 130vh;
   margin: 0;
   text-align: end;
+}
+
+#left-side a {
+  width: 10vw;
 }
 
 #button-portfolio,
