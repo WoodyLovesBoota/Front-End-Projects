@@ -64,7 +64,7 @@ main {
 #eng-name {
   font-size: 90px;
   font-weight: 400;
-  margin: 0;
+  margin: 20px 0;
   text-align: end;
 }
 
@@ -72,9 +72,13 @@ main {
   font-size: 30px;
 }
 
+#name {
+  margin-bottom: 40px;
+}
+
 .content {
   font-size: 12px;
-  margin-top: 0;
+  margin: 10px 0;
   word-break: break-all;
   letter-spacing: 0.05vw;
   line-height: min(1.5vw, 3vh);
@@ -107,7 +111,7 @@ main {
 
 #word p {
   font-size: min(7vw, 14vh);
-  margin: 0;
+  margin: 60px 0;
 }
 
 #not {
