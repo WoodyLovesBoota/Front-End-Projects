@@ -89,6 +89,10 @@
   align-items: center;
 }
 
+.dday-element:hover {
+  border: 1px solid transparent;
+}
+
 .dday-element > div:first-child > p:last-child {
   color: rgb(138, 137, 137);
   font-size: 14px;
