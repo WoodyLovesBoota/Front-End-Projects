@@ -13,6 +13,7 @@
   padding: 30px;
   color: white;
   border-radius: 30px;
+  font-weight: 500;
 }
 
 #todos {
@@ -55,7 +56,6 @@
 #todos li button {
   margin: 0px;
   border: none;
-  font-weight: 550;
   position: absolute;
   top: 5px;
   right: 5px;
@@ -77,13 +77,11 @@
   width: 13px;
   height: 13px;
   position: absolute;
-  font-weight: 700;
 }
 
 #todo-input {
   width: 100%;
   font-size: 15px;
-  font-weight: 550;
   background-color: transparent;
   margin-top: 30px;
   border: none;
@@ -91,6 +89,7 @@
   color: white;
   padding: 3px;
   letter-spacing: 1.5px;
+  font-weight: 600;
 }
 
 #todo-input:focus {
@@ -107,5 +106,5 @@
 #todo-input-box p {
   text-align: center;
   font-size: 15px;
-  font-weight: 550;
+  font-weight: 600;
 }
