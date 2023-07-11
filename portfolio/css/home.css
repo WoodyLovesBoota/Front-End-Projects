@@ -79,14 +79,14 @@ main {
 
 #name,
 #eng-name {
-  font-size: min(6vw, 12vh);
-  font-weight: 350;
+  font-size: 90px;
+  font-weight: 400;
   margin: 0;
   text-align: end;
 }
 
 #eng-name {
-  font-size: min(2vw, 4vh);
+  font-size: 30px;
 }
 
 .subject {
