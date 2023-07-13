@@ -4,25 +4,17 @@ const schedularDetail = [
   "Calendar - Schedule Handler는 HTML CSS Javascript\
   를 이용하여 구현한 Web Application이다. \
   Javascript를 이용하여 달력을 생성하고 사용자의 일정을 달력에 표시하는 기능을 구현하였다.",
-  "Front End 개발을 공부하며 가장 먼저 HTML과 CSS를 이용하여 Web Site를\
-   구현하였다. 이후, 좀 더 복잡한 Web Site / Application을\
-    만들기 위해 Javascript가 필요하다는 것을 알게 되었고 \
-    HTML CSS Javascript를 이용해 간단한 Application을 만들어 보자는 \
-    목표의식을 갖고 진행한 프로젝트 이다. Calendar - Schedule Handler는 단순히 \
+  " Calendar - Schedule Handler는 HTML CSS Javascript를 공부하기로 결심한 후 만들어낸 사실상 첫 결과물이다. \
+    가지고 있는 skill을 최대한 이용하여 구현하려 노력했고, 많은 다른 사람들의 코드를 보고 연구할수 있는 기회였다.\
+    이는 유명한 예제인 달력 기반 application을 선택한 이유이기도 하다. 단순히 \
     개발자가 제공하는 정보를 화면에 표시하는 것 뿐만 아니라, Javascript를 \
-    이용하여 사용자와 상호작용 하는 Web site를 구현했다는 것에 의의를 두었다. \
+    이용하여 사용자와 상호작용 하는 Web site를 구현했다는 것에 초점을 맞추어 project를 진행하였다. \
     비교적 간단한 프로젝트이지만 Javascript가 Front end 개발에 어떻게 사용되는지 \
     알게되었고, 구현 전 설계부터 프로젝트를 완성하기 까지의 과정을 혼자서 경험함으로써\
     스스로 보완할 점이나 앞으로 노력해 나가야 할 방향성을 결정 할 수 있었다.",
   "Front-End Development",
   "HTML . CSS . Javascript",
-  "Schedular에서 제공하는 기능은 크게 두가지 이다.\
-  <br>1. 월 별 달력 제공\
-  <br>2. 사용자가 추가한 일정을 표시\
-  <br>Javascript의 Date Object를 이용하여 각각의 달의 첫 날과 마지막 날의 요일을 계산하였다. 이후 table tag를 이용하여 해달 월의 달력을 화면에 표시하였다.\
-  각각의 cell은 날짜에 해당하는 영역이고 이를 클릭하면 해당 날짜에 사용자의 일정을 추가하는 기능을 구현하였다. \
-  사용자는 시간과 일정을 저장할 수 있고, 이는 local storage에 {날짜 : 시간 : 일정}의 Object 형태로 저장된다. \
-  각각의 일정은 bar 형태로 cell에 표현되고 사용자는 bar를 클릭함으로써 일정을 변경 혹은 삭제할 수 있다.",
+  "",
 ];
 
 const plannerDetail = [
