@@ -16,6 +16,7 @@ let language = document.querySelector("#project-spec-language");
 let viewButton = document.querySelector("#project-button");
 let sourcecode = document.querySelector("#project-code-address");
 let implementation = document.querySelector("#project-implementation");
+let achivement = document.querySelector("#project-achivement");
 
 let now = 0;
 let total = projects["basic"].length - 1;
@@ -46,6 +47,8 @@ const drawProject = (index) => {
   language.innerHTML = project.detail[3];
   sourcecode.href = project.sourcecode;
   implementation.innerHTML = project.detail[4];
+  achivement.innerHTML = project.detail[5];
+
   prevSubject.innerHTML =
     index === 0
       ? projects["basic"][total].title
