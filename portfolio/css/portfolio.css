@@ -57,6 +57,7 @@ main {
 #project-spec-part,
 #project-spec-language,
 #project-background,
+#project-achivement,
 #project-implementation {
   font-size: 16px;
   word-break: break-all;
@@ -74,6 +75,11 @@ main {
 }
 
 #project-implementation-box {
+  width: 100%;
+  margin: 10vh 0;
+}
+
+#project-achivement-box {
   width: 100%;
   margin: 10vh 0;
 }
@@ -101,6 +107,11 @@ main {
 }
 
 #project-implementation-box p:first-child {
+  font-size: min(3vh, 1.5vw);
+  margin-bottom: 3vh;
+}
+
+#project-achivement-box p:first-child {
   font-size: min(3vh, 1.5vw);
   margin-bottom: 3vh;
 }
