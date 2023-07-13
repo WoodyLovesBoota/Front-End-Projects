@@ -76,18 +76,12 @@ main {
 
 #project-implementation-box {
   width: 100%;
-  margin: 10vh 0;
+  margin: 8vh 0;
 }
 
 #project-achivement-box {
   width: 100%;
-  margin: 10vh 0;
-}
-
-#project-preview-box {
-  width: 100%;
-  height: 35vh;
-  margin: 15vh 0;
+  margin: 8vh 0;
 }
 
 #project-subject-title {
@@ -103,17 +97,17 @@ main {
 
 #project-background-box p:first-child {
   font-size: min(3vh, 1.5vw);
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 
 #project-implementation-box p:first-child {
   font-size: min(3vh, 1.5vw);
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 
 #project-achivement-box p:first-child {
   font-size: min(3vh, 1.5vw);
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 
 #project-preview-box p:first-child {
