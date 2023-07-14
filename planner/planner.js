@@ -1,8 +1,6 @@
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
-//TODO : bg img
-
 let todoInput = document.querySelector("#todo-input");
 todoInput.addEventListener("change", todo.setTodo);
 
