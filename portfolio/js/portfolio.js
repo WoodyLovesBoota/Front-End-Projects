@@ -1,6 +1,3 @@
-// clone 추가
-// design 바꾸기
-
 import { projects } from "../description.js";
 
 let title = document.querySelector("#project-subject-title");
