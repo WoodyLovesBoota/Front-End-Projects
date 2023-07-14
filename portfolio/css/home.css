@@ -68,7 +68,7 @@ main {
 #name,
 #eng-name {
   font-size: 90px;
-  font-weight: 400;
+  font-weight: 200;
   margin: 20px 0;
   text-align: end;
 }
@@ -90,7 +90,6 @@ main {
 }
 
 #name-box {
-  width: 35vw;
 }
 
 #introduce {
