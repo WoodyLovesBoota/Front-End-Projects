@@ -6,16 +6,16 @@
 }
 
 #time-date-text {
-  font-size: min(1.4vw, 2.4vh);
+  font-size: min(1.8vw, 3vh);
   text-align: center;
-  font-weight: 500;
-  color: lightgrey;
+  font-weight: 600;
+  color: rgb(130, 129, 129);
   margin-bottom: 10px;
 }
 
 #time-hour-text {
   text-align: center;
-  font-size: min(4.5vw, 7.7vh);
-  font-weight: 400;
+  font-size: min(5vw, 8.5vh);
+  font-weight: 500;
   color: black;
 }

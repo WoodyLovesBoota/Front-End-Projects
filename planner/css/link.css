@@ -2,7 +2,7 @@
   text-align: center;
   width: 83%;
   height: 40%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.8);
   margin-top: 3vh;
   border-radius: 30px;
   padding: 40px 50px;
@@ -30,12 +30,12 @@
   margin: 30px 0;
   border: none;
   border-bottom: 3px solid rgb(0, 0, 0);
-  color: rgb(85, 85, 85);
+  color: rgb(28, 26, 26);
   padding: 5px;
   letter-spacing: 1.5px;
 }
 
 #links form input::placeholder {
-  color: lightgray;
+  color: rgb(112, 112, 112);
   font-size: 20px;
 }
