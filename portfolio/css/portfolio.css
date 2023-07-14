@@ -11,6 +11,12 @@ body {
   width: 70vw;
   height: 200vh;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+
+  background: linear-gradient(
+    90deg,
+    rgb(218, 247, 253) 0%,
+    rgb(250, 213, 251) 100%
+  );
 }
 
 p {
