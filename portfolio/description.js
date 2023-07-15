@@ -1,4 +1,4 @@
-// TODO : 내용 다시쓰기
+// TODO : rewrite introduce
 
 const schedularDetail = [
   "Calendar - Schedule Handler는 HTML CSS Javascript\
