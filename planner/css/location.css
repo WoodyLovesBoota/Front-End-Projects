@@ -11,14 +11,14 @@
 }
 
 #location-box p {
-  font-size: 1.3vw;
+  font-size: 20px;
   font-weight: 500;
 }
 
 #location-box span {
   margin: 0;
-  font-size: 1vw;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 #weather {
