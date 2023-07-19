@@ -25,11 +25,10 @@ nav ul li {
   margin-left: 2vw;
   width: 8%;
   height: 100%;
-
-  text-align: center;
-}
-
-nav ul li a {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li a:hover {
