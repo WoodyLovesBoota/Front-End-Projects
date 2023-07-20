@@ -169,7 +169,7 @@ let stopButton = document.querySelector(".timer-buttons__stop");
 stopButton.addEventListener("click", () => {
   clearInterval(startTime);
   timerBackground.style.backgroundColor =
-    "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.4 + ")";
+    "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.7 + ")";
   let timerValue = document.querySelector(".timer__time");
   timerValue.innerHTML = "00 : 00 : 00";
   isPaused = false;
@@ -180,7 +180,7 @@ let pauseButton = document.querySelector(".timer-buttons__pause");
 pauseButton.addEventListener("click", () => {
   if (!isPaused) {
     timerBackground.style.backgroundColor =
-      "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.4 + ")";
+      "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.7 + ")";
     let nowClock =
       document.getElementsByClassName("timer__time")[0].textContent;
     document.querySelector(".timer__time").innerHTML = nowClock;
