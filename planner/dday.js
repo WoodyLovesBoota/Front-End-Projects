@@ -65,7 +65,7 @@ const calcTime = (name, target) => {
 
   let clockMessage2 =
     //  "D - " + lestDate + "일 " + lestHour + ":" + lestMinute + ":" + lestSecond;
-    "D - " + lestDate;
+    "D - " + String(Number(lestDate) + 1);
   content2.innerHTML = clockMessage2;
   ddayContent.appendChild(content);
   ddayContent.appendChild(ddayDate);
