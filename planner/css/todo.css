@@ -30,6 +30,8 @@
   vertical-align: center;
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 #todos li:hover {
@@ -57,12 +59,15 @@
   margin: 0px;
   border: none;
   position: absolute;
-  top: 5px;
   right: 5px;
   font-size: 15px;
   color: rgb(158, 158, 158);
   background-color: transparent;
   cursor: pointer;
+}
+
+#todos li button:hover {
+  color: white;
 }
 
 .checked input ~ span {

@@ -11,11 +11,13 @@ body {
   width: 70vw;
   height: 200vh;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background-color: rgb(63, 63, 63);
+  color: white;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 main {
@@ -25,7 +27,6 @@ main {
 }
 
 .information {
-  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 }
 
