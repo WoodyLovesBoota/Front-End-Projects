@@ -66,67 +66,6 @@ main {
   font-size: 100%;
 }
 
-#name,
-#eng-name {
-  font-size: 90px;
-  font-weight: 200;
-  margin: 20px 0;
-  text-align: end;
-}
-
-#eng-name {
-  font-size: 30px;
-}
-
-#name {
-  margin-bottom: 40px;
-}
-
-.content {
-  font-size: 12px;
-  margin: 10px 0;
-  word-break: break-all;
-  letter-spacing: 1.5px;
-  line-height: 26px;
-}
-
-#introduce {
-  text-align: start;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 5vh;
-  word-break: break-all;
-  letter-spacing: 1.5px;
-  line-height: 26px;
-}
-
-#face-image {
-  width: 30vw;
-  margin: 4vh 0;
-}
-
-#word {
-  position: absolute;
-  top: 30vh;
-  left: 7vw;
-  font-weight: 300;
-  width: 30vw;
-}
-
-#word p {
-  font-size: min(7vw, 14vh);
-  margin: 60px 0;
-}
-
-#society {
-  display: block;
-  padding-left: 50px;
-}
-
-#not {
-  text-align: center;
-}
-
 /* button style */
 /* content style */
 /* layout */
