@@ -52,3 +52,7 @@
   animation: hideSplashScreen 0.5s ease-in-out forwards;
   animation-delay: 1s;
 }
+
+.fa-info-circle {
+  margin-right: 5px;
+}
