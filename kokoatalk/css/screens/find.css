@@ -33,11 +33,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .open-post__title {
   font-weight: 600;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .open-post__hashtags {
