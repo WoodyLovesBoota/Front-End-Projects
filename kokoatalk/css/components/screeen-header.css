@@ -19,3 +19,8 @@
 .screen-header__icons span:last-child {
   position: relative;
 }
+
+.screen-header .nav__new {
+  bottom: 20px;
+  left: 23px;
+}
