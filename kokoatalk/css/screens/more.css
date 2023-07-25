@@ -10,6 +10,7 @@
 
 .more-suggestions__title {
   margin-bottom: 30px;
+  font-weight: 550;
 }
 
 .more-suggestions__icons {
@@ -24,8 +25,8 @@
 }
 
 .more-suggestions__icon-image {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: var(--yellow);
   border-radius: 10px;
   display: flex;
@@ -35,6 +36,16 @@
 }
 
 .more-suggestions__icon-image i {
-  font-size: 32px;
+  font-size: 30px;
   color: white;
+}
+
+.more-suggestions__icon-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.more-screen .icon-row:nth-child(3) {
+  margin-bottom: 70px;
 }
