@@ -5,12 +5,13 @@
   width: 100vw;
   background-color: var(--yellow);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   top: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .no-mobile {
     display: none;
   }
