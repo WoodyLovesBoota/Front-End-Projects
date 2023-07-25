@@ -94,6 +94,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 55px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -114,24 +115,30 @@
 
 .reply input {
   padding-left: 12px;
-  height: 30px;
+  height: 45px;
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
+  font-size: 15px;
+}
+
+.reply__column:first-child > i {
+  font-size: 27px;
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button {
   position: absolute;
   right: 5px;
-  top: 1px;
+  top: 7px;
 }
 
 .reply__column:last-child > i {
   right: 40px;
-  top: 8px;
+  top: 10px;
+  font-size: 25px;
 }
 
 .reply__column button {
