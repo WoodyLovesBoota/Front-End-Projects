@@ -1,3 +1,4 @@
+//TODO : 그냥 페이지 여러개 만들까...
 let chatComponent = document.querySelectorAll(".chat-component");
 console.log(chatComponent);
 
