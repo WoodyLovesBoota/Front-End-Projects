@@ -1,5 +1,5 @@
-let wordRow = document.querySelectorAll(".word-row");
-let wordCell = document.querySelectorAll(".word-row__cell");
+let wordRows = document.querySelectorAll(".word-row");
+let wordCells = document.querySelectorAll(".word-row__cell");
 
 //자동 커서 넘기기
 const moveCursor = (element) => {
@@ -10,13 +10,17 @@ const moveCursor = (element) => {
   });
 };
 
-wordRow.forEach((e) => {
-  e.addEventListener("submit", (event) => {
+//submit 되면 실행시킬 함수 : 단어 확인
+const checkAnswer = () => {};
+
+wordRows.forEach((wordRow) => {
+  wordRow.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log("a");
+    // submit 되면 뭐하는데
+    checkAnswer(wordRow);
   });
 });
 
-wordCell.forEach((e) => {
-  moveCursor(e);
+wordCells.forEach((wordCell) => {
+  moveCursor(wordCell);
 });
