@@ -4,13 +4,18 @@ let wordCells = document.querySelectorAll(".word-row__cell");
 //자동 커서 넘기기
 const moveCursor = (element) => {
   element.addEventListener("keyup", () => {
-    if (element.nextElementSibling.getAttribute("type") === "text")
-      element.nextElementSibling.focus();
+    if (element.value.length === +element.getAttribute("maxlength")) {
+      if (element.nextElementSibling.getAttribute("type") === "text")
+        element.nextElementSibling.focus({ focusVisible: false });
+    }
   });
 };
 
 // 마지막은 다음 형제노드가 submit 이여서 submit 할 때 focus넘겨야 함
-const moveCursorToNextRow = (element) => {};
+const moveCursorToNextRow = (element) => {
+  console.log(element.nextElementSibling.firstElementChild);
+  element.nextElementSibling.firstElementChild.focus();
+};
 
 //submit 되면 실행시킬 함수 : 단어 확인
 const checkAnswer = (words) => {};
