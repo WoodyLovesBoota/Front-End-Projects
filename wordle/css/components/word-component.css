@@ -1,24 +1,26 @@
 .word-component {
-  width: 80vw;
-  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .word-row {
-  width: 100%;
-  height: 19%;
+  width: 350px;
+  height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 15px;
 }
 
 .word-row__cell {
-  width: 18%;
-  height: 100%;
+  width: 65px;
+  height: 65px;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   box-sizing: border-box;
-  font-size: 13vw;
+  font-size: 40px;
+  margin: 0 10px;
 }
 
 .word-row__cell:focus {
