@@ -1,0 +1,28 @@
+@import "./reset.css";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+/* components */
+@import "./components/word-row.css";
+
+body {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  font-size: 40px;
+  font: 550;
+}
+
+.word-section {
+  width: 80vw;
+  height: 60vh;
+}

@@ -1,0 +1,13 @@
+.word-row {
+  width: 100%;
+  height: 19%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.word-row__cell {
+  width: 18%;
+  height: 100%;
+}
