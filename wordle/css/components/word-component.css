@@ -20,19 +20,12 @@
   padding-bottom: 5px;
   box-sizing: border-box;
   font-size: 40px;
+  font-weight: 600;
   margin: 0 10px;
+  border: 2px solid rgb(220, 209, 236);
+  border-radius: 5px;
 }
 
 .word-row__cell:focus {
   outline: none;
 }
-
-$(function() {
-  $(".inputs").keyup (function () {
-      var charLimit = $(this).attr("maxlength");
-      if (this.value.length >= charLimit) {
-          $(this).next('.inputs').focus();
-          return false;
-      }
-  });
-});

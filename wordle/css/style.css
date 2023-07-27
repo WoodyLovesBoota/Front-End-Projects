@@ -8,3 +8,7 @@
 body {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
+
+input[type="submit"] {
+  display: none;
+}
