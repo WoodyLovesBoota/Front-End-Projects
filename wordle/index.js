@@ -18,12 +18,18 @@ const moveCursorToNextRow = (element) => {
   element.nextElementSibling.firstElementChild.focus();
 };
 
+// 성공했을 때 실행되는 함수
+const winTheGame = () => {};
+
+// 실패했을 때 실행되는 함수
+const loseTheGame = () => {};
+
 //submit 되면 실행시킬 함수 : 단어 확인
 const checkAnswer = (words) => {
   let wordsArr = [];
   let green = 0;
   let yellow = 0;
-
+  let cnt = 0;
   for (let i = 0; i < 5; i++) {
     wordsArr.push(words.children[i].value);
   }
@@ -36,6 +42,13 @@ const checkAnswer = (words) => {
     } else if (answer.includes(wordsArr[i])) {
       yellow++;
       words.children[i].classList.add("word-yellow");
+      cnt++;
+    } else cnt++;
+    if (green === 5) {
+      winTheGame();
+    }
+    if (cnt === 5) {
+      loseTheGame();
     }
   }
 };
