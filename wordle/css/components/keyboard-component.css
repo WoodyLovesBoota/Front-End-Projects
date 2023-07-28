@@ -1,0 +1,20 @@
+.keyboard-component {
+  margin-top: 40px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.keyboard__cell {
+  border: 2px solid rgb(162, 162, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

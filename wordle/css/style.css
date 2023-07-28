@@ -5,6 +5,7 @@
 @import "./components/word-component.css";
 @import "./components/header.css";
 @import "./components/result-screen.css";
+@import "./components/keyboard-component.css";
 
 body {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
