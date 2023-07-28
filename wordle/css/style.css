@@ -8,6 +8,8 @@
 
 body {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background-color: rgb(68, 68, 68);
+  color: white;
 }
 
 input[type="submit"] {

@@ -24,6 +24,8 @@
   margin: 0 10px;
   border: 2px solid rgb(220, 209, 236);
   border-radius: 5px;
+  background-color: rgb(68, 68, 68);
+  color: white;
 }
 
 .word-row__cell:focus {
@@ -32,8 +34,10 @@
 
 .word-green {
   border: 2px solid green;
+  background-color: green;
 }
 
 .word-yellow {
-  border: 2px solid rgb(250, 234, 9);
+  border: 2px solid rgb(206, 206, 67);
+  background-color: rgb(206, 206, 67);
 }
