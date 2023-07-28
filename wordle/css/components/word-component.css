@@ -5,8 +5,6 @@
 }
 
 .word-row {
-  width: 350px;
-  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +12,8 @@
 }
 
 .word-row__cell {
-  width: 65px;
-  height: 65px;
+  width: 70px;
+  height: 70px;
   text-align: center;
   padding-bottom: 5px;
   box-sizing: border-box;
