@@ -3,6 +3,16 @@ header {
   justify-content: center;
   align-items: center;
   height: 10vh;
-  font-size: 40px;
-  font: 550;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 40px 0;
+  letter-spacing: 2px;
+}
+
+.letter-green {
+  color: rgb(42, 184, 42);
+}
+
+.letter-yellow {
+  color: rgb(226, 209, 57);
 }
