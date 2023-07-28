@@ -30,7 +30,7 @@ const moveCursorToNextRow = (element) => {
 // 성공했을 때 실행되는 함수
 const winTheGame = () => {
   document.querySelector(".result-screen").classList.remove("unshow");
-  document.querySelector(".result__text").innerText = "Congratulation!!";
+  document.querySelector(".result__text").innerText = "Congratulations!!";
   win = true;
 };
 
