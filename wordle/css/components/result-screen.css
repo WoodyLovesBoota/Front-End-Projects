@@ -18,8 +18,13 @@
 }
 
 .restart__button {
+  margin-bottom: 50px;
 }
 
 .restart__text {
   font-size: 40px;
+}
+
+.fa-undo-alt {
+  font-size: 70px;
 }

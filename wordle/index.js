@@ -1,5 +1,6 @@
 let wordRows = document.querySelectorAll(".word-row");
 let wordCells = document.querySelectorAll(".word-row__cell");
+let restartButton = document.querySelector(".restart__button");
 
 let win = false;
 let history = [];
@@ -75,4 +76,8 @@ wordRows.forEach((wordRow) => {
 
 wordCells.forEach((wordCell) => {
   moveCursor(wordCell);
+});
+
+restartButton.addEventListener(() => {
+  location.reload();
 });
