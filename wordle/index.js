@@ -1,6 +1,8 @@
 let wordRows = document.querySelectorAll(".word-row");
 let wordCells = document.querySelectorAll(".word-row__cell");
 
+const answer = "abcde";
+let history = [];
 //자동 커서 넘기기
 const moveCursor = (element) => {
   element.addEventListener("keyup", () => {
@@ -13,12 +15,30 @@ const moveCursor = (element) => {
 
 // 마지막은 다음 형제노드가 submit 이여서 submit 할 때 focus넘겨야 함
 const moveCursorToNextRow = (element) => {
-  console.log(element.nextElementSibling.firstElementChild);
   element.nextElementSibling.firstElementChild.focus();
 };
 
 //submit 되면 실행시킬 함수 : 단어 확인
-const checkAnswer = (words) => {};
+const checkAnswer = (words) => {
+  let wordsArr = [];
+  let green = 0;
+  let yellow = 0;
+
+  for (let i = 0; i < 5; i++) {
+    wordsArr.push(words.children[i].value);
+  }
+  console.log(wordsArr);
+  for (let i = 0; i < wordsArr.length; i++) {
+    history.push(wordsArr[i]);
+    if (wordsArr[i] === answer[i]) {
+      green++;
+      words.children[i].classList.add("word-green");
+    } else if (answer.includes(wordsArr[i])) {
+      yellow++;
+      words.children[i].classList.add("word-yellow");
+    }
+  }
+};
 
 wordRows.forEach((wordRow) => {
   wordRow.addEventListener("submit", (event) => {

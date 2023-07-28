@@ -29,3 +29,11 @@
 .word-row__cell:focus {
   outline: none;
 }
+
+.word-green {
+  border: 2px solid green;
+}
+
+.word-yellow {
+  border: 2px solid rgb(250, 234, 9);
+}
