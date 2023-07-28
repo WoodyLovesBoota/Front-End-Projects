@@ -1,3 +1,5 @@
+//TODO : 문제 random으로 내기
+
 let wordRows = document.querySelectorAll(".word-row");
 let wordCells = document.querySelectorAll(".word-row__cell");
 let restartButton = document.querySelector(".restart__button");
@@ -68,12 +70,14 @@ wordRows.forEach((wordRow) => {
     moveCursorToNextRow(wordRow);
     checkAnswer(wordRow);
 
+    // history 확인해서 keyboard 색칠
     keyboards.forEach((e) => {
       if (history.includes(e.textContent)) e.classList.add("selected");
     });
 
+    // 6번만에 정답 못맞추면 fail
     cnt++;
-    if (cnt === 5 && !win) {
+    if (cnt === 6 && !win) {
       loseTheGame();
     }
   });
