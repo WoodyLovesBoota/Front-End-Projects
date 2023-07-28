@@ -1,6 +1,7 @@
 let wordRows = document.querySelectorAll(".word-row");
 let wordCells = document.querySelectorAll(".word-row__cell");
 let restartButton = document.querySelector(".restart__button");
+let keyboards = document.querySelectorAll(".keyboard__cell");
 
 let win = false;
 let history = [];
@@ -45,9 +46,8 @@ const checkAnswer = (words) => {
   for (let i = 0; i < 5; i++) {
     wordsArr.push(words.children[i].value);
   }
-  console.log(wordsArr);
   for (let i = 0; i < wordsArr.length; i++) {
-    history.push(wordsArr[i]);
+    history.push(wordsArr[i].toUpperCase());
     if (wordsArr[i] === answer[i]) {
       green++;
       words.children[i].classList.add("word-green");
@@ -67,6 +67,11 @@ wordRows.forEach((wordRow) => {
     // submit 되면 뭐하는데
     moveCursorToNextRow(wordRow);
     checkAnswer(wordRow);
+
+    keyboards.forEach((e) => {
+      if (history.includes(e.textContent)) e.classList.add("selected");
+    });
+
     cnt++;
     if (cnt === 5 && !win) {
       loseTheGame();
@@ -78,6 +83,6 @@ wordCells.forEach((wordCell) => {
   moveCursor(wordCell);
 });
 
-restartButton.addEventListener(() => {
+restartButton.addEventListener("click", () => {
   location.reload();
 });
