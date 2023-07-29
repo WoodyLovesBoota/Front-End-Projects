@@ -76,6 +76,8 @@ const checkAnswer = (words) => {
 
   for (let i = 0; i < wordsArr.length; i++) {
     history.push(wordsArr[i].toUpperCase());
+    words.children[i].classList.remove("done");
+
     if (wordsArr[i] === answer[i]) {
       green++;
       words.children[i].classList.add("word-green");
