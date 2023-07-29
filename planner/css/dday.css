@@ -1,13 +1,14 @@
 #dday-box {
-  width: 70%;
-  height: 40vh;
+  width: 100%;
+  height: 54%;
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 5vh 3vw;
+  margin: 5vh 0;
   padding: 30px;
   color: black;
   border-radius: 30px;
   position: relative;
   font-weight: 550;
+  box-sizing: border-box;
 }
 
 .add-dday-box {

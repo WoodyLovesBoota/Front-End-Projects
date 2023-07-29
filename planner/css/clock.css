@@ -3,10 +3,11 @@
   height: 20%;
   position: relative;
   margin-top: 20vh;
+  box-sizing: border-box;
 }
 
 #time-date-text {
-  font-size: min(1.8vw, 3vh);
+  font-size: 20px;
   text-align: center;
   font-weight: 600;
   color: rgb(130, 129, 129);
@@ -15,7 +16,7 @@
 
 #time-hour-text {
   text-align: center;
-  font-size: min(5vw, 8.5vh);
+  font-size: 70px;
   font-weight: 500;
   color: black;
 }
