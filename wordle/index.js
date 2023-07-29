@@ -88,10 +88,11 @@ const checkAnswer = (words) => {
   }
 };
 
+// 한줄 submit 되었을 때 action
 wordRows.forEach((wordRow) => {
   wordRow.addEventListener("submit", (event) => {
     event.preventDefault();
-    // submit 되면 뭐하는데
+
     moveCursorToNextRow(wordRow);
     checkAnswer(wordRow);
     paintKeyboard();
@@ -99,6 +100,7 @@ wordRows.forEach((wordRow) => {
   });
 });
 
+// 한칸 submit 되었을 때 action
 wordCells.forEach((wordCell) => {
   paintWord(wordCell);
   moveCursor(wordCell);
