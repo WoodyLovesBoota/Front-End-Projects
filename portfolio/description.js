@@ -5,21 +5,18 @@ const schedularDetail = [
   를 이용하여 구현한 Web Application이다. \
   Javascript를 이용하여 달력을 생성하고 사용자의 일정을 달력에 표시하는 기능을 구현하였다.",
   " Calendar - Schedule Handler는 HTML CSS Javascript를 공부하기로 결심한 후 만들어낸 사실상 첫 결과물이다. \
-    가지고 있는 skill을 최대한 이용하여 구현하려 노력했고, 많은 다른 사람들의 코드를 보고 연구할수 있는 기회였다.\
-    이는 유명한 예제인 달력 기반 application을 선택한 이유이기도 하다. 단순히 \
-    개발자가 제공하는 정보를 화면에 표시하는 것 뿐만 아니라, Javascript를 \
-    이용하여 사용자와 상호작용 하는 Web site를 구현했다는 것에 초점을 맞추어 project를 진행하였다. \
-    비교적 간단한 프로젝트이지만 Javascript가 Front end 개발에 어떻게 사용되는지 \
-    알게되었고, 구현 전 설계부터 프로젝트를 완성하기 까지의 과정을 혼자서 경험함으로써\
-    스스로 보완할 점이나 앞으로 노력해 나가야 할 방향성을 결정하였다.",
+    단순히 \
+    개발자가 제공하는 정보를 화면에 표시하는 것 뿐만 아니라, 사용자와 상호작용 하는 web site를 구현하는 것을 목표로 하였다.\
+    ",
   "Front-End",
   "HTML . CSS . Javascript",
-  "전체적인 달력의 frame은 HTML의 <table> tag와 Javascript의 Date object를 이용하여 구현하였다. \
-  사용자의 schedule은 HTML <form>을 이용하여 입력받을 수 있게 하였고 날짜, 시간, 내용 등의 schedule 정보는 Web의 local storage에 저장되도록 구현하였다. \
-  사용자는 이를 통해 자신의 schedule을 날짜와 시간별로 달력에 저장할 수 있으며, 이미 저장한 schedule은 변경 및 삭제할 수 있다.",
-  "DOM 등 front end 개발 중 Javascript에서 사용되는 보편적인 skill에 대한 이해 및 실습을 하였다. \
+  "전체적인 달력의 frame은 HTML의 table tag와 Javascript의 Date object를 이용하여 구현하였다. \
+  사용자의 스케줄은 form을 이용하여 입력받을 수 있게 하였고 날짜, 시간, 내용 등의 스케줄 정보는 Web의 local storage에 저장되도록 구현하였다. \
+  사용자는 이를 통해 자신의 스케줄을 날짜와 시간별로 달력에 저장할 수 있으며, 이미 저장한 스케줄은 변경 및 삭제할 수 있다.",
+  "프로젝트를 통해 Javascript가 Front end 개발에 어떻게 사용되는지 \
+  알게되었고, DOM 등 front end 개발 중 Javascript에서 사용되는 보편적인 skill에 대한 이해 및 실습을 하였다. \
   비록 1page project이지만 화면 구성, component 배치 등 전체적인 layout 설계부터 직접적인 기능 구현 및 detail 한 style 디자인 까지 혼자서 구현 결과물의 시작부터 끝까지 완성시키는 경험을 할 수 있었다.\
-  또한 디자인을 신경쓰지 않고 기능부터 구현하다 보니 추가적인 작업이 많이짐을 느꼈고, front end 개발의 진행 순서에 대한 중요성을 느꼈다.",
+  또한 디자인을 신경쓰지 않고 기능부터 구현하다 보니 추가적인 작업이 많아짐을 느꼈고, 프로젝트 개발의 진행 순서에 대한 중요성을 느꼈다.",
 ];
 
 const plannerDetail = [
