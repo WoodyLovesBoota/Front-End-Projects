@@ -37,6 +37,12 @@ const moveCursorToNextRow = (element) => {
     element.nextElementSibling.firstElementChild.focus();
 };
 
+const paintKeyboard = () => {
+  keyboards.forEach((e) => {
+    if (history.includes(e.textContent)) e.classList.add("selected");
+  });
+};
+
 // 성공했을 때 실행되는 함수
 const winTheGame = () => {
   document.querySelector(".result-screen").classList.remove("unshow");
@@ -81,9 +87,7 @@ wordRows.forEach((wordRow) => {
     checkAnswer(wordRow);
 
     // history 확인해서 keyboard 색칠
-    keyboards.forEach((e) => {
-      if (history.includes(e.textContent)) e.classList.add("selected");
-    });
+    paintKeyboard();
 
     // 6번만에 정답 못맞추면 fail
     cnt++;
