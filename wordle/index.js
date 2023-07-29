@@ -12,7 +12,7 @@ let cnt = 0;
 
 const answer = "abcde";
 
-//자동 커서 넘기기
+// 자동 커서 넘기기
 const moveCursor = (element) => {
   element.addEventListener("keyup", () => {
     if (element.value.length === +element.getAttribute("maxlength")) {
@@ -22,7 +22,7 @@ const moveCursor = (element) => {
   });
 };
 
-//입력하면 테두리 색 변경하기
+// 입력하면 테두리 색 변경하기
 const paintWord = (element) => {
   element.addEventListener("keyup", () => {
     if (element.value.length === +element.getAttribute("maxlength")) {
@@ -37,6 +37,7 @@ const moveCursorToNextRow = (element) => {
     element.nextElementSibling.firstElementChild.focus();
 };
 
+// history 확인해서 keyboard 색칠
 const paintKeyboard = () => {
   keyboards.forEach((e) => {
     if (history.includes(e.textContent)) e.classList.add("selected");
@@ -56,7 +57,15 @@ const loseTheGame = () => {
   document.querySelector(".result__text").innerText = "So Close...";
 };
 
-//submit 되면 실행시킬 함수 : 단어 확인
+// 6번만에 정답 못맞추면 fail
+const loseWhenOverSix = () => {
+  cnt++;
+  if (cnt === 6 && !win) {
+    loseTheGame();
+  }
+};
+
+// submit 되면 실행시킬 함수 : 단어 확인
 const checkAnswer = (words) => {
   let wordsArr = [];
   let green = 0;
@@ -85,15 +94,8 @@ wordRows.forEach((wordRow) => {
     // submit 되면 뭐하는데
     moveCursorToNextRow(wordRow);
     checkAnswer(wordRow);
-
-    // history 확인해서 keyboard 색칠
     paintKeyboard();
-
-    // 6번만에 정답 못맞추면 fail
-    cnt++;
-    if (cnt === 6 && !win) {
-      loseTheGame();
-    }
+    loseWhenOverSix();
   });
 });
 
