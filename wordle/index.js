@@ -1,5 +1,4 @@
 //TODO : 문제 random으로 내기
-//TODO : 틀리면 회색으로
 
 const wordRows = document.querySelectorAll(".word-row");
 const wordCells = document.querySelectorAll(".word-row__cell");

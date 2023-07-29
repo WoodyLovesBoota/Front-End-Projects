@@ -12,7 +12,7 @@ const schedularDetail = [
     비교적 간단한 프로젝트이지만 Javascript가 Front end 개발에 어떻게 사용되는지 \
     알게되었고, 구현 전 설계부터 프로젝트를 완성하기 까지의 과정을 혼자서 경험함으로써\
     스스로 보완할 점이나 앞으로 노력해 나가야 할 방향성을 결정하였다.",
-  "Front-End Development",
+  "Front-End",
   "HTML . CSS . Javascript",
   "전체적인 달력의 frame은 HTML의 <table> tag와 Javascript의 Date object를 이용하여 구현하였다. \
   사용자의 schedule은 HTML <form>을 이용하여 입력받을 수 있게 하였고 날짜, 시간, 내용 등의 schedule 정보는 Web의 local storage에 저장되도록 구현하였다. \
@@ -37,7 +37,7 @@ const plannerDetail = [
   기존의 결과물들을 합쳐서 하나의 Project로 만들어 보게 되었다.\
   각각의 part를 하나의 file로 구현한 후 이를 하나의 main file에 합치는 것을 추구하였지만 \
   여러 code를 하나로 합치는 부분에서 어려움을 겪어서 모든 part가 완벽하게 분리되어 있지는 않는다.",
-  "Front-End Development",
+  "Front-End",
   "HTML . CSS . Javascript",
   "Planner는 크게 3가지 section으로 나누어져 있다.\
   <br>1. Clock - 현재 날짜와 시각 제공\
@@ -61,8 +61,20 @@ const kokoaDetail = [
   "index 2 . background\
     <br>of\
     <br>project3",
-  "index 4 . spec",
-  "index 5 . language",
+  "Front-End / Clone-Coding",
+  "HTML . CSS",
+  "index 6. implementation",
+];
+
+const wordleDetail = [
+  "index 1 . meaning\
+    <br>of\
+    <br>project3",
+  "index 2 . background\
+    <br>of\
+    <br>project3",
+  "Front-End",
+  "HTML . CSS . Javascript",
   "index 6. implementation",
 ];
 
@@ -101,11 +113,20 @@ const projects = {
     {
       title: "Kokoa Talk",
       subTitle: "Kakao Talk clone coding",
-      code: "../../kokoatalk/html/main.html",
+      code: "../../kokoatalk/html/index.html",
       image: "",
       detail: kokoaDetail,
       sourcecode:
         "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/kokoatalk",
+    },
+    {
+      title: "Wordle",
+      subTitle: "",
+      code: "../../wordle/index.html",
+      image: "",
+      detail: wordleDetail,
+      sourcecode:
+        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/wordle",
     },
     {
       title: "Project3",
