@@ -13,10 +13,26 @@ const padInt = (n) => {
   return res;
 };
 
+const drawDday = () => {
+  let list = document.getElementById("dday-list");
+  while (list.children.length > 0) {
+    list.removeChild(list.lastChild);
+  }
+  Object.entries(ddays).forEach(([key, value]) => {
+    let targetDay = new Date(
+      value.substring(0, 4),
+      value.substring(5, 7) - 1,
+      value.substring(8, 10)
+    );
+    calcTime(key, targetDay);
+  });
+};
+
 const deleteDday = (element) => {
   let target = element.firstChild.firstChild.innerText;
   delete ddays[target];
   localStorage.setItem("ddays", JSON.stringify(ddays));
+  drawDday();
 };
 
 const calcTime = (name, target) => {
@@ -74,17 +90,6 @@ const calcTime = (name, target) => {
   ddayElement.appendChild(ddayDelete);
   ddayElement.appendChild(content2);
   main.appendChild(ddayElement);
-};
-
-const drawDday = () => {
-  Object.entries(ddays).forEach(([key, value]) => {
-    let targetDay = new Date(
-      value.substring(0, 4),
-      value.substring(5, 7) - 1,
-      value.substring(8, 10)
-    );
-    calcTime(key, targetDay);
-  });
 };
 
 export { ddays, calcTime, drawDday };

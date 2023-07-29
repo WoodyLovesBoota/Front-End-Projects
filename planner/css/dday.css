@@ -176,6 +176,7 @@
   width: 50%;
   height: 5%;
   background-color: rgb(71, 198, 160);
+  font-size: 16px;
 }
 
 #reset {
@@ -189,4 +190,5 @@
   width: 50%;
   height: 5%;
   background-color: rgb(219, 219, 252);
+  font-size: 16px;
 }
