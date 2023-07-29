@@ -22,6 +22,15 @@ const moveCursor = (element) => {
   });
 };
 
+//입력하면 테두리 색 변경하기
+const paintWord = (element) => {
+  element.addEventListener("keyup", () => {
+    if (element.value.length === +element.getAttribute("maxlength")) {
+      element.classList.add("done");
+    }
+  });
+};
+
 // 마지막은 다음 형제노드가 submit 이여서 submit 할 때 focus넘겨야 함
 const moveCursorToNextRow = (element) => {
   if (element.nextElementSibling.firstElementChild !== null)
@@ -85,6 +94,7 @@ wordRows.forEach((wordRow) => {
 });
 
 wordCells.forEach((wordCell) => {
+  paintWord(wordCell);
   moveCursor(wordCell);
 });
 
