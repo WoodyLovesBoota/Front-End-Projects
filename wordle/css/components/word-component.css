@@ -40,3 +40,8 @@
   border: 2px solid rgb(226, 209, 57);
   background-color: rgb(226, 209, 57);
 }
+
+.word-gray {
+  border: 2px solid rgb(167, 167, 167);
+  background-color: rgb(167, 167, 167);
+}

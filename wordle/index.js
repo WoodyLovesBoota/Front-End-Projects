@@ -69,19 +69,22 @@ const loseWhenOverSix = () => {
 const checkAnswer = (words) => {
   let wordsArr = [];
   let green = 0;
-  let yellow = 0;
+
   for (let i = 0; i < 5; i++) {
     wordsArr.push(words.children[i].value);
   }
+
   for (let i = 0; i < wordsArr.length; i++) {
     history.push(wordsArr[i].toUpperCase());
     if (wordsArr[i] === answer[i]) {
       green++;
       words.children[i].classList.add("word-green");
     } else if (answer.includes(wordsArr[i])) {
-      yellow++;
       words.children[i].classList.add("word-yellow");
+    } else {
+      words.children[i].classList.add("word-gray");
     }
+
     if (green === 5) {
       winTheGame();
     }
