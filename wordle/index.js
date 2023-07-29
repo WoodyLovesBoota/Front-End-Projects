@@ -1,10 +1,11 @@
 //TODO : 문제 random으로 내기
 //TODO : 틀리면 회색으로
 
-let wordRows = document.querySelectorAll(".word-row");
-let wordCells = document.querySelectorAll(".word-row__cell");
-let restartButton = document.querySelector(".restart__button");
-let keyboards = document.querySelectorAll(".keyboard__cell");
+const wordRows = document.querySelectorAll(".word-row");
+const wordCells = document.querySelectorAll(".word-row__cell");
+const restartButton = document.querySelector(".restart__button");
+const keyboards = document.querySelectorAll(".keyboard__cell");
+const answerWord = document.querySelector(".answer-word");
 
 let win = false;
 let history = [];
@@ -110,6 +111,8 @@ wordCells.forEach((wordCell) => {
   paintWord(wordCell);
   moveCursor(wordCell);
 });
+
+answerWord.innerText = 'The answer is... "' + answer.toUpperCase() + '"';
 
 restartButton.addEventListener("click", () => {
   location.reload();
