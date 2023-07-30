@@ -46,6 +46,61 @@ ul {
   display: none;
 }
 
+@media (max-width: 1023px) {
+  body {
+    display: flex;
+  }
+
+  .column-center {
+    order: 1;
+    width: 55vw;
+  }
+
+  .column-left {
+    order: 2;
+    width: 0;
+    position: relative;
+  }
+
+  .column-right {
+    order: 3;
+    width: 40vw;
+  }
+
+  #links {
+    display: none;
+  }
+
+  #time-box {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #time-hour-text {
+    font-size: 6vw;
+    text-align: start;
+    margin-left: 6vw;
+  }
+
+  #time-date-text {
+    font-size: 2vw;
+    text-align: left;
+    font-weight: 500;
+    margin-left: 6vw;
+    color: rgb(241, 241, 241);
+  }
+
+  #todo-box {
+    position: absolute;
+    top: 150px;
+    left: -50vw;
+    width: 45vw;
+    height: 580px;
+  }
+}
+
 @media (max-width: 400px) {
   body {
     height: 200vh;
