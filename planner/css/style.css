@@ -45,3 +45,52 @@ ul {
 .unshow {
   display: none;
 }
+
+@media (max-width: 400px) {
+  body {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .column-left {
+    width: 100%;
+    height: 50%;
+    order: 2;
+  }
+
+  .column-center {
+    width: 100%;
+    height: 10%;
+    order: 1;
+    margin-top: 0px;
+  }
+
+  .column-right {
+    width: 100%;
+    height: 50%;
+    order: 3;
+  }
+
+  #time-box {
+    margin-top: 100px;
+  }
+
+  #links {
+    display: none;
+  }
+
+  #location-box {
+    display: none;
+  }
+
+  #timer-box p {
+    font-size: 30px;
+  }
+
+  .timer__time {
+    font: 30px;
+  }
+}
