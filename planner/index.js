@@ -3,7 +3,7 @@
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
-let todoInput = document.querySelector("#todo-input");
+let todoInput = document.querySelector(".todo-insert__input");
 todoInput.addEventListener("change", todo.setTodo);
 
 todo.drawTodos();
@@ -129,8 +129,7 @@ startButton.addEventListener("click", () => {
         calcTimer();
       }, 1000);
     } else {
-      let nowClock =
-        document.getElementsByClassName("timer__time")[0].textContent;
+      let nowClock = document.querySelector(".timer__time").textContent;
       let nowClockToTimestamp =
         Number(nowClock.substring(0, 2)) * 3600 +
         Number(nowClock.substring(5, 7)) * 60 +
@@ -183,8 +182,7 @@ pauseButton.addEventListener("click", () => {
   if (!isPaused) {
     timerBackground.style.backgroundColor =
       "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.7 + ")";
-    let nowClock =
-      document.getElementsByClassName("timer__time")[0].textContent;
+    let nowClock = document.querySelector(".timer__time").textContent;
     document.querySelector(".timer__time").innerHTML = nowClock;
     clearInterval(startTime);
     isPaused = true;

@@ -7,18 +7,18 @@
     <title>Planner</title>
   </head>
   <body>
-    <section class="column-left">
-      <section id="todo-box">
+    <div class="column-left">
+      <section class="todo">
         <p>Todo</p>
-        <section id="todo-input-box">
+        <div class="todo-insert">
           <p>오늘의 할 일은 무엇인가요?</p>
-          <form class="todo-input__form">
-            <input id="todo-input" autofocus required type="text" />
+          <form class="todo-insert__form">
+            <input class="todo-insert__input" autofocus required type="text" />
           </form>
-        </section>
-        <ul id="todos"></ul>
+        </div>
+        <ul class="todo-list"></ul>
       </section>
-    </section>
+    </div>
     <section class="column-center">
       <section id="time-box">
         <section id="time-date">

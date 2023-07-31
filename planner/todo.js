@@ -11,8 +11,8 @@ let checkedTodo =
 let cnt = Object.keys(todos).length;
 
 const setTodo = () => {
-  let todoItem = document.querySelector("#todo-input").value;
-  document.querySelector("#todo-input").value = null;
+  let todoItem = document.querySelector(".todo-insert__input").value;
+  document.querySelector(".todo-insert__input").value = null;
   todos[cnt] = todoItem;
   cnt++;
   localStorage.setItem("todos", JSON.stringify(todos));
@@ -40,13 +40,13 @@ const deleteTodo = (item) => {
 };
 
 const drawTodos = () => {
-  let list = document.getElementById("todos");
+  let list = document.querySelector(".todo-list");
   while (list.children.length > 0) {
     list.removeChild(list.lastChild);
   }
 
   Object.values(todos).forEach((e) => {
-    let todoList = document.getElementById("todos");
+    let todoList = document.querySelector(".todo-list");
     let item = document.createElement("li");
     let content = document.createElement("span");
     let button = document.createElement("button");
@@ -78,7 +78,7 @@ const drawTodos = () => {
   });
 };
 
-let input = document.querySelector(".todo-input__form");
+let input = document.querySelector(".todo-insert__form");
 input.addEventListener("submit", (e) => {
   e.preventDefault();
   setTodo();
