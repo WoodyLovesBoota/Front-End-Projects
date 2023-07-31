@@ -1,5 +1,3 @@
-// 반응형 디자인
-// default event
 import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
