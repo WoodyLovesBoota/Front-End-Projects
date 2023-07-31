@@ -37,6 +37,10 @@
 }
 
 #links form input::placeholder {
-  color: rgb(112, 112, 112);
-  font-size: 20px;
+  color: rgb(158, 157, 157);
+  font-size: 1.3vw;
+}
+
+.link-icon i {
+  font-size: 4vw;
 }
