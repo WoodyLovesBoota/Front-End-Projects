@@ -7,23 +7,24 @@
   border-radius: 30px;
   font-weight: 550;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #timer-box > p {
-  font-size: min(1.6vw, 2.7vh);
+  font-size: 2vw;
   text-align: center;
 }
 
 #timer-box > p:nth-child(2) {
-  font-size: min(3vw, 5.3vh);
-  margin: 25px 0;
+  font-size: 3vw;
 }
 
 .timer-buttons {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30px;
 }
 
 .timer__button {
@@ -38,4 +39,18 @@
 
 .timer__button > i {
   font-size: 20px;
+}
+
+@media (max-width: 1023px) {
+  #timer-box {
+    height: 20%;
+  }
+
+  #timer-box > p {
+    font-size: 2.7vw;
+  }
+
+  #timer-box > p:nth-child(2) {
+    font-size: 4vw;
+  }
 }
