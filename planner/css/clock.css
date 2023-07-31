@@ -20,3 +20,23 @@
   font-weight: 500;
   color: black;
 }
+
+@media (max-width: 1300px) {
+  #time-hour-text {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 1023px) {
+  #time-box {
+    margin-top: 100px;
+  }
+
+  #timer-box p {
+    font-size: 30px;
+  }
+
+  .timer__time {
+    font: 30px;
+  }
+}
