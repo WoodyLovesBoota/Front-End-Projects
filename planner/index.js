@@ -67,8 +67,8 @@ const drawClock = () => {
   let nowYearMonthDate =
     nowYear + " / " + nowMonth + " / " + nowDate + " " + nowDay;
   let nowHourMinutesSecond = nowHour + " : " + nowMinute + " : " + nowSecond;
-  let dateBox = document.querySelector("#time-date-text");
-  let hourBox = document.querySelector("#time-hour-text");
+  let dateBox = document.querySelector(".clock__date");
+  let hourBox = document.querySelector(".clock__time");
 
   dateBox.innerHTML = nowYearMonthDate;
   hourBox.innerHTML = nowHourMinutesSecond;

@@ -19,15 +19,17 @@
         <ul class="todo-list"></ul>
       </section>
     </div>
-    <section class="column-center">
-      <section id="time-box">
-        <section id="time-date">
-          <p id="time-date-text"></p>
-        </section>
-        <section id="time-hour">
-          <p id="time-hour-text"></p>
-        </section>
+
+    <div class="column-center">
+      <section class="clock">
+        <div>
+          <p class="clock__date"></p>
+        </div>
+        <div>
+          <p class="clock__time"></p>
+        </div>
       </section>
+
       <section id="links">
         <form
           method="get"
@@ -43,6 +45,7 @@
             placeholder="Search on Google"
           />
         </form>
+
         <ul class="link-icons">
           <li class="link-icon link-icon__youtube">
             <a href="https://www.youtube.com" target="_blank"
@@ -73,8 +76,10 @@
           </li>
         </ul>
       </section>
+
       <section id="music-box"></section>
-    </section>
+    </div>
+
     <section class="column-right">
       <section id="location-box">
         <img id="weather-icon" />
