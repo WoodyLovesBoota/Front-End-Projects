@@ -1,9 +1,8 @@
-let date = new Date();
-
 let todos =
   localStorage.getItem("todos") === null
     ? {}
     : JSON.parse(localStorage.getItem("todos"));
+
 let checkedTodo =
   localStorage.getItem("checks") === null
     ? []
@@ -78,8 +77,6 @@ const drawTodos = () => {
     });
   });
 };
-
-// let input = document.querySelector("#todo-input");
 
 let input = document.querySelector(".todo-input__form");
 input.addEventListener("submit", (e) => {

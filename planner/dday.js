@@ -57,17 +57,6 @@ const calcTime = (name, target) => {
   let lest = Math.floor((targetTime - nowTime) / 1000);
 
   let lestDate = Math.floor(lest / (60 * 60 * 24));
-  let lestHour = padInt(
-    Math.floor((lest - lestDate * (60 * 60 * 24)) / (60 * 60))
-  );
-  let lestMinute = padInt(
-    Math.floor((lest - lestDate * (60 * 60 * 24) - lestHour * (60 * 60)) / 60)
-  );
-  let lestSecond = padInt(
-    Math.floor(
-      lest - lestDate * (60 * 60 * 24) - lestHour * (60 * 60) - lestMinute * 60
-    )
-  );
 
   ddayDate.innerHTML =
     padInt(target.getFullYear()) +
@@ -79,9 +68,7 @@ const calcTime = (name, target) => {
   let clockMessage = name;
   content.innerHTML = clockMessage;
 
-  let clockMessage2 =
-    //  "D - " + lestDate + "일 " + lestHour + ":" + lestMinute + ":" + lestSecond;
-    "D - " + String(Number(lestDate) + 1);
+  let clockMessage2 = "D - " + String(Number(lestDate) + 1);
   content2.innerHTML = clockMessage2;
   ddayContent.appendChild(content);
   ddayContent.appendChild(ddayDate);
@@ -90,7 +77,6 @@ const calcTime = (name, target) => {
   ddayElement.appendChild(ddayDelete);
   ddayElement.appendChild(content2);
   main.appendChild(ddayElement);
-  console.log("draw");
 };
 
 export { ddays, calcTime, drawDday };
