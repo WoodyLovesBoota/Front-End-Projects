@@ -53,4 +53,25 @@
   #timer-box > p:nth-child(2) {
     font-size: 4vw;
   }
+
+  #time-box {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #time-hour-text {
+    font-size: 6vw;
+    text-align: start;
+    margin-left: 6vw;
+  }
+
+  #time-date-text {
+    font-size: 2vw;
+    text-align: left;
+    font-weight: 500;
+    margin-left: 6vw;
+    color: rgb(241, 241, 241);
+  }
 }
