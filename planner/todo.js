@@ -12,11 +12,13 @@ let cnt = Object.keys(todos).length;
 
 const setTodo = () => {
   let todoItem = document.querySelector(".todo-insert__input").value;
-  document.querySelector(".todo-insert__input").value = null;
-  todos[cnt] = todoItem;
-  cnt++;
-  localStorage.setItem("todos", JSON.stringify(todos));
-  drawTodos();
+  if (todoItem != "") {
+    document.querySelector(".todo-insert__input").value = null;
+    todos[cnt] = todoItem;
+    cnt++;
+    localStorage.setItem("todos", JSON.stringify(todos));
+    drawTodos();
+  }
 };
 
 const setChecks = () => {
