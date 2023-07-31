@@ -90,6 +90,7 @@ const calcTime = (name, target) => {
   ddayElement.appendChild(ddayDelete);
   ddayElement.appendChild(content2);
   main.appendChild(ddayElement);
+  console.log("draw");
 };
 
 export { ddays, calcTime, drawDday };

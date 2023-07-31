@@ -4,7 +4,7 @@ import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
 let todoInput = document.querySelector("#todo-input");
-// todoInput.addEventListener("change", todo.setTodo);
+todoInput.addEventListener("change", todo.setTodo);
 
 todo.drawTodos();
 
@@ -12,15 +12,14 @@ let addButton = document.querySelector("#add-dday");
 let addDdayBox = document.querySelector(".add-dday-box");
 let ddayInput = document.querySelector("#dday-input");
 let ddayName = document.querySelector("#dday-name");
-let ddaySubmit = document.querySelector("#submit");
+let ddaySubmit = document.querySelector(".dday-form");
 let ddayReset = document.querySelector("#reset");
 
-addButton.addEventListener("click", (event) => {
-  event.preventDefault();
+addButton.addEventListener("click", () => {
   addDdayBox.classList.add("show");
 });
 
-ddaySubmit.addEventListener("click", () => {
+ddaySubmit.addEventListener("submit", (e) => {
   let ddays =
     localStorage.getItem("ddays") === null
       ? {}
@@ -29,12 +28,13 @@ ddaySubmit.addEventListener("click", () => {
   let ddayTarget = ddayInput.value;
   ddays[ddaySubject] = ddayTarget;
   localStorage.setItem("ddays", JSON.stringify(ddays));
-
   addDdayBox.classList.remove("show");
+  dday.drawDday();
 });
 
 ddayReset.addEventListener("click", () => {
   addDdayBox.classList.remove("show");
+  dday.drawDday();
 });
 
 const padInt = (n) => {

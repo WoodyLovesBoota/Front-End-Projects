@@ -205,6 +205,7 @@
 
   .dday-element {
     font-size: 2vw;
+    margin: 1vw;
   }
 
   .dday-element p:last-child {
