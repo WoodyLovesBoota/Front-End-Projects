@@ -4,7 +4,7 @@ import * as todo from "./todo.js";
 import * as dday from "./dday.js";
 
 let todoInput = document.querySelector("#todo-input");
-todoInput.addEventListener("change", todo.setTodo);
+// todoInput.addEventListener("change", todo.setTodo);
 
 todo.drawTodos();
 

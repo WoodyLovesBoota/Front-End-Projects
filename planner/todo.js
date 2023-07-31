@@ -9,9 +9,13 @@ let checkedTodo =
     ? []
     : localStorage.getItem("checks").split(",");
 
+let cnt = Object.keys(todos).length;
+
 const setTodo = () => {
   let todoItem = document.querySelector("#todo-input").value;
-  todos[date.getTime()] = todoItem;
+  document.querySelector("#todo-input").value = null;
+  todos[cnt] = todoItem;
+  cnt++;
   localStorage.setItem("todos", JSON.stringify(todos));
   drawTodos();
 };
@@ -75,8 +79,13 @@ const drawTodos = () => {
   });
 };
 
-let input = document.querySelector("#todo-input");
-input.addEventListener("change", setTodo);
+// let input = document.querySelector("#todo-input");
+
+let input = document.querySelector(".todo-input__form");
+input.addEventListener("submit", (e) => {
+  e.preventDefault();
+  setTodo();
+});
 
 export {
   todos,
