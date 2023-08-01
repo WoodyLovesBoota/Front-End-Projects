@@ -115,7 +115,7 @@ let startTime;
 let isPaused = false;
 let isStarted = false;
 
-let timerBackground = document.querySelector("#timer-box");
+let timerBackground = document.querySelector(".timer");
 let startButton = document.querySelector(".timer-buttons__start");
 startButton.addEventListener("click", () => {
   if (!isStarted) {

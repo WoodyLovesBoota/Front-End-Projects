@@ -1,4 +1,4 @@
-#timer-box {
+.timer {
   width: 100%;
   height: 25%;
   background-color: rgba(255, 255, 255, 0.7);
@@ -12,12 +12,12 @@
   justify-content: space-between;
 }
 
-#timer-box > p {
+.timer > p {
   font-size: 25px;
   text-align: center;
 }
 
-#timer-box > p:nth-child(2) {
+.timer > p:nth-child(2) {
   font-size: 3vw;
 }
 
@@ -42,15 +42,15 @@
 }
 
 @media (max-width: 1023px) {
-  #timer-box {
+  .timer {
     height: 20%;
   }
 
-  #timer-box > p {
+  .timer > p {
     font-size: 2.7vw;
   }
 
-  #timer-box > p:nth-child(2) {
+  .timer > p:nth-child(2) {
     font-size: 4vw;
   }
 }
