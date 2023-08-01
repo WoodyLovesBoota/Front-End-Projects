@@ -82,17 +82,18 @@
       <section class="music-box"></section>
     </div>
 
-    <section class="column-right">
-      <section id="location-box">
-        <img id="weather-icon" />
-        <section id="location-text">
+    <div class="column-right">
+      <section class="location-weather">
+        <img class="weather__icon" />
+        <div>
           <i class="fas fa-map-marker-alt"></i> <span id="city"></span>
-          <section id="weather-box">
-            <span id="weather"></span>
+          <div class="weather-temp">
+            <span class="weather-temp__temperature"></span>
             <span>&deg;C</span>
-          </section>
-        </section>
+          </div>
+        </div>
       </section>
+
       <section id="timer-box">
         <p>Focus Time</p>
         <p class="timer__time">00 : 00 : 00</p>
@@ -115,7 +116,7 @@
         </div>
         <section id="dday-list"></section>
       </section>
-    </section>
+    </div>
     <section class="add-dday-box">
       <section id="add-dday-form">
         <p>D-Day를 추가하세요!</p>

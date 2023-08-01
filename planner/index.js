@@ -78,8 +78,8 @@ const getLocation = async () => {
 
 const drawLocation = async (location) => {
   let cityName = document.querySelector("#city");
-  let temperature = document.querySelector("#weather");
-  let weatherIcon = document.querySelector("#weather-icon");
+  let temperature = document.querySelector(".weather-temp__temperature");
+  let weatherIcon = document.querySelector(".weather__icon");
 
   let key = "a0da403921cabb72edbfc43c1abe7772";
   let [latitude, longitude] = [

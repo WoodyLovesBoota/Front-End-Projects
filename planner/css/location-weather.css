@@ -1,4 +1,4 @@
-#location-box {
+.location-weather {
   width: 100%;
   height: 7%;
   margin: 15px 0;
@@ -10,18 +10,18 @@
   box-sizing: border-box;
 }
 
-#location-box p {
+.location-weather p {
   font-size: 1vw;
   font-weight: 500;
 }
 
-#location-box span {
+.location-weather span {
   margin: 0;
   font-size: 1.1vw;
   font-weight: 500;
 }
 
-#weather {
+.weather-temp__temperature {
   display: inline-block;
   padding-left: 10px;
 }
@@ -30,21 +30,21 @@
   width: 30px;
 }
 
-#weather-icon {
+.weather__icon {
   width: 4vw;
 }
 
-#weather-box {
+.weather-temp {
   text-align: end;
 }
 
 @media (max-width: 1023px) {
-  #location-box p {
+  .location-weather p {
     font-size: 2vw;
     font-weight: 500;
   }
 
-  #location-box span {
+  .location-weather span {
     margin: 0;
     font-size: 1.5vw;
     font-weight: 500;
