@@ -10,7 +10,7 @@ let addButton = document.querySelector(".dday-add-button");
 let addDdayBox = document.querySelector(".add-dday");
 let ddayInput = document.querySelector(".add-dday-input__date");
 let ddayName = document.querySelector(".add-dday-input__name");
-let ddaySubmit = document.querySelector(".add-dday__main");
+let ddaySubmit = document.querySelector(".add-dday__form");
 let ddayReset = document.querySelector(".add-dday__reset-button");
 
 addButton.addEventListener("click", () => {
@@ -77,7 +77,7 @@ const getLocation = async () => {
 };
 
 const drawLocation = async (location) => {
-  let cityName = document.querySelector("#city");
+  let cityName = document.querySelector(".location__city");
   let temperature = document.querySelector(".weather-temp__temperature");
   let weatherIcon = document.querySelector(".weather__icon");
 
@@ -91,7 +91,6 @@ const drawLocation = async (location) => {
   let data = await response.json();
   let city = data.name;
   let temp = data.main.temp;
-  let sky = data.weather[0].main;
   let weatherCode = data.weather[0].icon;
   let weatherUrl = `https://openweathermap.org/img/wn/${weatherCode}@2x.png`;
   if (String(temp).length > 3) temp = String(temp).substring(0, 4);
