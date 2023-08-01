@@ -7,7 +7,7 @@
 }
 
 .clock__date {
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   font-weight: 500;
   color: rgb(130, 129, 129);
@@ -16,7 +16,7 @@
 
 .clock__time {
   text-align: center;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 500;
   color: black;
 }

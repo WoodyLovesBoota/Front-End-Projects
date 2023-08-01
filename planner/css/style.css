@@ -67,7 +67,7 @@ ul {
     width: 40vw;
   }
 
-  #links {
+  .search {
     display: none;
   }
 }
