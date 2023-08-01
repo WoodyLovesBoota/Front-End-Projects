@@ -14,7 +14,7 @@ const padInt = (n) => {
 };
 
 const drawDday = () => {
-  let list = document.querySelector("#dday-list");
+  let list = document.querySelector(".dday-list");
   while (list.children.length > 0) {
     list.removeChild(list.lastChild);
   }
@@ -36,7 +36,7 @@ const deleteDday = (element) => {
 };
 
 const calcTime = (name, target) => {
-  let main = document.querySelector("#dday-list");
+  let main = document.querySelector(".dday-list");
   let ddayContent = document.createElement("div");
   let ddayElement = document.createElement("div");
   let content = document.createElement("p");

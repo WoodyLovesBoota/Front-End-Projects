@@ -6,12 +6,12 @@ todoInput.addEventListener("change", todo.setTodo);
 
 todo.drawTodos();
 
-let addButton = document.querySelector("#add-dday");
-let addDdayBox = document.querySelector(".add-dday-box");
-let ddayInput = document.querySelector("#dday-input");
-let ddayName = document.querySelector("#dday-name");
-let ddaySubmit = document.querySelector(".dday-form");
-let ddayReset = document.querySelector("#reset");
+let addButton = document.querySelector(".dday-add-button");
+let addDdayBox = document.querySelector(".add-dday");
+let ddayInput = document.querySelector(".add-dday-input__date");
+let ddayName = document.querySelector(".add-dday-input__name");
+let ddaySubmit = document.querySelector(".add-dday__main");
+let ddayReset = document.querySelector(".add-dday__reset-button");
 
 addButton.addEventListener("click", () => {
   addDdayBox.classList.add("show");

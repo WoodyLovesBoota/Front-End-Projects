@@ -47,7 +47,6 @@
             placeholder="Search on Google"
           />
         </form>
-
         <ul class="link-icons">
           <li class="link-icon link-icon__youtube">
             <a href="https://www.youtube.com" target="_blank"
@@ -110,38 +109,38 @@
         </section>
       </section>
 
-      <section id="dday-box">
-        <div id="dday-header">
+      <section class="dday">
+        <div class="dday__header">
           <p>D-Day</p>
-          <button id="add-dday" type="button">+추가</button>
+          <button class="dday-add-button" type="button">+추가</button>
         </div>
-        <section id="dday-list"></section>
+        <div class="dday-list"></div>
       </section>
     </div>
 
-    <section class="add-dday-box">
-      <section id="add-dday-form">
+    <section class="add-dday">
+      <div class="add-dday__main">
         <p>D-Day를 추가하세요!</p>
-        <form class="dday-form">
+        <form class="add-dday__form">
           <input
-            id="dday-name"
+            class="add-dday-input__name"
             type="text"
             placeholder="제목 - ex)생일"
             required
           />
           <input
-            id="dday-input"
+            class="add-dday-input__date"
             type="date"
             data-placeholder="날짜 선택"
             required
             aria-required="true"
           />
-          <section id="add-dday-buttons">
-            <button id="submit" type="submit">저장</button>
-            <button id="reset" type="reset">취소</button>
-          </section>
+          <div>
+            <button class="add-dday__submit-button" type="submit">저장</button>
+            <button class="add-dday__reset-button" type="reset">취소</button>
+          </div>
         </form>
-      </section>
+      </div>
     </section>
     <script
       src="https://kit.fontawesome.com/a28619ea37.js"

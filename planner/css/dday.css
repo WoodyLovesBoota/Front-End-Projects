@@ -1,4 +1,4 @@
-#dday-box {
+.dday {
   width: 100%;
   height: 54%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-.add-dday-box {
+.add-dday {
   width: 400px;
   height: 98%;
   position: fixed;
@@ -27,7 +27,7 @@
   right: 0;
 }
 
-#add-dday-form {
+.add-dday__main {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -35,14 +35,14 @@
   padding: 20px;
 }
 
-#add-dday-form > p {
+.add-dday__main > p {
   font-size: 30px;
   font-weight: 600;
   color: rgb(255, 255, 255);
   margin: 40px 0;
 }
 
-#dday-name {
+.add-dday-input__name {
   background-color: transparent;
   border: none;
   border-bottom: 2px rgb(255, 255, 255) solid;
@@ -53,15 +53,15 @@
   margin-top: 50px;
 }
 
-#dday-name::placeholder {
+.add-dday-input__name::placeholder {
   color: rgb(181, 181, 181);
 }
 
-#dday-name:focus {
+.add-dday-input__name:focus {
   outline: none;
 }
 
-#dday-input {
+.add-dday-input__date {
   background-color: transparent;
   color: rgb(255, 255, 255);
   border: none;
@@ -72,7 +72,7 @@
   margin-top: 50px;
 }
 
-#dday-list {
+.dday-list {
   width: 100%;
   height: 90%;
   margin-top: 20px;
@@ -118,19 +118,19 @@
   color: rgb(90, 90, 90);
 }
 
-#dday-header {
+.dday__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#dday-header > p {
+.dday__header > p {
   font-size: 25px;
   margin: 0;
   font-weight: 700;
 }
 
-#add-dday {
+.dday-add-button {
   border: none;
   font-size: 15px;
   cursor: pointer;
@@ -138,35 +138,35 @@
   color: black;
 }
 
-#add-dday:hover {
+.dday-add-button:hover {
   border: 1px solid transparent;
 }
 
-#dday-input::before {
+.add-dday-input__date::before {
   content: attr(data-placeholder);
   width: 100%;
   font-size: 20px;
   color: rgb(155, 155, 155);
 }
 
-#dday-input:focus::before,
-#dday-input:valid::before {
+.add-dday-input__date:focus::before,
+.add-dday-input__date:valid::before {
   display: none;
 }
 
-#add-dday-form > form {
+.add-dday__main > form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#add-dday-form {
+.add-dday__main {
   position: relative;
   color: gray;
 }
 
-#submit {
+.add-dday__submit-button {
   background-color: transparent;
   color: white;
   border: none;
@@ -180,7 +180,7 @@
   font-size: 16px;
 }
 
-#reset {
+.add-dday__reset-button {
   background-color: transparent;
   color: gray;
   border: none;
@@ -195,11 +195,11 @@
 }
 
 @media (max-width: 1023px) {
-  #dday-box {
+  .dday {
     height: 59%;
   }
 
-  #dday-header > p {
+  .dday__header > p {
     font-size: 2.5vw;
   }
 
@@ -216,7 +216,7 @@
     font-size: 1.3vw;
   }
 
-  #add-dday {
+  .dday-add-button {
     font-size: 1.5vw;
   }
 }
