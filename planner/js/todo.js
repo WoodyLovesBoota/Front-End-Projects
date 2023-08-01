@@ -1,3 +1,6 @@
+import * as lib from "./library.js";
+
+// get data from local storage
 let todos =
   localStorage.getItem("todos") === null
     ? {}
@@ -8,31 +11,45 @@ let checkedTodo =
     ? []
     : localStorage.getItem("checks").split(",");
 
+const todoList = document.querySelector(".todo-list");
+
+// todo element key
 let cnt = Object.keys(todos).length;
 
-const setTodo = () => {
-  let todoItem = document.querySelector(".todo-insert__input").value;
-  if (todoItem != "") {
+// event when submit
+document.querySelector(".todo-insert__form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  addTodo();
+});
+
+/**
+ * add todo element to todo-list
+ */
+const addTodo = () => {
+  const todoContent = document.querySelector(".todo-insert__input").value;
+  if (todoContent != "") {
     document.querySelector(".todo-insert__input").value = null;
-    todos[cnt] = todoItem;
+    todos[cnt] = todoContent;
     cnt++;
     localStorage.setItem("todos", JSON.stringify(todos));
     drawTodos();
   }
 };
 
+/**
+ * update local storage : checkedTodo
+ */
 const setChecks = () => {
   localStorage.setItem("checks", checkedTodo);
   drawTodos();
 };
 
-const getKeyByValue = (object, value) => {
-  return Object.keys(object).find((key) => object[key] === value);
-};
-
+/**
+ * delete Todo element
+ */
 const deleteTodo = (item) => {
-  let target = item.querySelector("span").innerText;
-  let key = getKeyByValue(todos, target);
+  const target = item.querySelector("span").innerText;
+  const key = lib.getKeyByValue(todos, target);
   delete todos[key];
   localStorage.setItem("todos", JSON.stringify(todos));
   if (checkedTodo.indexOf(target) !== -1)
@@ -41,57 +58,76 @@ const deleteTodo = (item) => {
   drawTodos();
 };
 
-const drawTodos = () => {
-  let list = document.querySelector(".todo-list");
-  while (list.children.length > 0) {
-    list.removeChild(list.lastChild);
+/**
+ * add attribute to element
+ */
+const addAttributeToTodo = (e, checkBox, label) => {
+  checkBox.setAttribute("type", "checkbox");
+  checkBox.setAttribute("id", lib.getKeyByValue(todos, e));
+  checkBox.setAttribute("class", "check-box");
+  label.setAttribute("for", lib.getKeyByValue(todos, e));
+};
+
+/**
+ * add event listener to element
+ */
+const addEventListenerToTodo = (e, item, button, checkBox) => {
+  button.addEventListener("click", () => {
+    deleteTodo(item);
+  });
+
+  if (checkedTodo.indexOf(e) !== -1) {
+    item.classList.add("checked");
   }
 
-  Object.values(todos).forEach((e) => {
-    let todoList = document.querySelector(".todo-list");
-    let item = document.createElement("li");
-    let content = document.createElement("span");
-    let button = document.createElement("button");
-    let checkBox = document.createElement("input");
-    checkBox.setAttribute("type", "checkbox");
-    checkBox.setAttribute("id", getKeyByValue(todos, e));
-    checkBox.setAttribute("class", "check-box");
-
-    let label = document.createElement("label");
-    label.setAttribute("for", getKeyByValue(todos, e));
-    content.innerText = e;
-    button.innerHTML = "X";
-
-    if (checkedTodo.indexOf(e) !== -1) {
-      item.classList.add("checked");
-    }
-
-    checkBox.addEventListener("change", () => {
-      if (!item.classList.contains("checked")) checkedTodo.push(e);
-      else checkedTodo.splice(checkedTodo.indexOf(e), 1);
-      setChecks();
-    });
-
-    todoList.appendChild(item);
-    item.append(checkBox, label, content, button);
-    button.addEventListener("click", () => {
-      deleteTodo(item);
-    });
+  checkBox.addEventListener("change", () => {
+    if (!item.classList.contains("checked")) checkedTodo.push(e);
+    else checkedTodo.splice(checkedTodo.indexOf(e), 1);
+    setChecks();
   });
 };
 
-let input = document.querySelector(".todo-insert__form");
-input.addEventListener("submit", (e) => {
-  e.preventDefault();
-  setTodo();
-});
-
-export {
-  todos,
-  checkedTodo,
-  setTodo,
-  setChecks,
-  getKeyByValue,
-  deleteTodo,
-  drawTodos,
+/**
+ * add inner content to element
+ */
+const addContentToTodo = (e, button, content) => {
+  button.innerHTML = "X";
+  content.innerText = e;
 };
+
+/**
+ * make todo element frame
+ */
+const todoElementFactory = (e) => {
+  const item = document.createElement("li");
+  const content = document.createElement("span");
+  const button = document.createElement("button");
+  const checkBox = document.createElement("input");
+  const label = document.createElement("label");
+
+  addAttributeToTodo(e, checkBox, label);
+  addEventListenerToTodo(e, item, button, checkBox);
+  addContentToTodo(e, button, content);
+
+  item.append(checkBox, label, content, button);
+  todoList.appendChild(item);
+};
+
+const deleteCurrentTodo = () => {
+  while (todoList.children.length > 0) {
+    todoList.removeChild(todoList.lastChild);
+  }
+};
+
+/**
+ * draw Todo List
+ */
+const drawTodos = () => {
+  deleteCurrentTodo();
+
+  Object.values(todos).forEach((e) => {
+    todoElementFactory(e);
+  });
+};
+
+export { addTodo, setChecks, deleteTodo, drawTodos };

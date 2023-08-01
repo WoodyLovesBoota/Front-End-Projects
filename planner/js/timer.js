@@ -1,34 +1,25 @@
+import * as lib from "./library.js";
+
 let nowTimer = 0;
 let startTimer = 0;
 let startTime;
 let isPaused = false;
 let isStarted = false;
 
-let timerBackground = document.querySelector(".timer");
-let startButton = document.querySelector(".timer-buttons__start");
-
-const padInt = (n) => {
-  let res = String(n);
-  if (String(n).length === 1) {
-    let arr = String(n).split("");
-    arr.unshift("0");
-    res = arr.join("");
-  }
-  return res;
-};
+const timerBackground = document.querySelector(".timer");
+const startButton = document.querySelector(".timer-buttons__start");
 
 startButton.addEventListener("click", () => {
   if (!isStarted) {
-    timerBackground.style.backgroundColor =
-      "rgba(" + 247 + "," + 157 + "," + 157 + "," + 0.8 + ")";
+    timerBackground.classList.add("red");
     if (!isPaused) {
       startTimer = new Date().getTime();
       startTime = setInterval(() => {
         calcTimer();
       }, 1000);
     } else {
-      let nowClock = document.querySelector(".timer__time").textContent;
-      let nowClockToTimestamp =
+      const nowClock = document.querySelector(".timer__time").textContent;
+      const nowClockToTimestamp =
         Number(nowClock.substring(0, 2)) * 3600 +
         Number(nowClock.substring(5, 7)) * 60 +
         Number(nowClock.substring(10, 12));
@@ -44,46 +35,44 @@ startButton.addEventListener("click", () => {
 
 const calcTimer = () => {
   nowTimer = new Date().getTime();
-  let diff = nowTimer - startTimer;
-  let diffToSec = Math.floor(diff / 1000);
-  let hourPart = padInt(Math.floor(diffToSec / 3600));
-  let minPart = padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
-  let secPart = padInt(diffToSec - hourPart * 3600 - minPart * 60);
-  let timerValue = document.querySelector(".timer__time");
+  const diff = nowTimer - startTimer;
+  const diffToSec = Math.floor(diff / 1000);
+  const hourPart = lib.padInt(Math.floor(diffToSec / 3600));
+  const minPart = lib.padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
+  const secPart = lib.padInt(diffToSec - hourPart * 3600 - minPart * 60);
+  const timerValue = document.querySelector(".timer__time");
   timerValue.innerHTML = hourPart + " : " + minPart + " : " + secPart;
 };
 
 const calcTimerWhenPaused = (saved) => {
   nowTimer = new Date().getTime();
-  let diff = nowTimer - startTimer;
-  let diffToSec = Math.floor(diff / 1000) + saved;
-  let hourPart = padInt(Math.floor(diffToSec / 3600));
-  let minPart = padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
-  let secPart = padInt(diffToSec - hourPart * 3600 - minPart * 60);
-  let timerValue = document.querySelector(".timer__time");
+  const diff = nowTimer - startTimer;
+  const diffToSec = Math.floor(diff / 1000) + saved;
+  const hourPart = lib.padInt(Math.floor(diffToSec / 3600));
+  const minPart = lib.padInt(Math.floor((diffToSec - hourPart * 3600) / 60));
+  const secPart = lib.padInt(diffToSec - hourPart * 3600 - minPart * 60);
+  const timerValue = document.querySelector(".timer__time");
   timerValue.innerHTML = hourPart + " : " + minPart + " : " + secPart;
 };
 
-let stopButton = document.querySelector(".timer-buttons__stop");
-stopButton.addEventListener("click", () => {
+document.querySelector(".timer-buttons__stop").addEventListener("click", () => {
   clearInterval(startTime);
-  timerBackground.style.backgroundColor =
-    "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.7 + ")";
-  let timerValue = document.querySelector(".timer__time");
+  timerBackground.classList.remove("red");
+  const timerValue = document.querySelector(".timer__time");
   timerValue.innerHTML = "00 : 00 : 00";
   isPaused = false;
   isStarted = false;
 });
 
-let pauseButton = document.querySelector(".timer-buttons__pause");
-pauseButton.addEventListener("click", () => {
-  if (!isPaused) {
-    timerBackground.style.backgroundColor =
-      "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.7 + ")";
-    let nowClock = document.querySelector(".timer__time").textContent;
-    document.querySelector(".timer__time").innerHTML = nowClock;
-    clearInterval(startTime);
-    isPaused = true;
-    isStarted = false;
-  }
-});
+document
+  .querySelector(".timer-buttons__pause")
+  .addEventListener("click", () => {
+    if (!isPaused) {
+      timerBackground.classList.remove("red");
+      const nowClock = document.querySelector(".timer__time").textContent;
+      document.querySelector(".timer__time").innerHTML = nowClock;
+      clearInterval(startTime);
+      isPaused = true;
+      isStarted = false;
+    }
+  });

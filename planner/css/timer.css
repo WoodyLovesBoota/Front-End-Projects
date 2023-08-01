@@ -41,6 +41,10 @@
   font-size: 20px;
 }
 
+.red {
+  background-color: rgba(247, 157, 157, 0.8);
+}
+
 @media (max-width: 1023px) {
   .timer {
     height: 20%;

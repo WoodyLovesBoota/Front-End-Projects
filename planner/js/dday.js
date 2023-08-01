@@ -1,3 +1,5 @@
+import * as lib from "./library.js";
+
 let ddays =
   localStorage.getItem("ddays") === null
     ? {}
@@ -31,16 +33,6 @@ ddayReset.addEventListener("click", () => {
   addDdayBox.classList.remove("show");
   drawDday();
 });
-
-const padInt = (n) => {
-  let res = String(n);
-  if (String(n).length === 1) {
-    let arr = String(n).split("");
-    arr.unshift("0");
-    res = arr.join("");
-  }
-  return res;
-};
 
 const drawDday = () => {
   let list = document.querySelector(".dday-list");
@@ -88,11 +80,11 @@ const calcTime = (name, target) => {
   let lestDate = Math.floor(lest / (60 * 60 * 24));
 
   ddayDate.innerHTML =
-    padInt(target.getFullYear()) +
+    lib.padInt(target.getFullYear()) +
     "-" +
-    padInt(Number(target.getMonth()) + 1) +
+    lib.padInt(Number(target.getMonth()) + 1) +
     "-" +
-    padInt(target.getDate());
+    lib.padInt(target.getDate());
 
   let clockMessage = name;
   content.innerHTML = clockMessage;
