@@ -3,6 +3,35 @@ let ddays =
     ? {}
     : JSON.parse(localStorage.getItem("ddays"));
 
+let addButton = document.querySelector(".dday-add-button");
+let addDdayBox = document.querySelector(".add-dday");
+let ddayInput = document.querySelector(".add-dday-input__date");
+let ddayName = document.querySelector(".add-dday-input__name");
+let ddaySubmit = document.querySelector(".add-dday__form");
+let ddayReset = document.querySelector(".add-dday__reset-button");
+
+addButton.addEventListener("click", () => {
+  addDdayBox.classList.add("show");
+});
+
+ddaySubmit.addEventListener("submit", () => {
+  let ddays =
+    localStorage.getItem("ddays") === null
+      ? {}
+      : JSON.parse(localStorage.getItem("ddays"));
+  let ddaySubject = ddayName.value;
+  let ddayTarget = ddayInput.value;
+  ddays[ddaySubject] = ddayTarget;
+  localStorage.setItem("ddays", JSON.stringify(ddays));
+  addDdayBox.classList.remove("show");
+  drawDday();
+});
+
+ddayReset.addEventListener("click", () => {
+  addDdayBox.classList.remove("show");
+  drawDday();
+});
+
 const padInt = (n) => {
   let res = String(n);
   if (String(n).length === 1) {
