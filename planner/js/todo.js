@@ -98,7 +98,7 @@ const addContentToTodo = (e, button, content) => {
 /**
  * make todo element frame
  */
-const todoElementFactory = (e) => {
+const createTodoElement = (e) => {
   const item = document.createElement("li");
   const content = document.createElement("span");
   const button = document.createElement("button");
@@ -126,7 +126,7 @@ const drawTodos = () => {
   deleteCurrentTodo();
 
   Object.values(todos).forEach((e) => {
-    todoElementFactory(e);
+    createTodoElement(e);
   });
 };
 

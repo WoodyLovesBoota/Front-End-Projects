@@ -1,5 +1,3 @@
-// TODO : refactor
-
 import * as lib from "./library.js";
 
 let ddays =
@@ -30,21 +28,24 @@ document
   .querySelector(".add-dday__reset-button")
   .addEventListener("click", () => {
     ddayInsertionScreen.classList.remove("show");
-    drawDday();
   });
 
-const drawDday = () => {
+const deleteCurrentDday = () => {
   const ddayList = document.querySelector(".dday-list");
   while (ddayList.children.length > 0) {
     ddayList.removeChild(ddayList.lastChild);
   }
+};
+
+const drawDday = () => {
+  deleteCurrentDday();
   Object.entries(ddays).forEach(([key, value]) => {
     const targetDay = new Date(
       value.substring(0, 4),
       value.substring(5, 7) - 1,
       value.substring(8, 10)
     );
-    calcTime(key, targetDay);
+    addNewDday(key, targetDay);
   });
 };
 
@@ -55,48 +56,58 @@ const deleteDday = (element) => {
   drawDday();
 };
 
-const calcTime = (name, target) => {
+const createDdayElement = () => {
   const main = document.querySelector(".dday-list");
   const ddayContent = document.createElement("div");
   const ddayElement = document.createElement("div");
-  const content = document.createElement("p");
-  const content2 = document.createElement("p");
-  const ddayDelete = document.createElement("button");
-  const ddayDate = document.createElement("p");
-  ddayDelete.innerHTML = "X";
+  const ddayTitle = document.createElement("p");
+  const ddayResult = document.createElement("p");
+  const deleteDdayButton = document.createElement("button");
+  const ddaySubtitle = document.createElement("p");
 
+  ddayContent.appendChild(ddayTitle);
+  ddayContent.appendChild(ddaySubtitle);
+
+  ddayElement.appendChild(ddayContent);
+  ddayElement.appendChild(deleteDdayButton);
+  ddayElement.appendChild(ddayResult);
+
+  main.appendChild(ddayElement);
+
+  deleteDdayButton.innerHTML = "X";
   ddayElement.classList.add("dday-element");
 
-  ddayDelete.addEventListener("click", () => {
-    deleteDday(ddayDelete.parentNode);
+  deleteDdayButton.addEventListener("click", () => {
+    deleteDday(deleteDdayButton.parentNode);
   });
 
-  let now = new Date();
-  let nowTime = now.getTime();
-  let targetTime = target.getTime();
-  let lest = Math.floor((targetTime - nowTime) / 1000);
+  return [ddayTitle, ddaySubtitle, ddayResult];
+};
 
-  let lestDate = Math.floor(lest / (60 * 60 * 24));
+const calculateDday = (target) => {
+  const now = new Date();
+  const lest = Math.floor((target.getTime() - now.getTime()) / 1000);
+  const lestDate = Math.floor(lest / (60 * 60 * 24));
 
-  ddayDate.innerHTML =
+  const targetDate =
     lib.padInt(target.getFullYear()) +
     "-" +
     lib.padInt(Number(target.getMonth()) + 1) +
     "-" +
     lib.padInt(target.getDate());
 
-  let clockMessage = name;
-  content.innerHTML = clockMessage;
+  const resultDate = "D - " + String(Number(lestDate) + 1);
 
-  let clockMessage2 = "D - " + String(Number(lestDate) + 1);
-  content2.innerHTML = clockMessage2;
-  ddayContent.appendChild(content);
-  ddayContent.appendChild(ddayDate);
-  ddayElement.appendChild(ddayContent);
-
-  ddayElement.appendChild(ddayDelete);
-  ddayElement.appendChild(content2);
-  main.appendChild(ddayElement);
+  return [targetDate, resultDate];
 };
 
-export { ddays, calcTime, drawDday };
+const addNewDday = (name, target) => {
+  const [ddayTitle, ddaySubtitle, ddayResult] = createDdayElement();
+  const [targetDate, resultDate] = calculateDday(target);
+
+  ddayTitle.innerHTML = name;
+  ddaySubtitle.innerHTML = targetDate;
+  ddayResult.innerHTML = resultDate;
+};
+
+export { drawDday };
