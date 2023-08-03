@@ -4,15 +4,10 @@ import * as clock from "./clock.js";
 import * as location from "./location-weather.js";
 import "./timer.js";
 
-let todoInput = document.querySelector(".todo-insert__input");
-todoInput.addEventListener("change", todo.addTodo);
-
 todo.drawTodos();
-
+dday.drawDday();
 location.getLocation();
 
 setInterval(() => {
   clock.drawClock();
 }, 1000);
-
-dday.drawDday();

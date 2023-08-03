@@ -22,6 +22,9 @@ document.querySelector(".todo-insert__form").addEventListener("submit", (e) => {
   addTodo();
 });
 
+// let todoInput = document.querySelector(".todo-insert__input");
+// todoInput.addEventListener("change", todo.addTodo);
+
 /**
  * add todo element to todo-list
  */
@@ -130,4 +133,4 @@ const drawTodos = () => {
   });
 };
 
-export { addTodo, setChecks, deleteTodo, drawTodos };
+export { drawTodos };
