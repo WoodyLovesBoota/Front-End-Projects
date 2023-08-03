@@ -7,39 +7,36 @@ let ddays =
     ? {}
     : JSON.parse(localStorage.getItem("ddays"));
 
-const addButton = document.querySelector(".dday-add-button");
-const addDdayBox = document.querySelector(".add-dday");
-const ddayInput = document.querySelector(".add-dday-input__date");
-const ddayName = document.querySelector(".add-dday-input__name");
-const ddaySubmit = document.querySelector(".add-dday__form");
-const ddayReset = document.querySelector(".add-dday__reset-button");
+const ddayInsertionScreen = document.querySelector(".add-dday");
+const newDdayDate = document.querySelector(".add-dday-input__date");
+const newDdaySubject = document.querySelector(".add-dday-input__name");
 
-addButton.addEventListener("click", () => {
-  addDdayBox.classList.add("show");
+document.querySelector(".dday-add-button").addEventListener("click", () => {
+  ddayInsertionScreen.classList.add("show");
 });
 
-ddaySubmit.addEventListener("submit", () => {
+document.querySelector(".add-dday__form").addEventListener("submit", () => {
   let ddays =
     localStorage.getItem("ddays") === null
       ? {}
       : JSON.parse(localStorage.getItem("ddays"));
-  const ddaySubject = ddayName.value;
-  const ddayTarget = ddayInput.value;
-  ddays[ddaySubject] = ddayTarget;
+  ddays[newDdaySubject.value] = newDdayDate.value;
   localStorage.setItem("ddays", JSON.stringify(ddays));
-  addDdayBox.classList.remove("show");
+  ddayInsertionScreen.classList.remove("show");
   drawDday();
 });
 
-ddayReset.addEventListener("click", () => {
-  addDdayBox.classList.remove("show");
-  drawDday();
-});
+document
+  .querySelector(".add-dday__reset-button")
+  .addEventListener("click", () => {
+    ddayInsertionScreen.classList.remove("show");
+    drawDday();
+  });
 
 const drawDday = () => {
-  const list = document.querySelector(".dday-list");
-  while (list.children.length > 0) {
-    list.removeChild(list.lastChild);
+  const ddayList = document.querySelector(".dday-list");
+  while (ddayList.children.length > 0) {
+    ddayList.removeChild(ddayList.lastChild);
   }
   Object.entries(ddays).forEach(([key, value]) => {
     const targetDay = new Date(
