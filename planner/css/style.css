@@ -71,3 +71,41 @@ ul {
     display: none;
   }
 }
+
+@media (max-width: 400px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 200vh;
+  }
+
+  .column-center {
+    order: 1;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .column-left {
+    order: 2;
+    width: 100vw;
+    height: 30vh;
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .column-right {
+    order: 3;
+    width: 40vw;
+  }
+
+  .search {
+    display: none;
+  }
+}

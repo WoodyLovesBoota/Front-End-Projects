@@ -49,3 +49,20 @@
     color: rgb(241, 241, 241);
   }
 }
+
+@media (max-width: 400px) {
+  .clock {
+    height: 90%;
+    margin: 0;
+  }
+
+  .clock__time {
+    text-align: center;
+    margin: 0;
+  }
+
+  .clock__date {
+    text-align: center;
+    margin: 0;
+  }
+}
