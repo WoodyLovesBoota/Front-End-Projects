@@ -93,7 +93,7 @@ ul {
   .column-left {
     order: 2;
     width: 100vw;
-    height: 30vh;
+    height: 50vh;
     position: inherit;
     display: flex;
     align-items: center;
