@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .timer {
     width: 90%;
     height: 25vh;

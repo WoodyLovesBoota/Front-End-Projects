@@ -50,7 +50,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .clock {
     height: 90%;
     margin: 0;
@@ -59,13 +59,13 @@
   .clock__time {
     text-align: center;
     margin: 0;
-    font-size: 12vw;
+    font-size: 10vw;
   }
 
   .clock__date {
     text-align: center;
     margin: 0;
-    font-size: 4vw;
+    font-size: 3vw;
     margin-bottom: 10px;
   }
 }
