@@ -59,10 +59,13 @@
   .clock__time {
     text-align: center;
     margin: 0;
+    font-size: 12vw;
   }
 
   .clock__date {
     text-align: center;
     margin: 0;
+    font-size: 4vw;
+    margin-bottom: 10px;
   }
 }
