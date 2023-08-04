@@ -220,3 +220,55 @@
     font-size: 1.5vw;
   }
 }
+
+@media (max-width: 400px) {
+  .dday {
+    width: 90%;
+    margin-top: 40px;
+  }
+
+  .dday__header > p {
+    font-size: 5vw;
+  }
+
+  .dday-element {
+    font-size: 4vw;
+    margin: 1vw;
+  }
+
+  .dday-element p:last-child {
+    font-size: 4vw;
+  }
+
+  .dday-element > div:first-child > p:last-child {
+    font-size: 2.5vw;
+  }
+
+  .dday-add-button {
+    font-size: 3vw;
+  }
+
+  .add-dday {
+    width: 100%;
+    height: 400px;
+    position: fixed;
+    top: -450px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .show {
+    top: 0;
+  }
+
+  .add-dday__submit-button {
+    height: 10%;
+  }
+
+  .add-dday__reset-button {
+    height: 10%;
+  }
+}

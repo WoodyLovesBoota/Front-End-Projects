@@ -78,7 +78,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 200vh;
+    height: 140vh;
   }
 
   .column-center {
@@ -108,7 +108,9 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+
+    margin-top: 40px;
   }
 
   .search {
