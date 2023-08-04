@@ -79,7 +79,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 140vh;
+    height: 170vh;
   }
 
   .column-center {
@@ -93,7 +93,7 @@ ul {
   }
 
   .column-left {
-    order: 2;
+    order: 3;
     width: 100%;
     height: 50vh;
     position: inherit;
@@ -103,16 +103,14 @@ ul {
   }
 
   .column-right {
-    order: 3;
+    order: 2;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-
-    margin-top: 40px;
   }
 
   .search {
