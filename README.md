@@ -19,6 +19,10 @@ todo 할 때 localstorage로 데이터 관리하면서 object 형식의 자료�
 
 ### 7. Wordle
 
+TODO
+refactor wordle
+repository 이름 변경 -> js html css || front-end projects || front-end projects js html css
+
 https://sensol2.tistory.com/84
 
 https://parkjh7764.tistory.com/78
