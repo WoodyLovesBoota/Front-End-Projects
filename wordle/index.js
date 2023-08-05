@@ -1,5 +1,3 @@
-//TODO : 문제 random으로 내기
-
 const wordRows = document.querySelectorAll(".word-row");
 const wordCells = document.querySelectorAll(".word-row__cell");
 const restartButton = document.querySelector(".restart__button");
