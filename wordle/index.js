@@ -10,7 +10,22 @@ let win = false;
 let history = [];
 let cnt = 0;
 
-const answer = "abcde";
+const generateAnswer = async () => {
+  const url = `https://random-word-api.herokuapp.com/word?length=5`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+  return data[0];
+};
+
+const answer = await generateAnswer();
+
+answerWord.innerText = 'The answer is... "' + answer.toUpperCase() + '"';
+
+restartButton.addEventListener("click", () => {
+  location.reload();
+});
 
 // 자동 커서 넘기기
 const moveCursor = (element) => {
@@ -109,10 +124,4 @@ wordRows.forEach((wordRow) => {
 wordCells.forEach((wordCell) => {
   paintWord(wordCell);
   moveCursor(wordCell);
-});
-
-answerWord.innerText = 'The answer is... "' + answer.toUpperCase() + '"';
-
-restartButton.addEventListener("click", () => {
-  location.reload();
 });
