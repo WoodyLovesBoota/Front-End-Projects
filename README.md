@@ -24,9 +24,6 @@ HTML 정보를 가져와 DOM 으로 조작할 수 있다.
 적절한 API를 사용해 비동기적으로 요청을 보내고 응답을 받아 코드를 작성할 수 있다.
 유효성 검사를 하고 그에 따라 다양한 css 속성을 적용할 수 있다.
 
-TODO
-repository 이름 변경 -> js html css || front-end projects || front-end projects js html css
-
 https://sensol2.tistory.com/84
 
 https://parkjh7764.tistory.com/78
