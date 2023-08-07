@@ -1,9 +1,6 @@
 import * as lib from "./library.js";
 
-let ddays =
-  localStorage.getItem("ddays") === null
-    ? {}
-    : JSON.parse(localStorage.getItem("ddays"));
+let ddays = localStorage.getItem("ddays") === null ? {} : JSON.parse(localStorage.getItem("ddays"));
 
 const ddayInsertionScreen = document.querySelector(".add-dday");
 const newDdayDate = document.querySelector(".add-dday-input__date");
@@ -14,21 +11,16 @@ document.querySelector(".dday-add-button").addEventListener("click", () => {
 });
 
 document.querySelector(".add-dday__form").addEventListener("submit", () => {
-  let ddays =
-    localStorage.getItem("ddays") === null
-      ? {}
-      : JSON.parse(localStorage.getItem("ddays"));
+  let ddays = localStorage.getItem("ddays") === null ? {} : JSON.parse(localStorage.getItem("ddays"));
   ddays[newDdaySubject.value] = newDdayDate.value;
   localStorage.setItem("ddays", JSON.stringify(ddays));
   ddayInsertionScreen.classList.remove("show");
   drawDday();
 });
 
-document
-  .querySelector(".add-dday__reset-button")
-  .addEventListener("click", () => {
-    ddayInsertionScreen.classList.remove("show");
-  });
+document.querySelector(".add-dday__reset-button").addEventListener("click", () => {
+  ddayInsertionScreen.classList.remove("show");
+});
 
 const deleteCurrentDday = () => {
   const ddayList = document.querySelector(".dday-list");
@@ -40,11 +32,7 @@ const deleteCurrentDday = () => {
 const drawDday = () => {
   deleteCurrentDday();
   Object.entries(ddays).forEach(([key, value]) => {
-    const targetDay = new Date(
-      value.substring(0, 4),
-      value.substring(5, 7) - 1,
-      value.substring(8, 10)
-    );
+    const targetDay = new Date(value.substring(0, 4), value.substring(5, 7) - 1, value.substring(8, 10));
     addNewDday(key, targetDay);
   });
 };
@@ -89,12 +77,7 @@ const calculateDday = (target) => {
   const lest = Math.floor((target.getTime() - now.getTime()) / 1000);
   const lestDate = Math.floor(lest / (60 * 60 * 24));
 
-  const targetDate =
-    lib.padInt(target.getFullYear()) +
-    "-" +
-    lib.padInt(Number(target.getMonth()) + 1) +
-    "-" +
-    lib.padInt(target.getDate());
+  const targetDate = lib.padInt(target.getFullYear()) + "-" + lib.padInt(Number(target.getMonth()) + 1) + "-" + lib.padInt(target.getDate());
 
   const resultDate = "D - " + String(Number(lestDate) + 1);
 

@@ -1,15 +1,9 @@
 import * as lib from "./library.js";
 
 // get data from local storage
-let todos =
-  localStorage.getItem("todos") === null
-    ? {}
-    : JSON.parse(localStorage.getItem("todos"));
+let todos = localStorage.getItem("todos") === null ? {} : JSON.parse(localStorage.getItem("todos"));
 
-let checkedTodo =
-  localStorage.getItem("checks") === null
-    ? []
-    : localStorage.getItem("checks").split(",");
+let checkedTodo = localStorage.getItem("checks") === null ? [] : localStorage.getItem("checks").split(",");
 
 const todoList = document.querySelector(".todo-list");
 
@@ -55,8 +49,7 @@ const deleteTodo = (item) => {
   const key = lib.getKeyByValue(todos, target);
   delete todos[key];
   localStorage.setItem("todos", JSON.stringify(todos));
-  if (checkedTodo.indexOf(target) !== -1)
-    checkedTodo.splice(checkedTodo.indexOf(target), 1);
+  if (checkedTodo.indexOf(target) !== -1) checkedTodo.splice(checkedTodo.indexOf(target), 1);
   localStorage.setItem("checks", checkedTodo);
   drawTodos();
 };

@@ -25,8 +25,7 @@ const drawClock = () => {
   let nowMinute = padInt(now.getMinutes());
   let nowSecond = padInt(now.getSeconds());
 
-  let nowYearMonthDate =
-    nowYear + " / " + nowMonth + " / " + nowDate + " " + nowDay;
+  let nowYearMonthDate = nowYear + " / " + nowMonth + " / " + nowDate + " " + nowDay;
   let nowHourMinutesSecond = nowHour + " : " + nowMinute + " : " + nowSecond;
   let dateBox = document.querySelector(".clock__date");
   let hourBox = document.querySelector(".clock__time");

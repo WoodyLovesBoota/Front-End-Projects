@@ -13,10 +13,7 @@ const errorCallback = (error) => {
 };
 
 const getWeather = async (location) => {
-  const [latitude, longitude] = [
-    location.coords.latitude,
-    location.coords.longitude,
-  ];
+  const [latitude, longitude] = [location.coords.latitude, location.coords.longitude];
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
 
   const response = await fetch(url);

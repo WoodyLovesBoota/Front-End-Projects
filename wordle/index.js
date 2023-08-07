@@ -29,8 +29,7 @@ restartButton.addEventListener("click", () => {
 const moveCursor = (element) => {
   element.addEventListener("keyup", () => {
     if (element.value.length === +element.getAttribute("maxlength")) {
-      if (element.nextElementSibling.getAttribute("type") === "text")
-        element.nextElementSibling.focus({ focusVisible: false });
+      if (element.nextElementSibling.getAttribute("type") === "text") element.nextElementSibling.focus({ focusVisible: false });
     }
   });
 };
@@ -46,8 +45,7 @@ const paintWord = (element) => {
 
 // 마지막은 다음 형제노드가 submit 이여서 submit 할 때 focus넘겨야 함
 const moveCursorToNextRow = (element) => {
-  if (element.nextElementSibling.firstElementChild !== null)
-    element.nextElementSibling.firstElementChild.focus();
+  if (element.nextElementSibling.firstElementChild !== null) element.nextElementSibling.firstElementChild.focus();
 };
 
 // history 확인해서 keyboard 색칠
