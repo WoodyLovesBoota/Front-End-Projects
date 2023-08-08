@@ -1,7 +1,4 @@
-let memos =
-  localStorage.getItem("memos") === null
-    ? {}
-    : JSON.parse(localStorage.getItem("memos"));
+let memos = localStorage.getItem("memos") === null ? {} : JSON.parse(localStorage.getItem("memos"));
 
 let textArea = document.querySelector("#memo-content");
 textArea.addEventListener("change", (event) => {

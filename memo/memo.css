@@ -41,10 +41,7 @@ textarea::placeholder {
 .card {
   position: relative;
   margin: 5px;
-  background: linear-gradient(
-    rgb(252, 252, 14) 0% 8%,
-    rgb(227, 255, 128) 8% 100%
-  );
+  background: linear-gradient(rgb(252, 252, 14) 0% 8%, rgb(227, 255, 128) 8% 100%);
   color: rgb(104, 103, 103);
   font-size: 16px;
   font-weight: 600;
