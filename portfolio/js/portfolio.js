@@ -46,14 +46,8 @@ const drawProject = (index) => {
   implementation.innerHTML = project.detail[4];
   achivement.innerHTML = project.detail[5];
 
-  prevSubject.innerHTML =
-    index === 0
-      ? projects["basic"][total].title
-      : projects["basic"][index - 1].title;
-  nextSubject.innerHTML =
-    index === total
-      ? projects["basic"][0].title
-      : projects["basic"][index + 1].title;
+  prevSubject.innerHTML = index === 0 ? projects["basic"][total].title : projects["basic"][index - 1].title;
+  nextSubject.innerHTML = index === total ? projects["basic"][0].title : projects["basic"][index + 1].title;
 
   viewButton.addEventListener("click", () => {
     location.href = project.code;

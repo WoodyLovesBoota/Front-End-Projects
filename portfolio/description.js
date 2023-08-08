@@ -95,8 +95,7 @@ const projects = {
       code: "../../schedular/schedular.html",
       image: "",
       detail: schedularDetail,
-      sourcecode:
-        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
+      sourcecode: "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
     },
     {
       title: "Planner",
@@ -104,8 +103,7 @@ const projects = {
       code: "../../planner/planner.html",
       image: "",
       detail: plannerDetail,
-      sourcecode:
-        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/planner",
+      sourcecode: "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/planner",
     },
     {
       title: "Kokoa Talk",
@@ -113,8 +111,7 @@ const projects = {
       code: "../../kokoatalk/html/index.html",
       image: "",
       detail: kokoaDetail,
-      sourcecode:
-        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/kokoatalk",
+      sourcecode: "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/kokoatalk",
     },
     {
       title: "Wordle",
@@ -122,8 +119,7 @@ const projects = {
       code: "../../wordle/index.html",
       image: "",
       detail: wordleDetail,
-      sourcecode:
-        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/wordle",
+      sourcecode: "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/wordle",
     },
     {
       title: "Project3",
@@ -131,8 +127,7 @@ const projects = {
       code: "../../Schedular/Schedular.html",
       image: "",
       detail: project3Detail,
-      sourcecode:
-        "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
+      sourcecode: "https://github.com/WoodyLovesBoota/Self-Projects/tree/main/schedular",
     },
   ],
 };
