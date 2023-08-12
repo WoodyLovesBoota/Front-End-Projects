@@ -20,6 +20,9 @@ todo 할 때 localstorage로 데이터 관리하면서 object 형식의 자료�
 
 ### 6. KokoaTalk
 
+디자인에 따른 css 구성 방법
+전체적인 HTML CSS 코드 convention
+
 ### 7. Wordle
 
 HTML 정보를 가져와 DOM 으로 조작할 수 있다.
