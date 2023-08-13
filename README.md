@@ -34,3 +34,4 @@ https://parkjh7764.tistory.com/78
 
 TODO react 강의 , 책
 기술블로그
+필요없는, 하다 만 프로젝트 어떻게할지 결정
