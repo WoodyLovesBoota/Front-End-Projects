@@ -10,25 +10,32 @@ const timerBackground = document.querySelector(".timer");
 const timerValue = document.querySelector(".timer__time");
 const nowClock = document.querySelector(".timer__time").textContent;
 
-document.querySelector(".timer-buttons__start").addEventListener("click", () => {
-  if (!isStarted) {
-    timerBackground.classList.add("red");
-    if (!isPaused) {
-      startTimer = new Date().getTime();
-      startTime = setInterval(() => {
-        calcTimer();
-      }, 1000);
-    } else {
-      const nowClockToTimestamp = Number(nowClock.substring(0, 2)) * 3600 + Number(nowClock.substring(5, 7)) * 60 + Number(nowClock.substring(10, 12));
-      startTimer = new Date().getTime();
-      startTime = setInterval(() => {
-        calcTimerWhenPaused(nowClockToTimestamp);
-      }, 1000);
-      isPaused = false;
+document
+  .querySelector(".timer-buttons__start")
+  .addEventListener("click", () => {
+    if (!isStarted) {
+      timerBackground.classList.add("red");
+      if (!isPaused) {
+        startTimer = new Date().getTime();
+        startTime = setInterval(() => {
+          calcTimer();
+        }, 1000);
+      } else {
+        const copy = document.querySelector(".timer__time").textContent;
+
+        const nowClockToTimestamp =
+          Number(copy.substring(0, 2)) * 3600 +
+          Number(copy.substring(5, 7)) * 60 +
+          Number(copy.substring(10, 12));
+        startTimer = new Date().getTime();
+        startTime = setInterval(() => {
+          calcTimerWhenPaused(nowClockToTimestamp);
+        }, 1000);
+        isPaused = false;
+      }
+      isStarted = true;
     }
-    isStarted = true;
-  }
-});
+  });
 
 document.querySelector(".timer-buttons__stop").addEventListener("click", () => {
   clearInterval(startTime);
@@ -38,15 +45,18 @@ document.querySelector(".timer-buttons__stop").addEventListener("click", () => {
   isStarted = false;
 });
 
-document.querySelector(".timer-buttons__pause").addEventListener("click", () => {
-  if (!isPaused) {
-    timerBackground.classList.remove("red");
-    document.querySelector(".timer__time").innerHTML = nowClock;
-    clearInterval(startTime);
-    isPaused = true;
-    isStarted = false;
-  }
-});
+document
+  .querySelector(".timer-buttons__pause")
+  .addEventListener("click", () => {
+    if (!isPaused) {
+      timerBackground.classList.remove("red");
+      const copy = document.querySelector(".timer__time").textContent;
+      document.querySelector(".timer__time").innerHTML = copy;
+      clearInterval(startTime);
+      isPaused = true;
+      isStarted = false;
+    }
+  });
 
 const calcTimer = () => {
   nowTimer = new Date().getTime();

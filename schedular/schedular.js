@@ -3,7 +3,10 @@ let nowYear = now.getFullYear();
 let nowMonth = now.getMonth() + 1;
 let today = [now.getFullYear(), now.getMonth() + 1, now.getDate()];
 
-let schedules = localStorage.getItem("schedules") === null ? {} : JSON.parse(localStorage.getItem("schedules"));
+let schedules =
+  localStorage.getItem("schedules") === null
+    ? {}
+    : JSON.parse(localStorage.getItem("schedules"));
 
 let calendarBodyTable = document.querySelector("#calendar-table-body");
 
@@ -57,7 +60,7 @@ const drawCalendar = () => {
         clicked(nowText);
       }
     });
-    if ([nowYear, nowMonth, i] === today) nowCols.classList.add("today");
+    if ([nowYear, nowMonth, i] == [...today]) nowCols.classList.add("today");
   }
 
   for (let i = 1; i < totalRow; i++) {
@@ -77,7 +80,8 @@ const drawCalendar = () => {
         }
       });
 
-      if (nowYear === today[0] && nowMonth === today[1] && past === today[2]) nowCols.classList.add("today");
+      if (nowYear === today[0] && nowMonth === today[1] && past === today[2])
+        nowCols.classList.add("today");
 
       if (past >= getDateOfMonth(nowYear, nowMonth)) break;
     }
@@ -120,8 +124,10 @@ const saveSchedule = () => {
   let time = document.querySelector("#schedule-input-time").value;
   let [targetYear, targetMonth, targetDay] = date.split("-");
   let yearAndMonth = targetYear + "-" + targetMonth;
-  let daySchedule = schedules[yearAndMonth] === undefined ? {} : schedules[yearAndMonth];
-  let timeSchedule = daySchedule[targetDay] === undefined ? {} : daySchedule[targetDay];
+  let daySchedule =
+    schedules[yearAndMonth] === undefined ? {} : schedules[yearAndMonth];
+  let timeSchedule =
+    daySchedule[targetDay] === undefined ? {} : daySchedule[targetDay];
   timeSchedule[time.replace(":", "")] = content;
   daySchedule[targetDay] = timeSchedule;
   schedules[yearAndMonth] = daySchedule;
@@ -145,7 +151,12 @@ window.onload = () => {
 const clicked = (cell) => {
   let clickedDate = Number(cell.innerText);
   document.querySelector(".schedule-maker").classList.add("show");
-  document.querySelector("#target-date").innerText = padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString()) + "-" + padInt(clickedDate.toString());
+  document.querySelector("#target-date").innerText =
+    padInt(nowYear.toString()) +
+    "-" +
+    padInt(nowMonth.toString()) +
+    "-" +
+    padInt(clickedDate.toString());
 };
 
 const replaceSchedule = () => {
@@ -154,8 +165,10 @@ const replaceSchedule = () => {
   let time = document.querySelector("#schedule-change-input-time").value;
   let [targetYear, targetMonth, targetDay] = date.split("-");
   let yearAndMonth = targetYear + "-" + targetMonth;
-  let daySchedule = schedules[yearAndMonth] === undefined ? {} : schedules[yearAndMonth];
-  let timeSchedule = daySchedule[targetDay] === undefined ? {} : daySchedule[targetDay];
+  let daySchedule =
+    schedules[yearAndMonth] === undefined ? {} : schedules[yearAndMonth];
+  let timeSchedule =
+    daySchedule[targetDay] === undefined ? {} : daySchedule[targetDay];
   timeSchedule[time.replace(":", "")] = content;
   daySchedule[targetDay] = timeSchedule;
   schedules[yearAndMonth] = daySchedule;
@@ -166,15 +179,29 @@ const changeSchedule = (schedule) => {
   console.log(schedule);
   let clickedDate = Number(schedule.parentNode.firstChild.innerText);
   document.querySelector(".schedule-changer").classList.add("show");
-  document.querySelector("#target-change-date").innerText = padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString()) + "-" + padInt(clickedDate.toString());
-  document.querySelector("#schedule-change-input-content").value = schedule.lastChild.innerText;
+  document.querySelector("#target-change-date").innerText =
+    padInt(nowYear.toString()) +
+    "-" +
+    padInt(nowMonth.toString()) +
+    "-" +
+    padInt(clickedDate.toString());
+  document.querySelector("#schedule-change-input-content").value =
+    schedule.lastChild.innerText;
   document.querySelector("#change-button").addEventListener("click", () => {
-    delete schedules[padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())][padInt(clickedDate.toString())][schedule.firstChild.innerText.replace(" : ", "")];
+    delete schedules[
+      padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())
+    ][padInt(clickedDate.toString())][
+      schedule.firstChild.innerText.replace(" : ", "")
+    ];
     localStorage.setItem("schedules", JSON.stringify(schedules));
     replaceSchedule();
   });
   document.querySelector("#delete-button").addEventListener("click", () => {
-    delete schedules[padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())][padInt(clickedDate.toString())][schedule.firstChild.innerText.replace(" : ", "")];
+    delete schedules[
+      padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())
+    ][padInt(clickedDate.toString())][
+      schedule.firstChild.innerText.replace(" : ", "")
+    ];
     localStorage.setItem("schedules", JSON.stringify(schedules));
   });
 };
@@ -187,7 +214,8 @@ const drawSchedule = () => {
     }
   });
 
-  let targetSchedules = schedules[padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())];
+  let targetSchedules =
+    schedules[padInt(nowYear.toString()) + "-" + padInt(nowMonth.toString())];
   cells.forEach((e) => {
     if (targetSchedules !== undefined && e.firstChild !== null) {
       if (targetSchedules[padInt(e.firstChild.innerText)] !== undefined) {
